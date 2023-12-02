@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="A brief description">
+    <meta name="author" content="Ladiamond Kidd">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!--Progress bar in the navigation area should be fixed-->
+    <div class="progress-bar">
+        <nav>
+            <ul>
+                <li>Demographics</li>
+                <li>Medical History</li>
+                <li>Preventative</li>
+                <li>Social</li>
+                <li>Agreements</li>
+            </ul>
+        </nav>
+    </div>
+    <!--structure of form begins here-->
+    <div class="main">
+        <form action="registration" method="post">
+            <!--demographic section of the form-->
+            <div class="form" id="demographics">
+                <!--sub-section for demographics-->
+                <div class="sub-section" >
+                    <div class="sub-section" id="dg1-2">
+                        <div class="question"  class="multi-question" id="dg1">
+                            <label for="dg1">Today's Date</label>
+                            <p class="q-help-text">Date form was was filled out</p>
+                            <input type="date" name="dg1" id="dg1-1">   
+                        </div>
+                        <div class="question"  class="multi-question" id="dg1">
+                            <label for="dg2">Roots Staff Email Address</label>
+                            <input type="email" name="dg2" id="dg2-1">
+                        </div>
+                    </div>
+                    <div class="question" id="dg3">
+                        <label for="Roots Site"></label>
+                        <ul>
+                            <li><input type="radio" name="dg3" id="dg3-1" value="Main-9925 International"> Main-9925 International</li>
+                            <li><input type="radio" name="dg3" id="dg3-2" value="HQ-7272 Macarthur"> HQ-7272 Macarthur</li>
+                            <li><input type="radio" name="dg3" id="dg3-3" value="STOMP"> STOMP</li>
+                            <li><input type="radio" name="dg3" id="dg3-4" value="South Bay (San Jose)"> South Bay(San Jose)</li>
+                            <li><input type="radio" name="dg3" id="dg3-5" value="Turning Point"> Turning Point</li>
+                            <li><input type="radio" name="dg3" id="dg3-6" value="other"> Other</li>
+                        </ul>
+                    </div>
+                    <div class="question" id="dg4">
+                        <label for="dg4">Why are you here today?</label>
+                        <ul>
+                            <li><input type="checkbox" name="dg4" id="dg4-1" value="Medical Care"> Medical Care</li>
+                            <li><input type="checkbox" name="dg4" id="dg4-2" value="Navigation Services"> Navigation Services</li>
+                            <li><input type="checkbox" name="dg4" id="dg4-3" value="Behavioral Health Care"> Behavioral Health Care</li>
+                        </ul>
+                    </div>
+                    <div class="question"  id="dg4-5">
+                        <div class="question" class="multi-question" id="dg4">
+                            <label for="dg4">First Name</label>
+                            <input type="text" name="dg4" id="dg4-1">
+                        </div>
+                        <div class="question" class="multi-question" id="dg5">
+                            <label for="dg5">Last Name</label>
+                            <input type="text" name="dg5" id="dg5-1">
+                        </div>
+                    </div>
+                    <div class="question" id="dg6-7">
+                        <div class="question" class="multi-question" id="dg6">
+                            <label for="dg6">Middle Name</label>
+                            <input type="text" name="dg6" id="dg6-1">
+                        </div>
+                        <div class="question" class="multi-question" id="dg7">
+                            <label for="dg7">Preferred Name</label>
+                            <input type="text" name="dg7" id="dg7-1">
+                        </div>
+                    </div>
+                    <div class="question" id="dg8-9">
+                        <div class="question" class="multi-question" id="dg8">
+                            <label for="dg8">Date if Birth</label>
+                            <input type="date" name="dg8" id="dg8-1">
+                        </div>
+                        <div class="question" class="multi-question" id="dg9">
+                            <label for="dg9">Social Security Number</label>
+                            <p class="q-help-text">9 digits, no spaces or dashes</p>
+                            <input type="password" name="dg9" id="dg9-1">
+                        </div>
+                    </div>
+                    <div class="question" id="dg10">
+                        <div class="question" id="dg10">
+                            <label for="dg10"> Sex</label>
+                            <ul>
+                                <li><input type="radio" name="dg10" id="dg10-1" value="female"> Female</li>
+                                <li><input type="radio" name="dg10" id="dg10-2" value="male"> Male</li>
+                                <li><input type="radio" name="dg10" id="dg10-3" value="prefer not to answer">Prefer not to answer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question" id="dg11">
+                        <div class="question" id="dg11">
+                            <label for="dg11"> Gender Identity</label>
+                            <ul>
+                                <li><input type="radio" name="dg11" id="dg11-1" value="female"> Female</li>
+                                <li><input type="radio" name="dg11" id="dg11-2" value="male"> Male</li>
+                                <li><input type="radio" name="dg11" id="dg11-3" value="trans F-M"> Trans F-M</li>
+                                <li><input type="radio" name="dg11" id="dg11-4" value="trans M-F"> Trans M-F</li>
+                                <li><input type="radio" name="dg11" id="dg11-5" value="genderqueer"> Genderqueer</li>
+                                <li><input type="radio" name="dg11" id="dg11-6" value="prefer not to answer">Prefer not to answer</li>
+                                <li><input type="radio" name="dg11" id="dg11-0" value="other"> Other</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question" id="dg8">
+
+                    </div>
+                    <div class="question" id="dg9">
+
+                    </div>
+                    <div class="question" id="dg10">
+
+                    </div>
+                </div>
+            </div>
+            <!--medical section of the form-->
+            <div class="form" id="medical">
+                <!--sub-section for TB screening-->
+                <div class="sub-section" id="tb-testing">
+                    <div class="question" id="tb1">
+                        <label for="tb1"> Have you previously tested positive for TB?</label>
+                        <input type="radio" name="tb1" id="tb1yes" value="yes"> Yes
+                        <input type="radio" name="tb1" id="tb1no" value="no"> No
+                    </div>
+                    <div class="question" id="tb2">
+                        <label for="tb2">Have you been in close contact to someone with infectious TB disease at any time?</label>
+                        <input type="radio" name="tb2" id="tb2yes" value="yes"> Yes
+                        <input type="radio" name="tb2" id="tb2no" value="no"> No
+                    </div>
+                    <div class="question" id="tb3">
+                        <label for="tb3">Do you currently have a weakened immune system(immunosuppression)?</label>
+                        <p class="q-help-text">This may include HIV infected, organ transplant recipents, and those treated with TNF-alpha antagonist/infliximab/etanercept/others, steroids/prenisone, or other immunosuppressive medications</p>
+                        <input type="radio" name="tb3" id="tb3yes" value="yes"> Yes
+                        <input type="radio" name="tb3" id="tb3no" value="no"> No
+                    </div>
+                    <div class="question" id="tb4">
+                        <label for="tb4">Have you given birth, traveled, or been a residence of at least 1 month in a country with elevated rate of TB?</label>
+                        <p class="q-help-text">Any country other than United States, Canada, Australia, New Zealand, or a country in western or northern Europe</p>
+                        <input type="radio" name="tb4" id="tb4yes" value="yes"> Yes
+                        <input type="radio" name="tb4" id="tb4no" value="no"> No
+                    </div>
+                    <div class="question" id="tb5">
+                        <label for="tb5">Have you been a resident, employee, or volunteer of a high-risk congregate setting or served clients who are at risk for active TB disease?</label>
+                        <p class="q-help-text">e.g, correctional facilities(including juvenile hall), long-term care facilities, homeless shelters, or homeless encampments</p>
+                        <input type="radio" name="tb5" id="tb5yes" value="yes"> Yes
+                        <input type="radio" name="tb5" id="tb5no" value="no"> No
+                    </div>
+                </div>
+                <!--sub-section for Reproductive-->
+                <div>
+
+                </div>
+            </div>
+            <!--preventative section of the form-->
+            <div class="form" id="preventative">
+                <div class="sub-section">
+
+                </div>
+            </div>
+            <!--social section of the form-->
+            <div class="form" id="social">
+                <div class="sub-section">
+
+                </div>
+            </div>
+            <!--agreement section of the form-->
+            <div class="form" id="agreements">
+                <div class="sub-section">
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

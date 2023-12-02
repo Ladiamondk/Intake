@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.main{
+    margin-top: 50px;
+}
+/* Decorations for the nav/progress bar*/
+.progress-bar{
+    position: fixed;
+    width: 99%;
+    margin-top: 10px;
+    top: 0;
+    overflow: hidden;
+}
+.progress-bar nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.progress-bar nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border: 2px solid black;
+    width: 19.5%;
+    height: 30px;
+}
