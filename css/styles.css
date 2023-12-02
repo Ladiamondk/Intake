@@ -15,7 +15,6 @@ body{
     width: 99%;
     margin-top: 10px;
     top: 0;
-    overflow: hidden;
 }
 .progress-bar nav ul {
     display: flex;
