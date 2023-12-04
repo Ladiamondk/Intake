@@ -26,21 +26,33 @@
         <form action="registration" method="post">
             <!--demographic section of the form-->
             <div class="form" id="demographics">
+                <div class="heading">
+                    <h1 class="header">Demographics</h1>
+                    <p class="h-help-text">This will contain a brief explanation of the currently viewed sub-section</p>
+                </div>
                 <!--sub-section for demographics-->
                 <div class="sub-section" >
-                    <div class="sub-section" id="dg1-2">
-                        <div class="question"  class="multi-question" id="dg1">
-                            <label for="dg1">Today's Date</label>
-                            <p class="q-help-text">Date form was was filled out</p>
-                            <input type="date" name="dg1" id="dg1-1">   
-                        </div>
-                        <div class="question"  class="multi-question" id="dg1">
-                            <label for="dg2">Roots Staff Email Address</label>
-                            <input type="email" name="dg2" id="dg2-1">
+                    <div class="questions" id="dg1-2">
+                        <div class="multi-question">
+                            <div class="question" id="dg1">
+                                <div class="q-w-help">
+                                    <div class="label">
+                                        <label for="dg1">Today's Date</label>
+                                        <p class="q-help-text">Date form is filled out</p>
+                                    </div>
+                                    <div class="input">
+                                        <input type="date" name="dg1" id="dg1-1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question"  class="multi-question" id="dg1">
+                                <label for="dg2">Roots Staff Email Address</label>
+                                <input type="email" name="dg2" id="dg2-1">
+                            </div>
                         </div>
                     </div>
-                    <div class="question" id="dg3">
-                        <label for="Roots Site"></label>
+                    <div class="questions" id="dg3">
+                        <label for="Roots Site">Roots Site</label>
                         <ul>
                             <li><input type="radio" name="dg3" id="dg3-1" value="Main-9925 International"> Main-9925 International</li>
                             <li><input type="radio" name="dg3" id="dg3-2" value="HQ-7272 Macarthur"> HQ-7272 Macarthur</li>
@@ -50,7 +62,7 @@
                             <li><input type="radio" name="dg3" id="dg3-6" value="other"> Other</li>
                         </ul>
                     </div>
-                    <div class="question" id="dg4">
+                    <div class="questions" id="dg4">
                         <label for="dg4">Why are you here today?</label>
                         <ul>
                             <li><input type="checkbox" name="dg4" id="dg4-1" value="Medical Care"> Medical Care</li>
@@ -58,50 +70,60 @@
                             <li><input type="checkbox" name="dg4" id="dg4-3" value="Behavioral Health Care"> Behavioral Health Care</li>
                         </ul>
                     </div>
-                    <div class="question"  id="dg5-6">
-                        <div class="question" class="multi-question" id="dg5">
-                            <label for="dg5">First Name</label>
-                            <input type="text" name="dg5" id="dg5-1">
-                        </div>
-                        <div class="question" class="multi-question" id="dg6">
-                            <label for="dg6">Last Name</label>
-                            <input type="text" name="dg6" id="dg6-1">
-                        </div>
-                    </div>
-                    <div class="question" id="dg7-8">
-                        <div class="question" class="multi-question" id="dg7">
-                            <label for="dg7">Middle Name</label>
-                            <input type="text" name="dg7" id="dg7-1">
-                        </div>
-                        <div class="question" class="multi-question" id="dg8">
-                            <label for="dg8">Preferred Name</label>
-                            <input type="text" name="dg8" id="dg8-1">
+                    
+                    <div class="questions" id="dg5-6">
+                        <div class="multi-question">
+                            <div class="question"  id="dg5">
+                                <label for="dg5">First Name</label>
+                                <input type="text" name="dg5" id="dg5-1">
+                            </div>
+                            <div class="question" id="dg6">
+                                <label for="dg6">Last Name</label>
+                                <input type="text" name="dg6" id="dg6-1">
+                            </div>
                         </div>
                     </div>
-                    <div class="question" id="dg9-10">
-                        <div class="question" class="multi-question" id="dg9">
-                            <label for="dg9">Date if Birth</label>
-                            <input type="date" name="dg9" id="dg9-1">
-                        </div>
-                        <div class="question" class="multi-question" id="dg10">
-                            <label for="dg10">Social Security Number</label>
-                            <p class="q-help-text">9 digits, no spaces or dashes</p>
-                            <input type="password" name="dg10" id="dg10-1">
+                    <div class="questions" id="dg7-8">
+                        <div class="multi-question">
+                            <div class="question" id="dg7">
+                                <label for="dg7">Middle Name</label>
+                                <input type="text" name="dg7" id="dg7-1">
+                            </div>
+                            <div class="question" id="dg8">
+                                <label for="dg8">Preferred Name</label>
+                                <input type="text" name="dg8" id="dg8-1">
+                            </div>
                         </div>
                     </div>
-                    <div class="question" id="dg11">
-                        <div class="question" id="dg11">
-                            <label for="dg11"> Sex</label>
+                    <div class="questions" id="dg9-10">
+                        <div class="multi-question">
+                            <div class="question" id="dg9">
+                                <label for="dg9">Date of Birth</label>
+                                <input type="date" name="dg9" id="dg9-1">
+                            </div>
+                            <div class="question" id="dg10">
+                                <div class="q-w-help">
+                                    <div class="label">
+                                        <label for="dg10">Social Security Number</label>
+                                        <p class="q-help-text">9 digits, no spaces or dashes</p>
+                                    </div>
+                                    <div class="input">
+                                        <input type="password" name="dg10" id="dg10-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions" id="dg11">
+                        <label for="dg11"> Sex</label>
                             <ul>
                                 <li><input type="radio" name="dg11" id="dg11-1" value="female"> Female</li>
                                 <li><input type="radio" name="dg11" id="dg11-2" value="male"> Male</li>
                                 <li><input type="radio" name="dg11" id="dg11-3" value="prefer not to answer">Prefer not to answer</li>
                             </ul>
-                        </div>
                     </div>
-                    <div class="question" id="dg12">
-                        <div class="question" id="dg12">
-                            <label for="dg12"> Gender Identity</label>
+                    <div class="questions" id="dg12">
+                         <label for="dg12"> Gender Identity</label>
                             <ul>
                                 <li><input type="radio" name="dg12" id="dg12-1" value="female"> Female</li>
                                 <li><input type="radio" name="dg12" id="dg12-2" value="male"> Male</li>
@@ -109,24 +131,65 @@
                                 <li><input type="radio" name="dg12" id="dg12-4" value="trans M-F"> Trans M-F</li>
                                 <li><input type="radio" name="dg12" id="dg12-5" value="genderqueer"> Genderqueer</li>
                                 <li><input type="radio" name="dg12" id="dg12-6" value="prefer not to answer">Prefer not to answer</li>
-                                <li><input type="radio" name="dg12" id="dg12-0" value="other"> Other</li>
+                                <li><input type="radio" name="dg12" id="dg12-7"> Other</li>
                             </ul>
+                    </div>
+                    <div class="questions" id="dg13">
+                        <label for="dg13">Preferred Pronouns</label>
+                        <ul>
+                            <li><input type="radio" name="dg13" id="dg13-1" value="She/her">She/her</li>
+                            <li><input type="radio" name="dg13" id="dg13-2" value="He/him">He/him</li>
+                            <li><input type="radio" name="dg13" id="dg13-3">Other</li>
+                        </ul>
+                    </div>
+                    <div class="questions" id="dg14">
+                        <label for="dg14">Sexual Orientation</label>
+                        <ul>
+                            <li><input type="radio" name="dg14" id="dg14-1" value="Straight/Heterosexual">Straight/Heterosexual</li>
+                            <li><input type="radio" name="dg14" id="dg14-2" value="Gay/Lesbian/Homosexual"> Gay/Lesbian/Homosexual</li>
+                            <li><input type="radio" name="dg14" id="dg14-3" value="Bisexual">Bisexual</li>
+                            <li><input type="radio" name="dg14" id="dg14-4" value="Prefer not to answer">Prefer not to answer</li>
+                            <li><input type="radio" name="dg14" id="dg14-5">Other</li>
+                        </ul>
+                    </div>
+                    <div class="questions" id="dg15">
+                        <label for="dg15">Address</label>
+                        <input type="text" name="dg15" id="dg15-1">
+                    </div>
+                    <div class="questions" id="dg16-17-18">
+                        <div class="multi-question">
+                            <div class="question" id="dg16">
+                                <label for="dg16">Personal Email</label>
+                                <input type="email" name="dg16" id="dg16-1">
+                            </div>
+                            <div class="question" id="dg17">
+                                <label for="dg17">Home Phone</label>
+                                <input type="tel" name="dg17" id="dg17-1">
+                            </div>
+                            <div class="question" id="dg18">
+                                <label for="dg18">Cell Phone</label>
+                                <input type="tel" name="dg18" id="dg18-1">
+                            </div>
                         </div>
                     </div>
-                    <div class="question" id="dg13">
-
-                    </div>
-                    <div class="question" id="dg14">
-
-                    </div>
-                    <div class="question" id="dg15">
-
+                    <div class="questions" id="dg19">
+                        <label for="dg19">What is best way to contact you?</label>
+                        <ul>
+                            <li><input type="radio" name="dg19" id="dg19-1" value="Home Phone">Home Phone</li>
+                            <li><input type="radio" name="dg19" id="dg19-2" value="Cell Phone">Cell Phone</li>
+                            <li><input type="radio" name="dg19" id="dg19-3" value="Email">Email</li>
+                            <li><input type="radio" name="dg19" id="dg19-4">Other</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <!--medical section of the form-->
             <div class="form" id="medical">
                 <!--sub-section for TB screening-->
+                <div class="heading">
+                    <h1 class="header">Demographics</h1>
+                    <p class="h-help-text">This will contain a brief explanation of the  text area</p>
+                </div>
                 <div class="sub-section" id="tb-testing">
                     <div class="question" id="tb1">
                         <label for="tb1"> Have you previously tested positive for TB?</label>
