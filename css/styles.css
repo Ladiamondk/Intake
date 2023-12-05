@@ -122,6 +122,12 @@ input{
 .q-w-help{
     display: flex;
 }
+/*styles for buttons*/
+button{
+    width: 120px;
+    height: 20px;
+    font-size: 10px;
+}
 /*styles for the Demograpic questions*/
 #demographics{
     visibility: visible;
