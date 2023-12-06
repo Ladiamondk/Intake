@@ -24,7 +24,7 @@
     <!--structure of form begins here-->
     <div class="main">
         <form action="registration" method="post">
-            <!--demographic section of the form-->
+    <!--demographic section of the form-->
             <div class="form" id="demographics">
                 <div class="heading">
                     <h1 class="header">Demographics</h1>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="questions" id="dg3">
+                    <fieldset class="questions" id="dg3">
                         <label for="Roots Site">Roots Site</label>
                         <ul>
                             <li><input type="radio" name="dg3" id="dg3-1" value="Main-9925 International"> Main-9925 International</li>
@@ -61,16 +61,15 @@
                             <li><input type="radio" name="dg3" id="dg3-5" value="Turning Point"> Turning Point</li>
                             <li><input type="radio" name="dg3" id="dg3-6" value="other"> Other</li>
                         </ul>
-                    </div>
-                    <div class="questions" id="dg4">
+                    </fieldset>
+                    <fieldset class="questions" id="dg4">
                         <label for="dg4">Why are you here today?</label>
                         <ul>
                             <li><input type="checkbox" name="dg4" id="dg4-1" value="Medical Care"> Medical Care</li>
                             <li><input type="checkbox" name="dg4" id="dg4-2" value="Navigation Services"> Navigation Services</li>
                             <li><input type="checkbox" name="dg4" id="dg4-3" value="Behavioral Health Care"> Behavioral Health Care</li>
                         </ul>
-                    </div>
-                    
+                    </fieldset>
                     <div class="questions" id="dg5-6">
                         <div class="multi-question">
                             <div class="question"  id="dg5">
@@ -114,15 +113,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="questions" id="dg11">
+                    <fieldset class="questions" id="dg11">
                         <label for="dg11"> Sex</label>
                             <ul>
                                 <li><input type="radio" name="dg11" id="dg11-1" value="female"> Female</li>
                                 <li><input type="radio" name="dg11" id="dg11-2" value="male"> Male</li>
                                 <li><input type="radio" name="dg11" id="dg11-3" value="prefer not to answer">Prefer not to answer</li>
                             </ul>
-                    </div>
-                    <div class="questions" id="dg12">
+                    </fieldset>
+                    <fieldset class="questions" id="dg12">
                          <label for="dg12"> Gender Identity</label>
                             <ul>
                                 <li><input type="radio" name="dg12" id="dg12-1" value="female"> Female</li>
@@ -133,16 +132,16 @@
                                 <li><input type="radio" name="dg12" id="dg12-6" value="prefer not to answer">Prefer not to answer</li>
                                 <li><input type="radio" name="dg12" id="dg12-7"> Other</li>
                             </ul>
-                    </div>
-                    <div class="questions" id="dg13">
+                    </fieldset>
+                    <fieldset class="questions" id="dg13">
                         <label for="dg13">Preferred Pronouns</label>
                         <ul>
                             <li><input type="radio" name="dg13" id="dg13-1" value="She/her">She/her</li>
                             <li><input type="radio" name="dg13" id="dg13-2" value="He/him">He/him</li>
                             <li><input type="radio" name="dg13" id="dg13-3">Other</li>
                         </ul>
-                    </div>
-                    <div class="questions" id="dg14">
+                    </fieldset>
+                    <fieldset class="questions" id="dg14">
                         <label for="dg14">Sexual Orientation</label>
                         <ul>
                             <li><input type="radio" name="dg14" id="dg14-1" value="Straight/Heterosexual">Straight/Heterosexual</li>
@@ -151,7 +150,7 @@
                             <li><input type="radio" name="dg14" id="dg14-4" value="Prefer not to answer">Prefer not to answer</li>
                             <li><input type="radio" name="dg14" id="dg14-5">Other</li>
                         </ul>
-                    </div>
+                    </fieldset>
                     <div class="questions" id="dg15">
                         <label for="dg15">Address</label>
                         <input type="text" name="dg15" id="dg15-1">
@@ -172,7 +171,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="questions" id="dg19">
+                    <fieldset class="questions" id="dg19">
                         <label for="dg19">What is best way to contact you?</label>
                         <ul>
                             <li><input type="radio" name="dg19" id="dg19-1" value="Home Phone">Home Phone</li>
@@ -180,7 +179,7 @@
                             <li><input type="radio" name="dg19" id="dg19-3" value="Email">Email</li>
                             <li><input type="radio" name="dg19" id="dg19-4">Other</li>
                         </ul>
-                    </div>
+                    </fieldset>
                     <div class="questions" id="dg20-21-22">
                         <div class="multi-question">
                             <div class="question" id="dg20">
@@ -223,57 +222,166 @@
                                 <input type="text" name="dg25" id="dg25-1">
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="move">
-                        <button type="button" class="btn" id="dgPrev">Previous</button>
+                        <button type="button" class="btn" id="dgPrev" style="visibility: hidden;">Previous</button>
                         <button type="button" class="btn" id="dgNext">Next</button>
-                    </div>
-                </div>
+                    </div> 
+                </div>                
             </div>
-            <!--medical section of the form-->
+<!--medical section of the form-->
             <div class="form" id="medical">
-                <!--sub-section for TB screening-->
-                <div class="heading">
-                    <h1 class="header">Demographics</h1>
-                    <p class="h-help-text">This will contain a brief explanation of the  text area</p>
+    <!--sub-section for TB screening-->
+                <div class="form">
+                    <div class="heading">
+                        <h1 class="header">TB-Testing</h1>
+                        <p class="h-help-text">This will contain a brief explanation of the  text area</p>
+                    </div>
+                    <div class="sub-section" id="tb-testing">
+                        <fieldset class="questions" id="tb1">
+                            <label for="tb1"> Have you previously tested positive for TB?</label>
+                            <ul>
+                                <li><input type="radio" name="tb1" id="tb1yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="tb1" id="tb1no" value="no"> No  </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="tb2">
+                            <label for="tb2">Have you been in close contact to someone with infectious TB disease at any time?</label>
+                            <ul>
+                                <li><input type="radio" name="tb2" id="tb2yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="tb2" id="tb2no" value="no"> No</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="tb3">
+                            <div class="label">
+                                <label for="tb3">Do you currently have a weakened immune system(immunosuppression)?</label>
+                                <p class="q-help-text">This may include HIV infected, organ transplant recipents, and those treated with TNF-alpha antagonist/infliximab/etanercept/others, steroids/prenisone, or other immunosuppressive medications</p>
+                            </div>
+                            <div class="input">
+                                <ul>
+                                    <li><input type="radio" name="tb3" id="tb3yes" value="yes"> Yes</li>
+                                    <li><input type="radio" name="tb3" id="tb3no" value="no"> No</li>
+                                </ul>
+                            </div>                            
+                        </fieldset>
+                        <fieldset class="questions" id="tb4">
+                            <div class="label">
+                                <label for="tb4">Have you given birth, traveled, or been a residence of at least 1 month in a country with elevated rate of TB?</label>
+                                <p class="q-help-text">Any country other than United States, Canada, Australia, New Zealand, or a country in western or northern Europe</p>
+                            </div>
+                            <div class="input">
+                                <ul>
+                                    <li><input type="radio" name="tb4" id="tb4yes" value="yes"> Yes</li>
+                                    <li><input type="radio" name="tb4" id="tb4no" value="no"> No</li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                        <fieldset class="questions" id="tb5">
+                            <div class="label">
+                                <label for="tb5">Have you been a resident, employee, or volunteer of a high-risk congregate setting or served clients who are at risk for active TB disease?</label>
+                                <p class="q-help-text">e.g, correctional facilities(including juvenile hall), long-term care facilities, homeless shelters, or homeless encampments</p>    
+                            </div>
+                            <div class="input">
+                                <ul>
+                                    <li><input type="radio" name="tb5" id="tb5yes" value="yes"> Yes</li>
+                                    <li><input type="radio" name="tb5" id="tb5no" value="no"> No</li>
+                                </ul>
+                            </div>  
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="sub-section" id="tb-testing">
-                    <div class="question" id="tb1">
-                        <label for="tb1"> Have you previously tested positive for TB?</label>
-                        <input type="radio" name="tb1" id="tb1yes" value="yes"> Yes
-                        <input type="radio" name="tb1" id="tb1no" value="no"> No
+                
+    <!--sub-section for Reproductive-->
+                <div class="form">
+                    <div class="heading">
+                        <h1 class="header">Reproductive History</h1>
+                        <p class="h-help-text">This will contain a brief explanation of the  text area</p>
                     </div>
-                    <div class="question" id="tb2">
-                        <label for="tb2">Have you been in close contact to someone with infectious TB disease at any time?</label>
-                        <input type="radio" name="tb2" id="tb2yes" value="yes"> Yes
-                        <input type="radio" name="tb2" id="tb2no" value="no"> No
+                    <div class="sub-section" id="reproductive">
+                        <fieldset class="questions" id="rd-1">
+                            <label for="rd1">Are you currently pregnant?</label>
+                            <ul> 
+                                <li><input type="radio" name="rd1" id="rd1yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="rd1" id="rd1no" value="no"> No</li>
+                                <li><input type="radio" name="rd1" id="rd1dk" value="dont know"> Don't know</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="rd-2">
+                            <label for="rd2">Do you receive prenatal care?</label>
+                            <ul>
+                               
+                                <li><input type="radio" name="rd2" id="rd2yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="rd2" id="rd2no" value="no"> No</li>
+                                <li><input type="radio" name="rd2" id="rd2dk" value="dont know"> Don't know</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="rd2-3">
+                            <div class="multi-question">
+                                <div class="question" id="rd2">
+                                    <label for="rd2">Name of Doctor Providing Prenatal Care</label>
+                                    <input type="text" name="rd2" id="rd2-1">
+                                </div>
+                                <div class="question" id="rd3">
+                                    <label for="rd3">When was your last mentrual period?</label>
+                                    <input type="date" name="rd3" id="rd3-1">
+                                </div>
+                            </div>
+                        </div> 
+                        <fieldset class="questions" id="rd4">
+                            <label for="rd4">In the past 6 months, have you had multiple or anonymous sex?</label>
+                            <ul>
+                               
+                                <li><input type="radio" name="rd4" id="rd4yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="rd4" id="rd4no" value="no"> No</li>
+                                <li><input type="radio" name="rd4" id="rd4dk" value="decline"> Decline tp specify</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="rd5">
+                            <label for="rd5">What is your current method of birth control/prevention?</label>
+                            <input type="text" name="rd5" id="rd5-1">
+                        </div>                    
+                        <fieldset class="questions" id="rd6">
+                            <label for="rd6">Do you think you need the morning after pill(emergency contraception) today?</label>
+                            <ul>
+                                
+                                <li><input type="radio" name="rd6" id="rd6yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="rd6" id="rd6no" value="no"> No</li>
+                                <li><input type="radio" name="rd6" id="rd6dk" value="dont know"> Don't know</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="rd7">
+                            <label for="rd7">Have you ever been pregnant?</label>
+                            <ul>
+                                
+                                <li><input type="radio" name="rd7" id="rd7yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="rd7" id="rd7no" value="no"> No</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="rd8-9-10">
+                            <div class="multi-question">
+                                <div class="question" id="rd8">
+                                    <label for="rd8">How many pregnancies?</label>
+                                    <input type="number" name="rd8" id="rd8-1" min="0">
+                                </div>
+                                <div class="question" id="rd9">
+                                    <label for="rd9">How many living children?</label>
+                                    <input type="number" name="rd9" id="rd9-1" min="0">
+                                </div>
+                                <div class="question" id="rd10">
+                                    <label for="rd10">How many abortions?</label>
+                                    <input type="number" name="rd10" id="rd10-1" min="0">
+                                </div>
+                                <div class="question" id="rd11">
+                                    <label for="rd11">How many miscarriages?</label>
+                                    <input type="number" name="rd11" id="rd11-1" min="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="move">
+                            <button type="button" class="btn" id="mdPrev">Previous</button>
+                            <button type="button" class="btn" id="mdNext">Next</button>
+                        </div>
                     </div>
-                    <div class="question" id="tb3">
-                        <label for="tb3">Do you currently have a weakened immune system(immunosuppression)?</label>
-                        <p class="q-help-text">This may include HIV infected, organ transplant recipents, and those treated with TNF-alpha antagonist/infliximab/etanercept/others, steroids/prenisone, or other immunosuppressive medications</p>
-                        <input type="radio" name="tb3" id="tb3yes" value="yes"> Yes
-                        <input type="radio" name="tb3" id="tb3no" value="no"> No
-                    </div>
-                    <div class="question" id="tb4">
-                        <label for="tb4">Have you given birth, traveled, or been a residence of at least 1 month in a country with elevated rate of TB?</label>
-                        <p class="q-help-text">Any country other than United States, Canada, Australia, New Zealand, or a country in western or northern Europe</p>
-                        <input type="radio" name="tb4" id="tb4yes" value="yes"> Yes
-                        <input type="radio" name="tb4" id="tb4no" value="no"> No
-                    </div>
-                    <div class="question" id="tb5">
-                        <label for="tb5">Have you been a resident, employee, or volunteer of a high-risk congregate setting or served clients who are at risk for active TB disease?</label>
-                        <p class="q-help-text">e.g, correctional facilities(including juvenile hall), long-term care facilities, homeless shelters, or homeless encampments</p>
-                        <input type="radio" name="tb5" id="tb5yes" value="yes"> Yes
-                        <input type="radio" name="tb5" id="tb5no" value="no"> No
-                    </div>
-                </div>
-                <!--sub-section for Reproductive-->
-                <div>
-
-                </div>
-                <div>
-                    <button type="button" class="btn" id="dgPrev">Previous</button>
-                    <button type="button" class="btn" id="dgNext">Next</button>
                 </div>
             </div>
             <!--preventative section of the form-->

@@ -145,14 +145,14 @@ button{
     visibility: visible;
 }
 #medical{
-    visibility: hidden;
+    display: none;
 }
 #preventative{
-    visibility: hidden;
+    display: none;
 }
 #social{
-    visibility: hidden;
+    display: none;
 }
 #agreements{
-    visibility: hidden;
+    display: none;
 }
