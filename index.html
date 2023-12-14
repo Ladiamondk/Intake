@@ -10,8 +10,7 @@
 </head>
 <body>
     <!--Progress bar in the navigation area should be fixed-->
-    <div class="progress-bar">
-        <nav>
+        <nav class="progress-bar">
             <ul>
                 <li id="p-1">Demographics</li>
                 <li id="p-2">Medical History</li>
@@ -20,7 +19,6 @@
                 <li id="p-4">Agreements</li>
             </ul>
         </nav>
-    </div>
     <!--structure of form begins here-->
     <div class="main">
         <form action="registration" method="post">
@@ -187,20 +185,23 @@
                                 <input type="text" name="dg20" id="dg20-1">
                             </div>
                             <div class="question" id="dg21">
-                                <div class="label">
-                                    <label for="dg21">Emergency Contact Phone Number</label>
-                                    <p class="q-help-text">10 digits, no spaces or dashes</p>
-                                </div>
-                                <div class="input">
-                                    <input type="tel" name="dg21" id="dg21-1">
+                                <div class="q-w-help">
+                                    <div class="label">
+                                        <label for="dg21">Emergency Contact Phone Number</label>
+                                        <p class="q-help-text">10 digits, no spaces or dashes</p>
+                                    </div>
+                                    <div class="input">
+                                        <input type="tel" name="dg21" id="dg21-1">
+                                    </div>
                                 </div>
                             </div>
                             <div class="question" id="dg22">
                                 <label for="dg22">Emergency Contact Relationship</label>
                                 <input type="text" name="dg22" id="dg22-1">
                             </div>
+                            <button type="button" id="addEBtn" onclick="additionEC()">Add Emergency contact</button>
                         </div>
-                        <button type="button" id="addEBtn">Add Emergency contact</button>
+                        
                     </div>
                     <div class="questions" id="dg23-24-25" style="display: none;">
                         <div class="multi-question">
@@ -209,12 +210,14 @@
                                 <input type="text" name="dg23" id="dg23-1">
                             </div>
                             <div class="question" id="dg24">
-                                <div class="label">
-                                    <label for="dg24">Emergency Contact Phone Number</label>
-                                    <p class="q-help-text">10 digits, no spaces or dashes</p>
-                                </div>
-                                <div class="input">
-                                    <input type="tel" name="dg24" id="dg24-1">
+                                <div class="q-w-help">
+                                    <div class="label">
+                                        <label for="dg24">Emergency Contact Phone Number</label>
+                                        <p class="q-help-text">10 digits, no spaces or dashes</p>
+                                    </div>
+                                    <div class="input">
+                                        <input type="tel" name="dg24" id="dg24-1">
+                                    </div>
                                 </div>
                             </div>
                             <div class="question" id="dg25">
@@ -315,65 +318,65 @@
                                 <li><input type="radio" name="rd2" id="rd2dk" value="dont know"> Don't know</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="rd2-3">
+                        <div class="questions" id="rd3-4">
                             <div class="multi-question">
-                                <div class="question" id="rd2">
-                                    <label for="rd2">Name of Doctor Providing Prenatal Care</label>
-                                    <input type="text" name="rd2" id="rd2-1">
+                                <div class="question" id="rd-3">
+                                    <label for="rd3">Name of Doctor Providing Prenatal Care</label>
+                                    <input type="text" name="rd3" id="rd3-1">
                                 </div>
-                                <div class="question" id="rd3">
-                                    <label for="rd3">When was your last mentrual period?</label>
-                                    <input type="date" name="rd3" id="rd3-1">
+                                <div class="question" id="rd-4">
+                                    <label for="rd4">When was your last mentrual period?</label>
+                                    <input type="date" name="rd4" id="rd4-1">
                                 </div>
                             </div>
                         </div> 
-                        <fieldset class="questions" id="rd4">
-                            <label for="rd4">In the past 6 months, have you had multiple or anonymous sex?</label>
+                        <fieldset class="questions" id="rd-5">
+                            <label for="rd5">In the past 6 months, have you had multiple or anonymous sex?</label>
                             <ul>
                                
-                                <li><input type="radio" name="rd4" id="rd4yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="rd4" id="rd4no" value="no"> No</li>
-                                <li><input type="radio" name="rd4" id="rd4dk" value="decline"> Decline tp specify</li>
+                                <li><input type="radio" name="rd5" id="rd5yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="rd5" id="rd5no" value="no"> No</li>
+                                <li><input type="radio" name="rd5" id="rd5dk" value="decline"> Decline to specify</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="rd5">
-                            <label for="rd5">What is your current method of birth control/prevention?</label>
-                            <input type="text" name="rd5" id="rd5-1">
+                        <div class="questions" id="rd-6">
+                            <label for="rd6">What is your current method of birth control/prevention?</label>
+                            <input type="text" name="rd6" id="rd6-1">
                         </div>                    
-                        <fieldset class="questions" id="rd6">
-                            <label for="rd6">Do you think you need the morning after pill(emergency contraception) today?</label>
-                            <ul>
-                                
-                                <li><input type="radio" name="rd6" id="rd6yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="rd6" id="rd6no" value="no"> No</li>
-                                <li><input type="radio" name="rd6" id="rd6dk" value="dont know"> Don't know</li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class="questions" id="rd7">
-                            <label for="rd7">Have you ever been pregnant?</label>
+                        <fieldset class="questions" id="rd-7">
+                            <label for="rd7">Do you think you need the morning after pill(emergency contraception) today?</label>
                             <ul>
                                 
                                 <li><input type="radio" name="rd7" id="rd7yes" value="yes"> Yes</li>
                                 <li><input type="radio" name="rd7" id="rd7no" value="no"> No</li>
+                                <li><input type="radio" name="rd7" id="rd7dk" value="dont know"> Don't know</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="rd8-9-10">
+                        <fieldset class="questions" id="rd-8">
+                            <label for="rd8">Have you ever been pregnant?</label>
+                            <ul>
+                                
+                                <li><input type="radio" name="rd8" id="rd8yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="rd8" id="rd8no" value="no"> No</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="rd9-10-11-12">
                             <div class="multi-question">
-                                <div class="question" id="rd8">
-                                    <label for="rd8">How many pregnancies?</label>
-                                    <input type="number" name="rd8" id="rd8-1" min="0">
-                                </div>
-                                <div class="question" id="rd9">
-                                    <label for="rd9">How many living children?</label>
+                                <div class="question" id="rd-9">
+                                    <label for="rd9">How many pregnancies?</label>
                                     <input type="number" name="rd9" id="rd9-1" min="0">
                                 </div>
-                                <div class="question" id="rd10">
-                                    <label for="rd10">How many abortions?</label>
+                                <div class="question" id="rd-10">
+                                    <label for="rd10">How many living children?</label>
                                     <input type="number" name="rd10" id="rd10-1" min="0">
                                 </div>
-                                <div class="question" id="rd11">
-                                    <label for="rd11">How many miscarriages?</label>
+                                <div class="question" id="rd-11">
+                                    <label for="rd11">How many abortions?</label>
                                     <input type="number" name="rd11" id="rd11-1" min="0">
+                                </div>
+                                <div class="question" id="rd-12">
+                                    <label for="rd12">How many miscarriages?</label>
+                                    <input type="number" name="rd12" id="rd12-1" min="0">
                                 </div>
                             </div>
                         </div>
@@ -390,8 +393,8 @@
 
                 </div>
                 <div>
-                    <button type="button" class="btn" id="dgPrev">Previous</button>
-                    <button type="button" class="btn" id="dgNext">Next</button>
+                    <button type="button" class="btn" id="pvPrev">Previous</button>
+                    <button type="button" class="btn" id="pvNext">Next</button>
                 </div>
             </div>
             <!--social section of the form-->
@@ -400,8 +403,8 @@
 
                 </div>
                 <div>
-                    <button type="button" class="btn" id="dgPrev">Previous</button>
-                    <button type="button" class="btn" id="dgNext">Next</button>
+                    <button type="button" class="btn" id="scPrev">Previous</button>
+                    <button type="button" class="btn" id="scNext">Next</button>
                 </div>
             </div>
             <!--agreement section of the form-->
@@ -410,8 +413,8 @@
 
                 </div>
                 <div>
-                    <button type="button" class="btn" id="dgPrev">Previous</button>
-                    <button type="button" class="btn" id="dgNext">Next</button>
+                    <button type="button" class="btn" id="amPrev">Previous</button>
+                    <button type="button" class="btn" id="amNext">Next</button>
                 </div>
             </div>
         </form>

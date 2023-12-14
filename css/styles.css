@@ -28,29 +28,33 @@ body{
     width: 100%;
     top: 0;
     z-index: 1000;
-    padding: 5px 0;
+    padding: 7px 0;
     background-color: #94a187;
 }
-.progress-bar nav ul {
+.progress-bar ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.progress-bar nav ul li {
+.progress-bar ul li {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    border: .5px solid black;
+    border-radius: 2px;
     width: 19.5%;
     height: 30px;
+    border-radius: 2px;
     background-color: #d6cfcf;
+    box-shadow: .5px .5px 2px 1.2px rgb(100,100,100);
+    text-shadow:  0px 1px 2px #54595f;
 }
 /*define the form layout which is two colums*/
 .form{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
 }
 /*styles for the two section with in the form*/
 .heading{
@@ -58,23 +62,30 @@ body{
    flex-direction: column;
    width: 20%;
    min-width: 200px;
-   margin: 10px;
+   margin: 30px 20px;
+   position: static;
 }
 .sub-section{
     background-color: #ffff;
     flex: 1;
     padding: 5px 10px;
     margin: 10px;
-    border: 2px solid#54595f;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 1px #54595f;
 }
 
 /*styles for the heading and description area*/
-.heading h1{
+.header{
    font-size: 24px;
+   text-shadow:  3px 1px 5px #54595f;
+   align-self: center;
+   text-align: center;
 }
-.heading p{
+.h-help-text{
     font-size: 14px;
     color: #54595f;
+    text-align: center;
+    margin-top: 30px;
 }
 /*General Styling for questions and help text*/
 label{
@@ -83,6 +94,9 @@ label{
 }
 input{
     margin: 0 5px;
+}
+input[type="radio"]:hover, input[type="checkbox"]:hover{
+    cursor: pointer;
 }
 .question{
     background-color: #f5e2c8;
@@ -93,10 +107,16 @@ input{
     margin: 5px;
     border-radius: 2px;
     padding: 5px;
+    border: none;
+    box-shadow: 0px 0px 2px 1px #54595f;
+}
+.questions:hover {
+    box-shadow: 0px 0px 2px 0px #54595f;
 }
 .multi-question{
     display: flex;
     justify-content: space-between;
+    flex: 0 0 calc(50 - 20px);
     flex-wrap: wrap;
 }
 .multi-question .questions{
@@ -109,9 +129,9 @@ input{
     list-style: none;
 }
 .questions li{
+    flex: 0 0 calc(33.33% - 20px);
     font-size: 12px;
-    margin:2px 10px;
-    width: 220px;
+    margin:2px 0;
 }
 /*styling for questions with help text*/
 .q-help-text{
@@ -136,9 +156,19 @@ button{
 .btn{
     margin: 0 30px;
     background-color: #0f7235;
+    color: #ffff;
+}
+.btn:hover{
+    border: none;
 }
 .btn,button,a:hover{
     cursor: pointer;
+}
+#addEBtn{
+    margin-right: 5px;
+}
+#addEBtn:hover{
+    border: 2px solid black;
 }
 /*styles for the Demograpic questions*/
 #demographics{
