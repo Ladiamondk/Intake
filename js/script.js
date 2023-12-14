@@ -162,6 +162,7 @@ if(rd1){
                 if(pregVal == 'no' || pregVal == 'dont know'){
                     rd2.style.display = 'none';
                     rd3.style.display = 'none';
+                    rd7.style.display = 'block';
                 } else if(pregVal == 'yes'){
                     rd2.style.display = 'block';
                     rd3.style.display = 'block';
