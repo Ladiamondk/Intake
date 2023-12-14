@@ -3,8 +3,7 @@ const medical = document.getElementById('medical');
 const preventative = document.getElementById('preventative')
 const social = document.getElementById('social')
 const agreements = document.getElementById('agreements')
-const dgnext = document.getElementById('dgNext')
-const mdprev = document.getElementById('mdPrev')
+
 
 const rd1 = document.getElementById('rd-1')
 const rd2 = document.getElementById('rd-2')
@@ -19,31 +18,92 @@ const rd9101112 = document.getElementById('rd9-10-11-12')
 function next(current, next){
     current.style.display = 'none';
     next.style.display = 'contents'; 
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // You can use 'auto' instead of 'smooth' for instant scrolling
+      });
 }
 function prev(current, prev){
     current.style.display = 'none';
     prev.style.display = 'flex';
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // You can use 'auto' instead of 'smooth' for instant scrolling
+      });
 }
-/*demo and medical */
-const checkmark = new Image();
-checkmark.src = 'resources/checkmark.png';
-checkmark.width = 20;
-checkmark.height = 20;
-checkmark.alt = 'green checkmark';
-checkmark.style.borderRadius = '15px';
-checkmark.style.boxShadow = '0px 2px 2px #54595f';
-const pDemo = document.getElementById('p-1');
 
+function createCheckMark(){
+    const checkmark = new Image();
+    checkmark.src = 'resources/checkmark.png';
+    checkmark.width = 20;
+    checkmark.height = 20;
+    checkmark.alt = 'green checkmark';
+    checkmark.style.borderRadius = '15px';
+    checkmark.style.boxShadow = '0px 2px 2px #54595f'; 
+    return checkmark;
+}
+
+const dgnext = document.getElementById('dgNext')
+const mdprev = document.getElementById('mdPrev')
+const demoDone = createCheckMark();
+const pDemo = document.getElementById('p-1');
 dgnext.addEventListener('click', () =>{ 
     next(demo, medical);
     pDemo.innerText = '';
-    pDemo.appendChild(checkmark);
+    pDemo.appendChild(demoDone);
 });
 
 mdprev.addEventListener('click', () =>{
     prev(medical, demo);
     pDemo.innerText = 'Demographics';
 });
+
+const mdnext = document.getElementById('mdNext');
+const pvprev = document.getElementById('pvPrev');
+const pMed = document.getElementById('p-2');
+const medDone = createCheckMark();
+mdnext.addEventListener('click', () =>{ 
+    next(medical, preventative);
+    pMed.innerText = '';
+    pMed.appendChild(medDone);
+});
+
+pvprev.addEventListener('click', () =>{
+    prev(preventative, medical);
+    pMed.innerText = 'Medical';
+});
+
+const pvnext = document.getElementById('pvNext');
+const scprev = document.getElementById('scPrev');
+const pPrev = document.getElementById('p-3');
+const prevDone = createCheckMark();
+pvnext.addEventListener('click', () =>{ 
+    next(preventative, social);
+    pPrev.innerText = '';
+    pPrev.appendChild(prevDone);
+});
+
+scprev.addEventListener('click', () =>{
+    prev(social, preventative);
+    pPrev.innerText = 'Preventative';
+});
+
+const scnext = document.getElementById('scNext');
+const amprev = document.getElementById('amPrev');
+const pSocial = document.getElementById('p-4');
+const socialDone = createCheckMark();
+scnext.addEventListener('click', () =>{ 
+    next(social, agreements);
+    pSocial.innerText = '';
+    pSocial.appendChild(socialDone);
+});
+
+amprev.addEventListener('click', () =>{
+    prev(agreements, social);
+    pSocial.innerText = 'Social';
+});
+
+
 //Demographics section of the form
 //Additional Emergency contact
 function additionEC(){
