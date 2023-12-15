@@ -23,10 +23,11 @@
     <!--structure of form begins here-->
     <div class="main">
         <form action="/registration" method="post">
-    <!--demographic section of the form-->
-            <div class="form" id="demographics">
+        <!--demographic section of the form-->
+            <div id="demographics">
+                <div class="form">
                 <div class="heading">
-                    <div class="targetEl ">
+                    <div class="targetEl">
                         <h1 class="header">Demographics</h1>
                         <p class="h-help-text">This will contain a brief explanation of the currently viewed sub-section</p>
                     </div>
@@ -233,8 +234,9 @@
                         <button type="button" class="btn" id="dgPrev" style="visibility: hidden;">Previous</button>
                         <button type="button" class="btn" id="dgNext">Next</button>
                     </div> 
-                </div>                
-            </div>
+                </div>
+            </div>               
+        </div>
 <!--medical section of the form-->
             <div class="form" id="medical">
     <!--sub-section for TB screening-->
@@ -298,7 +300,6 @@
                         </fieldset>
                     </div>
                 </div>
-                
     <!--sub-section for Reproductive-->
                 <div class="form">
                     <div class="heading">
@@ -396,32 +397,42 @@
             </div>
             <!--preventative section of the form-->
             <div class="form" id="preventative">
-                <div class="sub-section">
+                <div class="form">
+                    <div class="header">
 
-                </div>
-                <div>
-                    <button type="button" class="btn" id="pvPrev">Previous</button>
-                    <button type="button" class="btn" id="pvNext">Next</button>
+                    </div>
+                    <div class="sub-section">
+                        <div>
+                            <button type="button" class="btn" id="pvPrev">Previous</button>
+                            <button type="button" class="btn" id="pvNext">Next</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--social section of the form-->
             <div class="form" id="social">
-                <div class="sub-section">
+                <div class="form">
+                    <div class="sub-section">
+                        <div class="header">
 
-                </div>
-                <div>
-                    <button type="button" class="btn" id="scPrev">Previous</button>
-                    <button type="button" class="btn" id="scNext">Next</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn" id="scPrev">Previous</button>
+                            <button type="button" class="btn" id="scNext">Next</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--agreement section of the form-->
             <div class="form" id="agreements">
-                <div class="sub-section">
+                <div class="form">
+                    <div class="sub-section">
 
-                </div>
-                <div>
-                    <button type="button" class="btn" id="amPrev">Previous</button>
-                    <button type="submit" class="btn" id="submit">Submit</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn" id="amPrev">Previous</button>
+                        <button type="submit" class="btn" id="submit">Submit</button>
+                    </div>
                 </div>
             </div>
         </form>

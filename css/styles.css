@@ -53,9 +53,9 @@ body{
 .form{
     display: grid;
     grid-template-columns: 30% 70%;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     position: relative;
+    flex-wrap: wrap;
 }
 /*styles for the two section with in the form*/
 .heading{
@@ -63,6 +63,7 @@ body{
    flex-direction: column;
    min-width: 200px;
    margin: 30px 20px 0;
+   max-width: 250px;
 }
 .sub-section{
     background-color: #ffff;
@@ -72,6 +73,8 @@ body{
     border-radius: 3px;
     box-shadow: 0px 0px 3px 1px #54595f;
     z-index: 1;
+    flex: 1;
+    max-width: 900px;
 }
 
 /*styles for the heading and description area*/
