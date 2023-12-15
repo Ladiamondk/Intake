@@ -25,7 +25,7 @@ function next(current, next){
 }
 function prev(current, prev){
     current.style.display = 'none';
-    prev.style.display = 'flex';
+    prev.style.display = 'grid';
     window.scrollTo({
         top: 0,
         behavior: 'smooth' // You can use 'auto' instead of 'smooth' for instant scrolling

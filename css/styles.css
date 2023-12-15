@@ -52,7 +52,7 @@ body{
 /*define the form layout which is two colums*/
 .form{
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 25% 75%;
     justify-content: space-between;
     position: relative;
     flex-wrap: wrap;
