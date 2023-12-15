@@ -1,21 +1,42 @@
-/*setting up the database 
-Initialize the client - npm init -y
-install postgres package - npm install pg
-install express.js package - npm install express*/
-const {client} = require('pg');
+//web server
+const express = require('express');
+const bodyParser = require('body-parser');
+const {Pool} = require('pg');
+var path = require('path');
 
-const client = new client({
-    host: 'localhost',
+const app =express();
+const port = 3000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+//connect to Postgress
+const pool = new Pool({
     user: 'postgres',
+    host:'localhost',
+    database:'test',
+    password: '102019',
     port: 5432,
-    password: "rootUser",
-    database: 'postgres'
 })
+app.get('/', (req,res) => {
+    res.send(index.html)
+})
+//handle form submission
+app.post('/registration', async(req, res) => {
+    try {
+        const {dg1, dg2} = req.body;
 
-client.connect();
+        const result = await pool.query('INSERT INTO test (dg1, dg2) VALUES ($1, $2) RETURNING *', [dg1, dg2]);
 
-client.query(`Select * from users`, (err, req) => {
-    if(!err){
-        console.log();
+        console.log(result.rows[0]);
+
+        res.send('Formsubmitted successfully!');
+    } catch(error){
+        console.error('Error processing form data:', error);
+        res.status(500).send('Internal Server Error');
     }
+})
+//listen on the port
+app.listen(port, () => {
+    console.log(`Intake form is running on port${port}`)
 })

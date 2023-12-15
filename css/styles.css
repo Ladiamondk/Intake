@@ -81,12 +81,19 @@ body{
    text-shadow:  3px 1px 5px #54595f;
    align-self: center;
    text-align: center;
+   margin-top: 60px;
 }
 .h-help-text{
     font-size: 14px;
     color: #54595f;
     text-align: center;
     margin-top: 30px;
+}
+.targetEl {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: #94a187;
 }
 /*General Styling for questions and help text*/
 label{
@@ -174,7 +181,6 @@ button{
 }
 /*styles for the Demograpic questions*/
 #demographics{
-    grid-template-columns: 20% 80%;
     visibility: visible;
 }
 #medical{
