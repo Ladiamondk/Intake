@@ -51,8 +51,9 @@ body{
 }
 /*define the form layout which is two colums*/
 .form{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: center;
     flex-wrap: wrap;
     position: relative;
 }
@@ -60,19 +61,17 @@ body{
 .heading{
    display: flex;
    flex-direction: column;
-   width: 20%;
    min-width: 200px;
-   margin: 30px 20px;
-   position: static;
+   margin: 30px 20px 0;
 }
 .sub-section{
     background-color: #ffff;
-    flex: 1;
     padding: 5px 10px;
-    margin: 10px;
-    width: 85%;
+    margin: 10px 5px;
+    width: 93%;
     border-radius: 3px;
     box-shadow: 0px 0px 3px 1px #54595f;
+    z-index: 1;
 }
 
 /*styles for the heading and description area*/
