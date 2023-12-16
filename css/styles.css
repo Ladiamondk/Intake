@@ -42,7 +42,7 @@ body{
     align-items: center;
     list-style: none;
     border-radius: 2px;
-    width: 19.5%;
+    width: 16.1%;
     height: 30px;
     border-radius: 2px;
     background-color: #d6cfcf;
@@ -53,7 +53,6 @@ body{
 .form{
     display: grid;
     grid-template-columns: 25% 75%;
-    justify-content: space-between;
     position: relative;
     flex-wrap: wrap;
 }
@@ -63,7 +62,7 @@ body{
    flex-direction: column;
    min-width: 200px;
    margin: 30px 20px 0;
-   max-width: 250px;
+   justify-items: center;
 }
 .sub-section{
     background-color: #ffff;
@@ -103,7 +102,7 @@ label{
     font-size: 14px;
 }
 input{
-    margin: 0 5px;
+    margin: 5px 5px 0;
 }
 input[type="radio"]:hover, input[type="checkbox"]:hover{
     cursor: pointer;
@@ -139,7 +138,7 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
     list-style: none;
 }
 .questions li{
-    flex: 0 0 calc(33.33% - 20px);
+    width: 200px ;
     font-size: 12px;
     margin:2px 0;
 }
@@ -192,6 +191,9 @@ button{
     display: none;
 }
 #social{
+    display: none;
+}
+#screening{
     display: none;
 }
 #agreements{

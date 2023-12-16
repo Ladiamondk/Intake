@@ -3,7 +3,7 @@ const medical = document.getElementById('medical');
 const preventative = document.getElementById('preventative')
 const social = document.getElementById('social')
 const agreements = document.getElementById('agreements')
-
+const screening = document.getElementById('screening')
 
 const rd1 = document.getElementById('rd-1')
 const rd2 = document.getElementById('rd-2')
@@ -20,15 +20,16 @@ function next(current, next){
     next.style.display = 'contents'; 
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // You can use 'auto' instead of 'smooth' for instant scrolling
+        behavior: 'smooth'
       });
 }
+
 function prev(current, prev){
     current.style.display = 'none';
     prev.style.display = 'grid';
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // You can use 'auto' instead of 'smooth' for instant scrolling
+        behavior: 'smooth' 
       });
 }
 
@@ -70,7 +71,7 @@ mdnext.addEventListener('click', () =>{
 
 pvprev.addEventListener('click', () =>{
     prev(preventative, medical);
-    pMed.innerText = 'Medical';
+    pMed.innerText = 'Medical History';
 });
 
 const pvnext = document.getElementById('pvNext');
@@ -89,21 +90,36 @@ scprev.addEventListener('click', () =>{
 });
 
 const scnext = document.getElementById('scNext');
-const amprev = document.getElementById('amPrev');
+const snprev = document.getElementById('snPrev');
 const pSocial = document.getElementById('p-4');
 const socialDone = createCheckMark();
 scnext.addEventListener('click', () =>{ 
-    next(social, agreements);
+    next(social, screening);
     pSocial.innerText = '';
     pSocial.appendChild(socialDone);
 });
 
-amprev.addEventListener('click', () =>{
-    prev(agreements, social);
+snprev.addEventListener('click', () =>{
+    prev(screening, social);
     pSocial.innerText = 'Social';
 });
 
 
+const snnext = document.getElementById('snNext');
+const amprev = document.getElementById('amPrev');
+const pScreen = document.getElementById('p-5');
+const screenDone = createCheckMark();
+
+snnext.addEventListener('click', ()=> {
+    next(screening, agreements);
+    pScreen.innerText = '';
+    pScreen.appendChild(screenDone);
+})
+
+amprev.addEventListener('click', () => {
+    prev(agreements, screening);
+    pScreen.innerText = 'Screening';
+})
 //Demographics section of the form
 //Additional Emergency contact
 function additionEC(){
@@ -116,38 +132,6 @@ function additionEC(){
     }else{
         addEContact.style.display = 'none';
     }   
-}
-
-//Male
-const gender = document.getElementById('dg11');
-if(gender){
-    gender.addEventListener('click', () => {
-        let genderVal;
-        const genderRadios = gender.querySelectorAll('input[type="radio"]');
-    
-        for(let i = 0; i < genderRadios.length; i++){
-            if( genderRadios[i].checked){
-                genderVal = genderRadios[i].value;
-                if(genderVal == 'male'){
-                    rd1.style.display = 'none';
-                    rd2.style.display = 'none';
-                    rd34.style.display = 'none';
-                    rd6.style.display = 'none';
-                    rd7.style.display = 'none';
-                    rd8.style.display = 'none';
-                    rd9101112.style.display = 'none';
-                } else {
-                    rd1.style.display = 'block';
-                    rd2.style.display = 'block';
-                    rd34.style.display = 'block';
-                    rd6.style.display = 'block';
-                    rd7.style.display = 'block';
-                    rd8.style.display = 'block';
-                    rd9101112.style.display = 'block';
-                }
-            }
-        }
-    });  
 }
 //Reproductive section of the form
 //Pregnant
