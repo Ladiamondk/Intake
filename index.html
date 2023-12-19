@@ -395,34 +395,73 @@
                                 <li><input type="radio" name="hc1" id="hc1-10" value="Other"> Other</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="hc-2">
-                            <label for="hc2">Do you have a regular primary care doctor?</label>
+                        <div class="questions" id="hc-2">
+                            <label for="hc2">What is the policy number?</label>
+                            <input type="text" name="hc2" id="hc2-1">
+                        </div>
+                        <fieldset class="questions" id="hc-3">
+                            <label for="hc1-3">Do you have a regular primary care doctor?</label>
                             <ul>
-                                <li><input type="radio" name="hc2" id="hc2-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hc2" id="hc2-2" value="no">No</li>
+                                <li><input type="radio" name="hc3" id="hc3-1" value="yes">Yes</li>
+                                <li><input type="radio" name="hc3" id="hc3-2" value="no">No</li>
                                 <li></li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="hc-3">
-                            <label for="hc3">When did you last see your doctor?(conditional)</label>
-                            <input type="date" name="hc3" id="hc3-1">
-                        </div>
                         <div class="questions" id="hc-4">
-                            <label for="hc4">What is the name of the doctor and location?</label>
-                            <input type="text" name="hc4" id="hc4-1">
+                            <label for="hc4">When did you last see your doctor?(conditional)</label>
+                            <input type="date" name="hc4" id="hc4-1">
                         </div>
-
-                        <fieldset class="questions" id="hc-5">
-                            <label for="hc5">Do you have a regular dentist?</label>
+                        <div class="questions" id="hc-5">
+                            <label for="hc5">What is the name of the doctor and location?(conditonal)</label>
+                            <input type="text" name="hc5" id="hc5-1">
+                        </div>
+                        <fieldset class="questions" id="hc-6">
+                            <label for="hc6">Do you have a regular dentist?</label>
                             <ul>
-                                <li><input type="radio" name="hc5" id="hc5-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hc5" id="hc5-2" value="no">No</li>
+                                <li><input type="radio" name="hc6" id="hc6-1" value="yes">Yes</li>
+                                <li><input type="radio" name="hc6" id="hc6-2" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="hc-6">
-                            <label for="hc6">What is the name of the dentist and the location?</label>
-                            <input type="text" name="hc6" id="hc6-1">
-                        </div>                        
+                        <div class="questions" id="hc-7">
+                            <label for="hc7">When did you last see your dentist?(conditional)</label>
+                            <input type="date" name="hc7" id="hc7-1">
+                        </div>
+                        <div class="questions" id="hc-8">
+                            <label for="hc8">What is the name of the dentist and the location?(conditional)</label>
+                            <input type="text" name="hc8" id="hc8-1">
+                        </div>
+                        <fieldset class="questions" id="hc-9">
+                            <label for="hc9">Do you have any other doctors, therapists, counselors?</label>
+                            <ul>
+                                <li><input type="radio" name="hc9" id="hc9-1" value="yes">Yes</li>
+                                <li><input type="radio" name="hc9" id="hc9-2" value="no">No</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="hc-10">
+                            <label for="hc10">What are their names and locations?(conditional)</label>
+                            <input type="text" name="hc10" id="hc10-1">
+                        </div> 
+                        <fieldset class="questions" id="hc-11">
+                            <label for="hc11">Do you have a case manager or social worker who helps you manage your healthcare?</label>
+                            <ul>
+                                <li><input type="radio" name="hc11" id="hc11-1" value="yes">Yes</li>
+                                <li><input type="radio" name="hc11" id="hc11-2" value="no">No</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="hc-12">
+                            <label for="hc12">What is their name and location?(Conditional)</label>
+                            <input type="text" name="hc12" id="hc12-1">
+                        </div>
+                        <fieldset class="questions" id="hc-13">
+                            <label for="hc13">In general, would you say your health is:</label>
+                            <ul>
+                                <li><input type="radio" name="hc13" id="hc13-1">Poor</li>
+                                <li><input type="radio" name="hc13" id="hc13-2">Fair</li>
+                                <li><input type="radio" name="hc13" id="hc13-3">Good</li>
+                                <li><input type="radio" name="hc13" id="hc13-4">Very goog</li>
+                                <li><input type="radio" name="hc13" id="hc13-5">Excellent</li>
+                            </ul>
+                        </fieldset>
                         <div class="move">
                             <button type="button" class="btn" id="pvPrev">Previous</button>
                             <button type="button" class="btn" id="pvNext">Next</button>
@@ -507,8 +546,38 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        
-
+                        <fieldset class="questions" id="ss-1">
+                            <label for="ss1">Is there someone now that you can depend on if you ever needed help to do a task,
+                                like getting a ride somewhere, or help with shopping or cooking a meal?
+                            </label>
+                            <ul>
+                                <li><input type="radio" name="ss1" id="ss1-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ss1" id="ss1-2" value="no">No</li>
+                                <li><input type="radio" name="ss1" id="ss1-3" value="dont know">Don't know</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ss-2">
+                            <label for="ss2">Are you currently involved with any church, community group, club, etc?</label>
+                            <ul>
+                                <li><input type="radio" name="ss2" id="ss2-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ss2" id="ss2-2" value="no">No</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ss-3">
+                            <label for="ss3">Is there someone you can call when you're feeling down or stressed?</label>
+                            <ul>
+                                <li><input type="radio" name="ss3" id="ss3-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ss3" id="ss3-2" value="no">No</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ss-4">
+                            <label for="ss4">Does a partner, or anyone at home, hurt, hit or threaten you?</label>
+                            <ul>
+                                <li><input type="radio" name="ss4" id="ss4-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ss4" id="ss4-2" value="no">No</li>
+                                <li><input type="radio" name="ss4" id="ss4-3" value="prefer not to say">Prefer not to say</li>
+                            </ul>
+                        </fieldset>
                     </div> 
                 </div>
                 <div class="form">
@@ -520,8 +589,100 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        
-
+                        <fieldset class="questions" id="ls-1">
+                            <label for="ls1">Have you ever been arrested?</label>
+                            <ul>
+                                <li><input type="radio" name="ls1" id="ls1-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls1" id="ls1-2" value="no">No</li>
+                                <li><input type="radio" name="ls1" id="ls1-3" value="prefer not to say">Prefer not to say</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ls-2">
+                            <label for="ls2">Do you have an on going criminal case?</label>
+                            <ul>
+                                <li><input type="radio" name="ls2" id="ls2-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls2" id="ls2-2" value="no">No</li>
+                                <li><input type="radio" name="ls2" id="ls2-3" value="prefer not to say">Prefer not to say</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ls3">
+                            <label for="ls3">Have you ever been in prison or jail?</label>
+                            <ul>
+                                <li><input type="radio" name="ls3" id="ls3-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls3" id="ls3-2" value="no">No</li>
+                                <li><input type="radio" name="ls3" id="ls3-3" value="prefer not to say">Prefer not to say</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="ls-4">
+                            <label for="ls4">When were you last released? What is your CDC/PFN #?(conditional)</label>
+                            <input type="text" name="ls4" id="ls4-1">
+                        </div>
+                        <fieldset class="questions" id="ls-5">
+                            <label for="ls5">Do you owe restitution?</label>
+                            <ul>
+                                <li><input type="radio" name="ls5" id="ls5-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls5" id="ls5-2" value="no">No</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="ls-6">
+                            <label for="ls6">How much?</label>
+                            <input type="text" name="ls6" id="ls6-1">
+                        </div>
+                        <fieldset class="questions" id="ls-7">
+                            <label for="ls7">Are you interested in criminal record clearing?</label>
+                            <ul>
+                                <li><input type="radio" name="ls7" id="ls7-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls7" id="ls7-2" value="no">No</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ls-8">
+                            <label for="ls8">Are you currently on parole or probation?</label>
+                            <ul>
+                                <li><input type="radio" name="ls8" id="ls8-1" value="no">No</li>
+                                <li><input type="radio" name="ls8" id="ls8-2" value="parole">Parole</li>
+                                <li><input type="radio" name="ls8" id="ls8-3" value="probation">Probation</li>
+                                <li><input type="radio" name="ls8" id="ls8-4" value="prefer not to say">Prefer not to say</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions" id="ls-9">
+                            <label for="ls9">What is your parole or probation end date?(conditional)</label>
+                            <input type="date" name="ls9" id="ls9-1">
+                        </div>
+                        <fieldset class="questions" id="ls-10">
+                            <label for="ls10">Are you currently having difficulties in getting a job, housing, or any government
+                                benefits because of your legal status, background or a criminal record?
+                            </label>
+                            <ul>
+                                <li><input type="radio" name="ls10" id="ls10-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls10" id="ls10-2" value="no">No</li>
+                                <li><input type="radio" name="ls10" id="ls10-3" value="prefer not to say">Prefer not to say</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ls-11">
+                            <label for="ls11">Do you have a government issued ID or driver's license?</label>
+                            <ul>
+                                <li><input type="radio" name="ls11" id="ls11-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls11" id="ls11-2" value="no">No</li>
+                        </fieldset>
+                        <fieldset class="questions" id="ls-12">
+                            <label for="ls12">Do you have concerns about your family's immigration status?</label>
+                            <ul>
+                                <li><input type="radio" name="ls12" id="ls12-1" value="yes">Yes</li>
+                                <li><input type="radio" name="ls12" id="ls12-2" value="no">No</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions" id="ls-13">
+                            <div class="label">
+                                <label for="ls13">Do you have concerns with or disputes with your landlord?</label>
+                                <p class="q-help-text">threats of eviction, etc.</p>
+                            </div>
+                            <div class="input">
+                                <ul>
+                                    <li><input type="radio" name="ls13" id="ls13-1" value="yes">Yes</li>
+                                    <li><input type="radio" name="ls13" id="ls13-2" value="no">No</li>
+                                </ul>
+                            </div>
+                        </fieldset>
                     </div> 
                 </div>
                 <div class="form">
