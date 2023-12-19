@@ -19,13 +19,18 @@ body{
     justify-content: center;
     background-color: #94a187;
 }
-.main{
+
+.main {
     margin-top: 50px;
+    width: 100%;max-width: 1600px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
 }
 /* Decorations for the nav/progress bar*/
 .progress-bar{
     position: fixed;
     width: 100%;
+    max-width: 1600px;
     top: 0;
     z-index: 1000;
     padding: 7px 0;
@@ -52,29 +57,30 @@ body{
 /*define the form layout which is two colums*/
 .form{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 30% 1fr;
     position: relative;
     flex-wrap: wrap;
 }
 /*styles for the two section with in the form*/
-.heading{
-   display: flex;
-   flex-direction: column;
-   min-width: 200px;
-   margin: 30px 20px 0;
-   justify-items: center;
+.heading {
+    max-width: 75%;
+    margin: 30px 20px 0;
 }
-.sub-section{
+.sub-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: #ffff;
     padding: 5px 10px;
     margin: 10px 5px;
-    width: 93%;
     border-radius: 3px;
     box-shadow: 0px 0px 3px 1px #54595f;
     z-index: 1;
+    min-width: 90%;
+    max-width: 1400px;
     flex: 1;
-    max-width: 900px;
 }
+
 
 /*styles for the heading and description area*/
 .header{
@@ -94,6 +100,7 @@ body{
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    padding-top: 10px;
     background-color: #94a187;
 }
 /*General Styling for questions and help text*/
@@ -118,14 +125,14 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
     padding: 5px;
     border: none;
     box-shadow: 0px 0px 2px 1px #54595f;
+    width: 95%;
 }
 .questions:hover {
     box-shadow: 0px 0px 2px 0px #54595f;
 }
 .multi-question{
-    display: flex;
-    justify-content: space-between;
-    flex: 0 0 calc(50 - 20px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-wrap: wrap;
 }
 .multi-question .questions{
@@ -133,12 +140,11 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 }
 /*Styling for radio buttions of checks questions*/
 .questions ul{
-    display: flex;
-    flex-wrap: wrap;
     list-style: none;
+    width: 100%;
 }
 .questions li{
-    width: 200px ;
+    min-width: 200px ;
     font-size: 12px;
     margin:2px 0;
 }
