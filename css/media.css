@@ -18,5 +18,9 @@
     .h-help-text{
         margin-top: 5px;
     }
+    .threeOrLess{
+        display: flex;
+        flex-direction: column;
+    }
 
 }

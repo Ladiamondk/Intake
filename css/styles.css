@@ -148,6 +148,14 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
     font-size: 12px;
     margin:2px 0;
 }
+.threeOrLess{
+    display: flex;
+    flex-wrap: wrap;
+}
+.threeOrLess li{
+    min-width: 160px;
+    max-width: 250px;
+}
 /*styling for questions with help text*/
 .q-help-text{
     margin: 0 10px;
