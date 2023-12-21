@@ -107,7 +107,7 @@ body{
 /*General Styling for questions and help text*/
 label{
     margin: 0 5px;
-    font-size: .9em;
+    font-size: .8em;
 }
 input{
     margin: 5px 5px 0;
@@ -118,7 +118,7 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 .question{
     background-color: #f5e2c8;
     padding: 5px 0;
-    min-width: 90%;
+    min-width: 100%;
 }
 .questions{
     background-color: #f5e2c8;
@@ -147,7 +147,7 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 }
 .questions li{
     min-width: 200px ;
-    font-size: .8em;
+    font-size: .72em;
     margin:2px 0;
 }
 .threeOrLess{
@@ -172,6 +172,24 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
     min-width: 3em;
     padding-right: .3em;
     text-indent: -.3em;
+}
+/*Agreement area of the form*/
+.agreements{
+    margin-top: .50em;
+    text-indent: .01em;
+    font-size: .7em;
+}
+.listing{
+    text-indent: .07em;
+    font-size: 1em;
+    padding-left: 1.5em;
+    margin-top: .50em;
+    left: 2em;
+}
+.listing li{
+    list-style-type: square;
+    padding-left: .50em;
+    max-width: 90%;
 }
 /*styles for buttons*/
 button{
@@ -202,7 +220,7 @@ button{
     position: absolute;
     bottom: .4em;
     right: .5em;
-    box-shadow: .2em .3em .2em #54595f;
+    box-shadow: .1em .1em .2em #54595f;
 
 }
 #addEBtn:hover{

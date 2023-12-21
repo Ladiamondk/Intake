@@ -136,7 +136,7 @@
                         <label for="dg14">Sexual Orientation</label>
                         <ul>
                             <li><input type="radio" name="dg14" id="dg14-1" value="Straight/Heterosexual">Straight/Heterosexual</li>
-                            <li><input type="radio" name="dg14" id="dg14-2" value="Gay/Lesbian/Homosexual"> Gay/Lesbian/Homosexual</li>
+                            <li><input type="radio" name="dg14" id="dg14-2" value="Gay/Lesbian/Homosexual">Gay/Lesbian/Homosexual</li>
                             <li><input type="radio" name="dg14" id="dg14-3" value="Bisexual">Bisexual</li>
                             <li><input type="radio" name="dg14" id="dg14-4" value="Prefer not to answer">Prefer not to answer</li>
                             <li><input type="radio" name="dg14" id="dg14-5">Other</li>
@@ -184,12 +184,16 @@
                                 <input type="tel" name="dg21" id="dg21-1">
                             </div>
                         </div>
-
                     </div>
-                    <div class="questions" id="dg22" style="position: relative;" >
-                        <label for="dg22">Emergency Contact Relationship</label>
-                        <input type="text" name="dg22" id="dg22-1">
-                        <button type="button" id="addEBtn" onclick="additionEC()">Add Emergency contact</button>
+                    <div class="multi-question questions" id="dg22">
+                        <div class="question">
+                            <label for="dg22">Emergency Contact Relationship</label>
+                            <input type="text" name="dg22" id="dg22-1">
+                        </div>
+                        <div class="question" style="position: relative;">
+                            <button type="button" id="addEBtn" onclick="additionEC()">Add Emergency contact</button>
+
+                        </div>
                     </div>
                     <div class="questions multi-question" id="dg23-24-25" style="display: none;">
                         <div class="question" id="dg23">
@@ -743,8 +747,8 @@
                     </div>
                     <div class="sub-section">
                         <div class="questions">
-                            <strong>Roots Community Code</strong>
-                            <p>
+                            <strong style="margin-left: .3em;">Roots Community Code</strong>
+                            <p class="agreements">
                                 Roots Community Health Center ("Roots") was started for you and all members of our 
                                 community who need a place to receive care and Information needed to stay healthy. 
                                 Roots is a place of genuine healing, and it is important that everyone respects this 
@@ -753,7 +757,7 @@
                             </p>
                             <br>
                             <strong>Personal Conduct:</strong>
-                            <ul>
+                            <ul class="listing">
                                 <li>
                                     Roots Community Health Center staff will treat patients and community members with
                                     professionalism, courteousness, care and respect.
@@ -772,14 +776,14 @@
                             </ul>
                             <br>
                             <Strong>Appointment Reminders:</Strong>
-                            <p>
+                            <p class="agreements">
                                 In order to keep our schedule efficient and accommodating for all of our patients, we have the following 
                                 guidelines in place Please understand that when you are late, forget, or cancel your appointment without 
                                 giving enough notice, we miss the opportunity to fill that appointment in time, and patients on our waiting 
                                 list miss the opportunity to receive pertinent medical care. We know how easy it is to forget an appointment, 
                                 so we provide courtesy reminder calls 24 hours in advance.
                             </p>
-                            <ul>
+                            <ul class="listing">
                                 <li>If you're scheduled for a 15 minute follow up and arrive MORE than 5 minutes late, your appointment may be canceled or rescheduled. A $5 late fee will also be applied at your next visit.</li>
                                 <li> If you are a no call/no show for 3 consecutive appointments, the Patient Care Coordinator will contact you in efforts to create a plan that supports your continuity of care.</li>
                             </ul>
@@ -792,10 +796,11 @@
                             </ul>
                         </fieldset>
                         <div class="questions">
-                            <Strong>Roots Community Health Clinic Notice of Privacy Preactices</Strong>
+                            <Strong style="margin-left: .3em;">Roots Community Health Clinic Notice of Privacy Preactices</Strong>
+                            <br>
                             <br>
                             <Strong>Our Legal Duty:</Strong>
-                            <p>
+                            <p class="agreements">
                                 We are required by applicable federal and state laws to maintain your protected health information privacy. We 
                                 are also required to give you this notice about our privacy practices, our legal duties, and your rights concerning 
                                 your protected health information. We must follow the privacy practices described in this notice while it is in effect. 
@@ -804,12 +809,12 @@
                             </p>
                             <br>
                             <strong>Uses and Disclosures of Protected Health Information:</strong>
-                            <p>
+                            <p class="agreements">
                                 We will use and disclose your protected health information for treatment, payment, and health care operations. Following are non-exhaustive examples of 
                                 the types of uses and disclosures of your protected health care information that our office may make. For a detailed description, please see the link below.   
                             </p>
                             <br>
-                            <ul> <!--Are these supposed to have actual links>-->
+                            <ul class="listing"> <!--Are these supposed to have actual links>-->
                                 <li>Treatment</li>
                                 <li>Payment</li>
                                 <li>Health Care Operations Required by Law</li>
@@ -821,12 +826,12 @@
                                 <li>Process and Proceedings Death; Organ Donation</li>
                             </ul>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 With limited exceptions, you have the right to look at or get copies of your protected health information. In writing, you must request the contact person 
                                 listed herein to obtain access to your protected health information; fees may apply. For a detailed description, please see the link below. 
                             </p>
                             <br>
-                            <ul>
+                            <ul class="listing">
                                 <li>Acess</li>
                                 <li>Accounting of Disclosures Questions and Complaints</li>
                                 <li>Restriction Requests</li>
@@ -834,13 +839,13 @@
                                 <li>Amendment</li>
                             </ul>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 If you want more information about our privacy practices or have questions or concerns, believe that we may have violated your privacy rights, or you disagree 
                                 with a decision we made about access to your protected health information or in response to a request you made, you may complain to us using the contact information below. 
                             </p>
                             <br>
                             <strong>Point Contact:</strong>
-                            <p>Enomwoyi Kunde, Clinical Quality Administrator,
+                            <p class="agreements">Enomwoyi Kunde, Clinical Quality Administrator,
                                 <br>
                                 <a href="mailto:Enomwoyi@rootsclinic.org">Enomwoyi@rootsclinic.org</a>
                                 <br>
@@ -848,7 +853,7 @@
                             </p>
                             <br>
                             <strong>Others Involved in Your Health Care:</strong>
-                            <p>
+                            <p class="agreements">
                                 Below, you have the opportunity to designate an authorized individual to receive your protected health information and initiate care on your behalf. This authorization will 
                                 remain in effect for the duration of your care unless another form replaces this one. No other person(s) not listed on this form will be permitted to access or initiate 
                                 medical care on your behalf. This includes but is not limited to: asking for refills, scheduling appointments, inquiring for records, discussing medical decisions, etc.
@@ -892,19 +897,19 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <div class="questions">
+                        <div class="questions" >
                             <strong>Targeted Case Management</strong>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 Roots Community Health Center (Roots') was started for you and all members of our
-                                 community who need a place to receive care and information needed to stay healthy. 
-                                 Roots offers you support that will integrate your care 
-                                 management, primary medical care and mental health services, barrier removal services, 
-                                 as well as linkages to social services.
+                                community who need a place to receive care and information needed to stay healthy. 
+                                Roots offers you support that will integrate your care 
+                                management, primary medical care and mental health services, barrier removal services, 
+                                as well as linkages to social services.
                             </p>
                             <br>
                             <strong>Freedom of Choice:</strong>
-                            <p>
+                            <p class="agreements">
                                 Participation in Targeted Case Management (TCM) services is voluntary. At any time 
                                 you may request o referral to another staff member of provider, and may terminate 
                                 services at any time, either in person or in writing. No one will be denied service 
@@ -913,7 +918,7 @@
                             </p>
                             <br>
                             <Strong>Fee Mechanism:</Strong>
-                            <p>
+                            <p class="agreements">
                                 Roots staff will make every effort to enroll you in any programs and benefits that you may 
                                 be entitled to such as Medi-Cal and CalFRESH (food stamps). If you do not qualify for Medi-Cal 
                                 or other coverage, a sliding fee scale is available. The fee may be waived if it is determined 
@@ -931,10 +936,9 @@
                             </ul>
                         </fieldset>
                         <div class="questions">
-                            <p><Strong>Health Measures: </Strong>Health Care Connections Services for Formerly Incarcerated</p>
-                            <p>Healthy Measures Program Services</p>
+                            <p style="text-indent: .01em;"><Strong>Health Measures: </Strong>Health Care Connections Services for Formerly Incarcerated (Healthy Measures Program Services)</p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 Healthy Measures Program is for men and women with chronic illnesses like High Blood Pressure, 
                                 Diabetes, Hepatitis, Asthma and Heart Disease who are returning to the community after incarceration, 
                                 This program will provide you with one-on-one services to give you a "bridge" to caring for yourself/ 
@@ -943,32 +947,32 @@
                                 community, where we will support your transition into care at Roots Community Health Center in East Oakland.  
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 HealthyMeasures offers you support that will integrate your case management, primary medical care, and 
                                 mental health services, barrier removal services, as well as linkage to social services in four phases:  
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                <strong>Phase One:</strong> Pre-release-Transition and short-term goal planning while incarcerated, Roots 
                                Transition Manager will work with you to prioritize your needs and develop a transitional plan. 
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                <strong>Phase Two:</strong> Critical Transition- Roots Transition Managér provides a "Warin Handoff to
                                 your Roots Health Navigator who will link you to your health/mental care, support you in your self-management 
                                 goals, and work with you to assess your barriers.
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                <strong>Phase Three:</strong> Transition- Meaningful engagement with your medical care and Barrier
                                 Removal Activities
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 <strong>Phase Four:</strong> Stabilization- ongoing medical care, barrier removal, and long-term stabilization. 
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 Participation in Healthy Measures services is voluntary. Roots staff will make every effort to enroll you in 
                                 any and all programs and benefits that you may be entitled to such as Medi-Cal and CalFRESH (food stamps), 
                                 beginning before your release whenever possible. You will not be charged for services or denied services based on 
@@ -977,12 +981,12 @@
                                 writing a letter, No one will be denied service.
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 Our appointment policies allow us the time to inform our standby guests of any availability, as well as keeping our 
                                 medical staff's schedules filled, thus better serving everyone.
                             </p>
                             <br>
-                            <p>
+                            <p class="agreements">
                                 Thank you for being a patient at Roots and for helping make Roots Community Health Center a true place of health and well-being.
                                 <br>
                                 Sincerely,
