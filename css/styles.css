@@ -117,15 +117,18 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 .question{
     background-color: #f5e2c8;
     padding: 5px 0;
+    min-width: 90%;
 }
 .questions{
     background-color: #f5e2c8;
     margin: 5px;
     border-radius: 2px;
-    padding: 5px;
+    padding: 5px 10px;
+    text-indent: -.3em;
     border: none;
     box-shadow: 0px 0px 2px 1px #54595f;
     width: 95%;
+
 }
 .questions:hover {
     box-shadow: 0px 0px 2px 0px #54595f;
@@ -160,10 +163,16 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 .q-help-text{
     margin: 0 10px;
     font-size: 10px;
+  
     color: #54595f;
 }
 .q-w-help{
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.label{
+    min-width: 230px;
+    text-indent: -.3em;
 }
 /*styles for buttons*/
 button{

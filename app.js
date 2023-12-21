@@ -26,11 +26,11 @@ app.post('/registration', async(req, res) => {
     try {
         const {dg1, dg2} = req.body;
 
-        const result = await pool.query('INSERT INTO test (dg1, dg2) VALUES ($1, $2) RETURNING *', [dg1, dg2]);
+        const result = await pool.query('INSERT INTO patient (todaydate, rootsemail) VALUES ($1, $2)', [dg1, dg2]);
 
         console.log(result.rows[0]);
 
-        res.send('Formsubmitted successfully!');
+        res.send('Form submitted successfully!');
     } catch(error){
         console.error('Error processing form data:', error);
         res.status(500).send('Internal Server Error');
