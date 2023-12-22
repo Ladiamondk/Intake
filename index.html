@@ -725,8 +725,39 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        
-
+                        <fieldset class="questions">
+                            <label for="">Over the past 3 months, did you ever have difficulties in paying your bills for 
+                                expenses like housing, utilities, child care, transportation, telephone, medical care, or 
+                                other basic needs?
+                            </label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">One Month</li>
+                                <li><input type="radio" name="" id="">Two Months</li>
+                                <li><input type="radio" name="" id="">Every Month</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Does your income generally cover your basic household expenses?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Over the past 3 months, did you ever cut the size of your meals or skip 
+                                meals, because there wasn't enough money for food?
+                            </label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Once or Twice</li>
+                                <li><input type="radio" name="" id="">Several Days</li>
+                                <li><input type="radio" name="" id="">Most Days</li>
+                                <li><input type="radio" name="" id="">Every Day</li>
+                            </ul>
+                        </fieldset>
+                        <!--Theres another question that goes 
+                            here but waying for structural input-->
                     </div> 
                 </div>
                 <div class="form">
@@ -738,8 +769,60 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        
-
+                        <fieldset class="questions">
+                            <label for="">What is the highest level of education you have completed?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">None</li>
+                                <li><input type="radio" name="" id="">Up to 8th grade</li>
+                                <li><input type="radio" name="" id="">Some high school</li>
+                                <li><input type="radio" name="" id="">High school diploma</li>
+                                <li><input type="radio" name="" id="">GED</li>
+                                <li><input type="radio" name="" id="">Trade/tech/vocational training</li>
+                                <li><input type="radio" name="" id="">Associate degree</li>
+                                <li><input type="radio" name="" id="">Some college</li>
+                                <li><input type="radio" name="" id="">Bachelor's degree</li>
+                                <li><input type="radio" name="" id="">Graduate/prof.degree</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Which of the following best describes your work situation today?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">I am employed full-time</li>
+                                <li><input type="radio" name="" id="">I am employed part-time</li>
+                                <li><input type="radio" name="" id="">I am self-employed</li>
+                                <li><input type="radio" name="" id="">I do odd jobs/occasional work</li>
+                                <li><input type="radio" name="" id="">I am unemployed, but looking for work</li>
+                                <li><input type="radio" name="" id="">I am unemployed but not looking for work</li>
+                                <li><input type="radio" name="" id="">I care for a child or family member full time</li>
+                                <li><input type="radio" name="" id="">I am temporarily disabled</li>
+                                <li><input type="radio" name="" id="">I am permanently disabled</li>
+                                <li><input type="radio" name="" id="">I am retired from work</li>
+                            </ul>
+                        </fieldset>
+                        <!--This is a conditional based on user indicating they are employed in the question above-->
+                        <div class="questions">
+                            <label for="">What is the name and location of your employer?</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <fieldset class="questions">
+                            <label for="">Are you currently participating in an educational or training program to improve your work opportunities?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No, but I would like to</li>
+                                <li><input type="radio" name="" id="">No, and I am not interested</li>
+                                <li><input type="radio" name="" id="">No, but I have in the past</li>
+                            </ul>
+                        </fieldset>
+                        <!--this is a conditonal question based on the user answering yes to the question above-->
+                        <div class="questions">
+                            <label for="">What is the name of the program or school?</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <!--this question is a conditional based on the user answering 'No, but I have in the past' to the question above-->
+                        <div class="questions">
+                            <label for="">What is the name of the program and the dates/year attended?</label>
+                            <input type="text" name="" id="">
+                        </div>
                     </div> 
                 </div>
                 <div class="form">
@@ -899,6 +982,43 @@
                         </div>
                     </div>
                     <div class="sub-section">
+                        <fieldset class="questions">
+                            <label for="">Do you have a personal phone where we can easily reach you?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Over the past year, did you ever have difficulty going to work, school, 
+                                shopping, or an appointment, because the lack of convenient transportation?
+                            </label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Once or Twice</li>
+                                <li><input type="radio" name="" id="">Several Days</li>
+                                <li><input type="radio" name="" id="">Most Days</li>
+                                <li><input type="radio" name="" id="">Every Day</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Is there someone now that you can depend on if you ever needed help to do a task, like getting a ride somewhere, or help with shopping or cooking a meal?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="" id="">Don't know</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Which of the following modes of transportation will you typically use to get to Roots?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Public Transportation</li>
+                                <li><input type="radio" name="" id="">My own car</li>
+                                <li><input type="radio" name="" id="">Ride from friend/family</li>
+                                <li><input type="radio" name="" id="">Walk, but I live within 1 mile</li>
+                                <li><input type="radio" name="" id="">Walk, but I live more than 1 mile away</li>
+                            </ul>
+                        </fieldset>
                          <div class="move">
                             <button type="button" class="btn" id="scPrev">Previous</button>
                             <button type="button" class="btn" id="scNext">Next</button>
