@@ -107,7 +107,7 @@ body{
 /*General Styling for questions and help text*/
 label{
     margin: 0 5px;
-    font-size: .8em;
+    font-size: .9em;
 }
 input{
     margin: 5px 5px 0;
@@ -147,7 +147,7 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 }
 .questions li{
     min-width: 200px ;
-    font-size: .72em;
+    font-size: .8em;
     margin:2px 0;
 }
 .threeOrLess{
@@ -172,24 +172,6 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
     min-width: 3em;
     padding-right: .3em;
     text-indent: -.3em;
-}
-/*Agreement area of the form*/
-.agreements{
-    margin-top: .50em;
-    text-indent: .01em;
-    font-size: .7em;
-}
-.listing{
-    text-indent: .07em;
-    font-size: 1em;
-    padding-left: 1.5em;
-    margin-top: .50em;
-    left: 2em;
-}
-.listing li{
-    list-style-type: square;
-    padding-left: .50em;
-    max-width: 90%;
 }
 /*styles for buttons*/
 button{
@@ -218,7 +200,7 @@ button{
     margin-right: 5px;
     display: block;
     position: absolute;
-    bottom: .4em;
+    bottom: 0;
     right: .5em;
     box-shadow: .1em .1em .2em #54595f;
 
@@ -241,6 +223,24 @@ button{
 }
 #screening{
     display: none;
+}
+/*Agreement area of the form*/
+.agreements{
+    margin-top: .50em;
+    text-indent: .01em;
+    font-size: .7em;
+}
+.listing{
+    text-indent: .07em;
+    font-size: 1em;
+    padding-left: 1.5em;
+    margin-top: .50em;
+    left: 2em;
+}
+.listing li{
+    list-style-type: square;
+    padding-left: .50em;
+    max-width: 90%;
 }
 #agreements{
     display: none;
