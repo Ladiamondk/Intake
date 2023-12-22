@@ -234,7 +234,147 @@
         </div>
 <!--medical section of the form-->
             <div id="medical">
-    <!--sub-section for TB screening-->
+    <!--sub-section for Medical History-->
+                <div class="form">
+                    <div class="heading">
+                        <div class="targetEl">
+                            <h1 class="header">Medical History</h1>
+                            <p class="h-help-text">This will contain a brief explanation of the  text area</p>     
+                        </div>
+                    </div>
+                    <div class="sub-section" id="medical-history">
+                        <fieldset class="questions">
+                            <label for="">Have you ever been a smoker?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="" id="">Prefer not to say</li>
+                            </ul>
+                        </fieldset>
+                        <!--this is a conditional question based on user selecting yes-->
+                        <fieldset class="questions">
+                            <label for="">Have you quit?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>
+                        <!--this is a conditional question based on the user selecting yes to quiting-->
+                        <div class="questions">
+                            <label for="">What day did you quit?</label>
+                            <input type="date" name="" id="">
+                        </div>
+                        <div class="questions">
+                            <label for="">List all prescription and non-prescription medication</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="questions">
+                            <label for="">List all allergies or reactions to medications.</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="questions">
+                            <label for="">List all hospitalizations for medical conditions or surgeries. What was the name of the condition 
+                                and the date of the hospitalization?
+                            </label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <fieldset class="questions">
+                            <label for="">Have you received any doses of the COVID-19 vaccine?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>
+                        <div class="questions multi-question">
+                            <fieldset class="question">
+                                <!--this is a conditional question based in the user answering yes to the question above-->
+                                <label for="">Dose 1 brand</label>
+                                <ul>
+                                    <li><input type="radio" name="" id="">Pfizer</li>
+                                    <li><input type="radio" name="" id="">Moderna</li>
+                                    <li><input type="radio" name="" id="">Johnson & Johnson</li>
+                                    <li><input type="radio" name="" id="">Other</li><!--If the  user select yes a text input box should be generated-->
+                                </ul>
+                            </fieldset>  
+                            <div class="question">
+                                <label for="">Dose 1 date</label>
+                                <input type="date" name="" id="">
+                            </div>                      
+                        </div>
+                        <div class="questions multi-question">
+                            <fieldset class="question">
+                                <!--this is a conditional question based in the user answering yes to the question above-->
+                                <label for="">Dose 2 brand</label>
+                                <ul>
+                                    <li><input type="radio" name="" id="">Pfizer</li>
+                                    <li><input type="radio" name="" id="">Moderna</li>
+                                    <li><input type="radio" name="" id="">Johnson & Johnson</li>
+                                    <li><input type="radio" name="" id="">Other</li><!--If the  user select yes a text input box should be generated-->
+                                </ul>
+                            </fieldset>  
+                            <div class="question">
+                                <label for="">Dose 2 date</label>
+                                <input type="date" name="" id="">
+                            </div>                      
+                        </div>
+                        <div class="questions multi-question">
+                            <fieldset class="question">
+                                <!--this is a conditional question based in the user answering yes to the question above-->
+                                <label for="">Dose 3 brand</label>
+                                <ul>
+                                    <li><input type="radio" name="" id="">Pfizer</li>
+                                    <li><input type="radio" name="" id="">Moderna</li>
+                                    <li><input type="radio" name="" id="">Johnson & Johnson</li>
+                                    <li><input type="radio" name="" id="">Other</li><!--If the  user select yes a text input box should be generated-->
+                                </ul>
+                            </fieldset>  
+                            <div class="question">
+                                <label for="">Dose 3 date</label>
+                                <input type="date" name="" id="">
+                            </div>                      
+                        </div>
+                        <div class="questions">
+                            <div class="label">
+                                <label for="">List medical conditions that run in your family and which of your relatives had this condition</label>
+                                <p class="q-help-text">e.g. Diabetes, Heart attacks/Heart problems, Strokes, Cancers</p>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                        <fieldset class="questions">
+                            <label for="">Have you had any of the following vaccinations as an adult?</label>
+                            <ul>
+                                <li><input type="checkbox" name="" id="">Tetanus</li>
+                                <li><input type="checkbox" name="" id="">Flu</li>
+                                <li><input type="checkbox" name="" id="">Pneumonia</li>
+                                <li><input type="checkbox" name="" id="">Shingles/Chicken Pox</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <div class="label">
+                                <label for="">Do you have an advanced healthcare directive?</label>
+                                <p class="q-help-text">living will/durable power of attorney</p>
+                            </div>
+                            <div class="input">
+                                <ul class="threeOrLess">
+                                    <li><input type="radio" name="" id="">Yes</li>
+                                    <li><input type="radio" name="" id="">No</li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                        <!--conditional question based on the users answering yes the question above-->
+                        <fieldset class="questions">
+                            <label for="">Would you like information provided about advanced healthcare directives?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </div>
+                
+                <!--sub-section for TB Testing-->
                 <div class="form">
                     <div class="heading">
                         <div class="targetEl">

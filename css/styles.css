@@ -215,6 +215,9 @@ button{
 #medical{
     display: none;
 }
+fieldset{
+    border: none;
+}
 #preventative{
     display: none;
 }
