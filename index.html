@@ -1177,9 +1177,52 @@
                             <p class="h-help-text">This will contain a brief explanation of the  text area</p>
                         </div>
                     </div>
+                    <div>
+                        <strong>The Alcohol Use Disorders Identification Test (AUDIT)</strong>
+                    </div>
                     <div class="sub-section">
-                        
-
+                        <fieldset class="questions">
+                            <label for="">Have you ever been diagnosed with any of the following mental health conditions (check all that apply)</label>
+                            <ul>
+                                <li><input type="checkbox" name="" id="">Anxiety</li>
+                                <li><input type="checkbox" name="" id="">Biploar Disorder</li>
+                                <li><input type="checkbox" name="" id="">Depression</li>
+                                <li><input type="checkbox" name="" id="">PTSD</li>
+                                <li><input type="checkbox" name="" id="">Schizophrenia</li>
+                                <li><input type="checkbox" name="" id="">None</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">During the past month, how often did poor mental health keep you from doing your usual activities, work, or recreation?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Some Days</li>
+                                <li><input type="radio" name="" id="">More than half the days</li>
+                                <li><input type="radio" name="" id="">Every Day</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">During the past month, how often did you suffer excessive worry about work, school, family, relationships or another important thing in your life?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Some Days</li>
+                                <li><input type="radio" name="" id="">More thhan half the days</li>
+                                <li><input type="radio" name="" id="">Every Day</li>
+                            </ul>
+                        </fieldset>
+                        <!--Question belongs here but waiting
+                             for structure direction-->
+                        <fieldset class="questions">
+                            <label for="">If you checked off any problem in this questionaire so far, how difficult have these problems made 
+                                it for you to do your work, take care of things at home, or get along with other people?
+                            </label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Not difficult at all</li>
+                                <li><input type="radio" name="" id="">Somewhat difficult</li>
+                                <li><input type="radio" name="" id="">Very difficult</li>
+                                <li><input type="radio" name="" id="">Extremely difficult</li>
+                            </ul>
+                        </fieldset>
                     </div>
                 </div>
                 <div class="form">
@@ -1191,6 +1234,229 @@
                         </div>
                     </div>
                     <div class="sub-section">
+                        <!--if user select 'Never' all following questions should be hidden-->
+                        <!--theres a calculation on this question based on the answers 
+                        there maybe a condition based on the calculation of users answers at 
+                        certain points of the screening-->
+                        <fieldset class="questions">
+                            <label for="">How often do you have a drink containing alcohol?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Monthly or less</li>
+                                <li><input type="radio" name="" id="">2 to 4 times a month</li>
+                                <li><input type="radio" name="" id="">2 to 3 times a week</li>
+                                <li><input type="radio" name="" id="">4 or more times a week</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">How many drinks containing alcohol do you have on a typical day when you are drinking?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">1 or 2</li>
+                                <li><input type="radio" name="" id="">3 or 4</li>
+                                <li><input type="radio" name="" id="">5 or 6</li>
+                                <li><input type="radio" name="" id="">7, 8, or 9</li>
+                                <li><input type="radio" name="" id="">10 or more</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">How often do you have six or more drinks on one occasion?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Less than monthly</li>
+                                <li><input type="radio" name="" id="">Monthly</li>
+                                <li><input type="radio" name="" id="">Weekly</li>
+                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                            </ul>
+                        </fieldset>
+                        <!--if the tally = 0 after answering questions 3 and for skip th redt of the alcohol related questions-->
+                        <fieldset class="questions">
+                            <label for="">How often during the last year have you found that you were not able to stop drinking once you had started?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Less than monthly</li>
+                                <li><input type="radio" name="" id="">Monthly</li>
+                                <li><input type="radio" name="" id="">Weekly</li>
+                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">How often during the last year have you failed to do what was normally expected from you because of drinking?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Less than monthly</li>
+                                <li><input type="radio" name="" id="">Monthly</li>
+                                <li><input type="radio" name="" id="">Weekly</li>
+                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">How often during the last year have you needed a first drink in the morning to get yourself going after a heavy drinking session?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Less than monthly</li>
+                                <li><input type="radio" name="" id="">Monthly</li>
+                                <li><input type="radio" name="" id="">Weekly</li>
+                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">How often during the last year have you had a feeling of guilt or remorse after drinking?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Less than monthly</li>
+                                <li><input type="radio" name="" id="">Monthly</li>
+                                <li><input type="radio" name="" id="">Weekly</li>
+                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">How often during the last year have you been unable to remember what happened the night before because you had been drinking?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Less than monthly</li>
+                                <li><input type="radio" name="" id="">Monthly</li>
+                                <li><input type="radio" name="" id="">Weekly</li>
+                                <li><input type="radio" name="" id="">Daily or almosy daily</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Have you or someone else been injured as a result of your drinking?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="" id="">Yes, but not in the last year</li>
+                                <li><input type="radio" name="" id="">Yes, during the last year</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">Has a relative or friend or a doctor or another health worker been concerned about your drinking or suggest you cut down?</label>
+                            <ul >
+                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="" id="">Yes, but not in the last year</li>
+                                <li><input type="radio" name="" id="">Yes, during the last year</li>
+                            </ul>
+                        </fieldset>
+                        <div>
+                            <Strong>Drug Screening Questionaire (DAST)</Strong>
+                        </div>
+                        <fieldset class="questions">
+                            <label for="">Which of the following drugs have you used?</label>
+                            <ul>
+                                <li><input type="checkbox" name="" id="">Methamphetamines (speed, crystal)</li>
+                                <li><input type="checkbox" name="" id="">Cocaine</li>
+                                <li><input type="checkbox" name="" id="">Cannabis (marijuana, pot)</li>
+                                <li><input type="checkbox" name="" id="">Narcotics (heroin, methadone, oxycodone, etc.)</li>
+                                <li><input type="checkbox" name="" id="">Inhalants (paint thinner, aerosol, glue)</li>
+                                <li><input type="checkbox" name="" id="">Hallucinogens (LSD, mushrooms)</li>
+                                <li><input type="checkbox" name="" id="">Tranquilizers (valium)</li>
+                                <li><input type="checkbox" name="" id="">None</li>
+                                <li><input type="checkbox" name="" id="">Other</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="questions">
+                            <label for="">How often have you used these drugs</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Monthly or less</li>
+                                <li><input type="radio" name="" id="">Weekly</li>
+                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Have you ever injected drugs?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Yes, in the past 90 days</li>
+                                <li><input type="radio" name="" id="">Yes, more than 90 days ago</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Have you ever been treated for substance abuse?</label>
+                            <ul>
+                                <li><input type="radio" name="" id="">Never</li>
+                                <li><input type="radio" name="" id="">Currently</li>
+                                <li><input type="radio" name="" id="">In the past</li>
+                            </ul>
+                        </fieldset>                       
+                        <fieldset class="questions">
+                            <label for="">Have you used drugs other than those required for medical reasons?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                      
+                        <fieldset class="questions">
+                            <label for="">Do you abuse more than one drug at a time?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Are you unable to stop using drugs when you want to?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Have you ever had blackouts or flashbacks as a result of drug use?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Do you ever feel bad or guilty about your drug use?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Does your spouse (or parent) ever complain about your involvement with drugs?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Have you neglected your family because of your use of drugs?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Have you engaged in illegal activities in order to obtain drugs?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for="">Have you ever experiences withdrawal symptoms (felt sick) when you stopped taking drugs?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="" id="">Yes</li>
+                                <li><input type="radio" name="" id="">No</li>
+                            </ul>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <div class="label">
+                                <label for="">Have you had medical problems as a result of your drug use?</label>
+                                <p class="q-help-text">e.g. memmory loss, hepatitis, convulsions, bleeding</p>
+                            </div>
+                            <div class="input">
+                                <ul class="threeOrLess">
+                                    <li><input type="radio" name="" id="">Yes</li>
+                                    <li><input type="radio" name="" id="">No</li>
+                                </ul>
+                            </div>
+                        </fieldset>                        
+                        <fieldset class="questions">
+                            <label for=""></label>
+                            <ul>
+
+                            </ul>
+                        </fieldset>
                         <div class="move">
                             <button type="button" class="btn" id="snPrev">Previous</button>
                             <button type="button" class="btn" id="snNext">Next</button>
