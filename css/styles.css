@@ -228,18 +228,19 @@ button{
 .agreements{
     margin-top: .50em;
     text-indent: .01em;
-    font-size: .7em;
+    font-size: .9em;
 }
 .listing{
     text-indent: .07em;
-    font-size: 1em;
+    font-size: .95em;
     padding-left: 1.5em;
-    margin-top: .50em;
+    margin: 1em ;
     left: 2em;
 }
 .listing li{
     list-style-type: square;
     padding-left: .50em;
+    padding-bottom: .2em;
     max-width: 90%;
 }
 #agreements{
