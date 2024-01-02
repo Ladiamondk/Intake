@@ -5,14 +5,8 @@ const social = document.getElementById('social')
 const agreements = document.getElementById('agreements')
 const screening = document.getElementById('screening')
 
-const rd1 = document.getElementById('rd-1')
-const rd2 = document.getElementById('rd-2')
 const rd34 = document.getElementById('rd3-4')
-const rd6 = document.getElementById('rd-6')
 const rd7 = document.getElementById('rd-7')
-const rd8 = document.getElementById('rd-8')
-const rd9101112 = document.getElementById('rd9-10-11-12')
-
 
 /*This area is for operating the next and previous buttons*/
 function next(current, next){
@@ -169,20 +163,18 @@ if(roots_site){
     })
 }
         //gender_identity question
-const gender_identity = document.getElementById('genderIdentity');
-if(gender_identity){
-    let genderIdentified;
+const genderIdentity = document.getElementById('genderIdentity');
+if(genderIdentity){
+    let gender_identified;
     let input;
-    const genderIdentifiedRadios = gender_identity.querySelectorAll('input[type="radio"]');
+    const genderIdentifiedRadios = genderIdentity.querySelectorAll('input[type="radio"]');
 
-    gender_identity.addEventListener('click', () =>{
+    genderIdentity.addEventListener('click', () =>{
         for(let i = 0; i < genderIdentifiedRadios.length; i++){
             if(genderIdentifiedRadios[i].checked){
-                genderIdentified = genderIdentifiedRadios[i].value;
+                gender_identified = genderIdentifiedRadios[i].value;
 
-                if(genderIdentified === 'other'){
-                    gender_identity_other.style.display = 'inline';
-
+                if(gender_identified == 'other'){
                     if(!input){
                         //createing new element
                         input = document.createElement('input');
@@ -190,10 +182,10 @@ if(gender_identity){
                         input.value = '';
                         input.placeholder = 'Please specify';
                         //append to element
-                        gender_identity.appendChild(input); 
+                        genderIdentity.appendChild(input); 
                     }
+                    input.style.display = 'inline';
                 }else{
-                    gender_identity_other.style.display = 'inline';
                     if(input){
                        input.style.display = 'none';
                        input.value = '';
@@ -276,7 +268,7 @@ if(preferredContactMethod){
 
     const preferredContactMethodRadios = preferredContactMethod.querySelectorAll('input[type="radio"]');
     preferredContactMethod.addEventListener('click', () => {
-        for(let i = 0; preferredContactMethodRadios.length; i++){
+        for(let i = 0;i < preferredContactMethodRadios.length; i++){
             if(preferredContactMethodRadios[i].checked){
                 OtherpreferredContactMethod = preferredContactMethodRadios[i].value;
                 if(OtherpreferredContactMethod == 'other'){
@@ -421,58 +413,260 @@ function additionEC(){
         addEContact.style.display = 'none';
     }   
 }
-//Reproductive section of the form
-//Pregnant
-const rd3 = document.getElementById('rd-3');
-if(rd1){
-    let pregVal;
-    const pregRadios = rd1.querySelectorAll('input[type="radio"]');
-    rd1.addEventListener('click', () => {
-        for(let i = 0; i < pregRadios.length; i++){
-            if(pregRadios[i].checked){
-                pregVal = pregRadios[i].value;
-                if(pregVal == 'no' || pregVal == 'dont know'){
-                    rd2.style.display = 'none';
-                    rd3.style.display = 'none';
-                    rd7.style.display = 'block';
-                } else if(pregVal == 'yes'){
-                    rd2.style.display = 'block';
-                    rd3.style.display = 'block';
-                    rd7.style.display = 'none';
+//Medical History section of the form
+//creates a text input element if other is selected
+        //Dose Brand 1 questiondoseBrand1
+const doseBrand1 = document.getElementById('doseBrand1');
+if(doseBrand1){
+    let input;
+    let otherDoseBrand1;
+
+    const doseBrand1Randios = doseBrand1.querySelectorAll('input[type="radio"]');
+    doseBrand1.addEventListener('click', () => {
+        for(let i = 0; doseBrand1Randios.length; i++){
+            if(doseBrand1Randios[i].checked){
+                otherDoseBrand1 = doseBrand1Randios[i].value;
+                if(otherDoseBrand1 == 'other'){
+                    if(!input){
+                        input = document.createElement('input');
+                        input.value = '';
+                        input.placeholder = 'Please specify';
+                        input.name = 'doseBrand1';
+
+                        doseBrand1.appendChild(input);
+                    }
+                    input.style.display = 'inline';
+                } else {
+                    if(input){
+                        input.name = '';
+                        input.value = '';
+                        input.style.display = 'none';
+                    }  
                 }
             }
         }
     })
 }
-//prenatal 
-if(rd2){
+        //Dose Brand 2 question
+const doseBrand2 = document.getElementById('doseBrand2');
+if(doseBrand2){
+    let input;
+    let otherDoseBrand2;
+        
+    const doseBrand2Randios = doseBrand2.querySelectorAll('input[type="radio"]');
+    doseBrand2.addEventListener('click', () => {
+        for(let i = 0; doseBrand2Randios.length; i++){
+            if(doseBrand2Randios[i].checked){
+                otherDoseBrand2 = doseBrand2Randios[i].value;
+                if(otherDoseBrand2 == 'other'){
+                    if(!input){
+                        input = document.createElement('input');
+                        input.value = '';
+                        input.placeholder = 'Please specify';
+                        input.name = 'doseBrand2';
+        
+                        doseBrand2.appendChild(input);
+                    }
+                    input.style.display = 'inline';
+                } else {
+                    if(input){
+                        input.name = '';
+                        input.value = '';
+                        input.style.display = 'none';
+                    }  
+                }
+            }
+        }
+    })
+}
+        //Dose Band 3 question
+const doseBrand3 = document.getElementById('doseBrand3');
+if(doseBrand3){
+    let input;
+    let otherDoseBrand3;
+        
+    const doseBrand3Randios = doseBrand3.querySelectorAll('input[type="radio"]');
+    doseBrand3.addEventListener('click', () => {
+        for(let i = 0; doseBrand3Randios.length; i++){
+            if(doseBrand3Randios[i].checked){
+                otherDoseBrand3 = doseBrand3Randios[i].value;
+                if(otherDoseBrand3 == 'other'){
+                    if(!input){
+                        input = document.createElement('input');
+                        input.value = '';
+                        input.placeholder = 'Please specify';
+                        input.name = 'doseBrand1';
+        
+                        doseBrand3.appendChild(input);
+                    }
+                    input.style.display = 'inline';
+                } else {
+                    if(input){
+                        input.name = '';
+                        input.value = '';
+                        input.style.display = 'none';
+                    }  
+                }
+            }
+        }
+    })
+}
+//Medical History dynamic Questions
+        //Smoking history and currently smoke
+const currentlySmoke = document.getElementById('currentlySmoke');
+const currentlySmokeRadios = currentlySmoke.querySelectorAll('input[type="radio"]');
+currentlySmoke.style.display = 'none';
+const smokingHistory = document.getElementById('smokingHistory');
+if(smokingHistory){
+    let history;
+    const smokingHistoryRadios = smokingHistory.querySelectorAll('input[type="radio"]');
+    smokingHistory.addEventListener('click', () => {
+        for(let i = 0; smokingHistoryRadios.length; i++){
+            if(smokingHistoryRadios[i].checked){
+                history = smokingHistoryRadios[i].value;
+                if(history == 'yes'){
+                    currentlySmoke.style.display = 'block';
+                } else {
+                    currentlySmoke.style.display = 'none';
+                    const currentlySmokeRadios = currentlySmoke.querySelectorAll('input[type="radio"]');
+                    currentlySmokeRadios.forEach(radio => {
+                        radio.checked = false;
+                    })
+                }
+            }
+        }
+    })
+}
+        //date quit smoking question
+const dateQuit = document.getElementById('dateQuit');
+dateQuit.style.display = 'none';
+if(currentlySmoke){
+    let quitSmoke;
+    currentlySmoke.addEventListener('click', () => {
+          for(let i = 0; currentlySmokeRadios.length; i++){
+            if(currentlySmokeRadios[i].checked){
+                quitSmoke = currentlySmokeRadios[i].value;
+                if(quitSmoke == 'yes'){
+                    dateQuit.style.display = 'block';
+                } else {
+                    dateQuit.style.display = 'none';
+                }
+            }
+
+        }  
+    })
+}
+        //covidHistory dynamic functionality
+const covidVaccinationHistory = document.getElementById('covidVaccinationHistory');
+const doseBrand1Set = document.getElementById('doseBrand1-set');
+doseBrand1Set.style.display = 'none';
+const doseBrand2Set = document.getElementById('doseBrand2-set');
+doseBrand2Set.style.display = 'none';
+const doseBrand3Set = document.getElementById('doseBrand3-set');
+doseBrand3Set.style.display = 'none';
+
+if(covidVaccinationHistory){
+    let covidVaccinatied;
+    const covidVaccinationHistoryRadios = covidVaccinationHistory.querySelectorAll('input[type="radio"]');
+    covidVaccinationHistory.addEventListener('click', () => {
+        for(let i = 0; i < covidVaccinationHistoryRadios.length; i++){
+            if(covidVaccinationHistoryRadios[i].checked){
+                covidVaccinatied = covidVaccinationHistoryRadios[i].value;
+                if(covidVaccinatied == 'yes'){
+                    doseBrand1Set.style.display = 'block'
+                    doseBrand2Set.style.display = 'block'
+                    doseBrand3Set.style.display = 'block'
+                } else {
+                    doseBrand1Set.style.display = 'none'
+                    doseBrand2Set.style.display = 'none'
+                    doseBrand3Set.style.display = 'none' 
+                }
+            }
+        }
+    })
+}
+        //advanceHealthcareDirective question dynamic functionality
+const advanceHealthcareDirective = document.getElementById('advanceHealthcareDirective');
+const advanceHealthcareDirectiveInquiry = document.getElementById('advanceHealthcareDirectiveInquiry');
+advanceHealthcareDirectiveInquiry.style.display = 'none';
+
+if(advanceHealthcareDirective){
+    let advanceHealthcare;
+    const advanceHealthcareDirectiveRadios = advanceHealthcareDirective.querySelectorAll('input[type="radio"]');
+    advanceHealthcareDirective.addEventListener('click', () => {
+        for(let i = 0; i < advanceHealthcareDirectiveRadios.length; i++){
+            if(advanceHealthcareDirectiveRadios[i].checked){
+                advanceHealthcare = advanceHealthcareDirectiveRadios[i].value;
+                if(advanceHealthcare == 'no');
+                advanceHealthcareDirectiveInquiry.style.display = 'block';
+            }else{
+                advanceHealthcareDirectiveInquiry.style.display = 'none';
+                const advanceHealthcareDirectiveInquiryRadios = advanceHealthcareDirectiveInquiry.querySelectorAll('input[type="radio"]');
+                advanceHealthcareDirectiveInquiryRadios.forEach(radio => {
+                    radio.checked = false;
+                });
+            }
+        }
+    })
+}
+//Reproductive section of the form
+        //pregnanciesStatus question dynamic  functionality
+const pregnanciesStatus = document.getElementById('pregnanciesStatus')
+const prenatalCareStatus = document.getElementById('prenatalCareStatus')
+prenatalCareStatus.style.display = 'none';
+const prenatalDoctor = document.getElementById('prenatalDoctor');
+prenatalDoctor.style.display = 'none'
+const emergencyContraception = document.getElementById('emergencyContraception')
+
+if(pregnanciesStatus){
+    let pregVal;
+    const pregRadios = pregnanciesStatus.querySelectorAll('input[type="radio"]');
+    pregnanciesStatus.addEventListener('click', () => {
+        for(let i = 0; i < pregRadios.length; i++){
+            if(pregRadios[i].checked){
+                pregVal = pregRadios[i].value;
+                if(pregVal == 'no' || pregVal == 'dont know'){
+                    prenatalCareStatus.style.display = 'none';
+                    emergencyContraception.style.display = 'block';
+                } else if(pregVal == 'yes'){
+                    prenatalCareStatus.style.display = 'block';
+                    emergencyContraception.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+        //prenatal 
+if(prenatalCareStatus){
     let prenatalVal;
-    const prenatalRadios = rd2.querySelectorAll('input[type="radio"]');
-    rd2.addEventListener('click', () => {
+    const prenatalRadios = prenatalCareStatus.querySelectorAll('input[type="radio"]');
+    prenatalCareStatus.addEventListener('click', () => {
     for(let i = 0; i < prenatalRadios.length; i++){
             if(prenatalRadios[i].checked){
                 prenatalVal = prenatalRadios[i].value;
                 if(prenatalVal == 'no'||prenatalVal == 'dont know'){
-                    rd3.style.display = 'none';
+                    prenatalDoctor.style.display = 'none';
                 }else{
-                    rd3.style.display = 'block';
+                    prenatalDoctor.style.display = 'block';
                 }
             }
         }
     })  
 }
-//pregnancies
-if(rd8){
+        //pregnancies
+const pregnancyQuestion = document.getElementById('pregnancyQuestion');
+pregnancyQuestion.style.display = 'none';
+if(pregnanciesHistory){
     let pregnanciesVal;
-    const pregnanciesRadios = rd8.querySelectorAll('input[type="radio"]');
-    rd8.addEventListener('click', () => {
+    const pregnanciesRadios = pregnanciesHistory.querySelectorAll('input[type="radio"]');
+    pregnanciesHistory.addEventListener('click', () => {
         for(let i = 0; i < pregnanciesRadios.length; i++){
             if(pregnanciesRadios[i].checked){
                 pregnanciesVal = pregnanciesRadios[i].value;
                 if(pregnanciesVal == 'no'){
-                    rd9101112.style.display = 'none';
+                    pregnancyQuestion.style.display = 'none';
                 }else{
-                    rd9101112.style.display = 'block';
+                    pregnancyQuestion.style.display = 'grid';
                 }
             }
         }

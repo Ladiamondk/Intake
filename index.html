@@ -325,132 +325,132 @@
                         </div>
                     </div>
                     <div class="sub-section" id="medical-history">
-                        <fieldset class="questions">
-                            <label for="">Have you ever been a smoker?</label>
+                        <fieldset class="questions" id="smokingHistory">
+                            <label for="smokingHistory">Have you ever been a smoker?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
-                                <li><input type="radio" name="" id="">Prefer not to say</li>
+                                <li><input type="radio" name="smokingHistory" id="smokingHistory-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="smokingHistory" id="smokingHistory-no" value="no">No</li>
+                                <li><input type="radio" name="smokingHistory" id="smokingHistory-notAnswered" value="prefer not to answer">Prefer not to say</li>
                             </ul>
                         </fieldset>
                         <!--this is a conditional question based on user selecting yes-->
-                        <fieldset class="questions">
-                            <label for="">Have you quit?</label>
+                        <fieldset class="questions" id="currentlySmoke">
+                            <label for="currentlySmoke">Have you quit?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="currentlySmoke" id="currentlySmoke-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="currentlySmoke" id="currentlySmoke-no" value="no">No</li>
                             </ul>
                         </fieldset>
                         <!--this is a conditional question based on the user selecting yes to quiting-->
-                        <div class="questions">
-                            <label for="">What day did you quit?</label>
-                            <input type="date" name="" id="">
+                        <div class="questions" id="dateQuit">
+                            <label for="dateQuit">What day did you quit?</label>
+                            <input type="date" name="dateQuit" id="dateQuit-date">
                         </div>
-                        <div class="questions">
-                            <label for="">List all prescription and non-prescription medication</label>
-                            <input type="text" name="" id="">
+                        <div class="questions" id="prescription">
+                            <label for="prescription">List all prescription and non-prescription medication</label>
+                            <input type="text" name="prescription" id="prescription-list">
                         </div>
-                        <div class="questions">
-                            <label for="">List all allergies or reactions to medications.</label>
-                            <input type="text" name="" id="">
+                        <div class="questions" id="allergies">
+                            <label for="allergies">List all allergies or reactions to medications.</label>
+                            <input type="text" name="allergies" id="allergies-list">
                         </div>
-                        <div class="questions">
-                            <label for="">List all hospitalizations for medical conditions or surgeries. What was the name of the condition 
+                        <div class="questions" id="hospitalizations">
+                            <label for="hospitalizations">List all hospitalizations for medical conditions or surgeries. What was the name of the condition 
                                 and the date of the hospitalization?
                             </label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="hospitalizations" id="hospitalizations-list">
                         </div>
-                        <fieldset class="questions">
-                            <label for="">Have you received any doses of the COVID-19 vaccine?</label>
+                        <fieldset class="questions" id="covidVaccinationHistory">
+                            <label for="covidVaccinationHistory">Have you received any doses of the COVID-19 vaccine?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="covidVaccinationHistory" id="covidVaccinationHistory-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="covidVaccinationHistory" id="covidVaccinationHistory-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions multi-question">
-                            <fieldset class="question">
+                        <div class="questions multi-question" id="doseBrand1-set">
+                            <fieldset class="question" id="doseBrand1">
                                 <!--this is a conditional question based in the user answering yes to the question above-->
-                                <label for="">Dose 1 brand</label>
+                                <label for="doseBrand1">Dose 1 brand</label>
                                 <ul>
-                                    <li><input type="radio" name="" id="">Pfizer</li>
-                                    <li><input type="radio" name="" id="">Moderna</li>
-                                    <li><input type="radio" name="" id="">Johnson & Johnson</li>
-                                    <li><input type="radio" name="" id="">Other</li><!--If the  user select yes a text input box should be generated-->
+                                    <li><input type="radio" name="doseBrand1" id="doseBrand1-pfizer" value="pfizer">Pfizer</li>
+                                    <li><input type="radio" name="doseBrand1" id="doseBrand1-moderna" value="moderna">Moderna</li>
+                                    <li><input type="radio" name="doseBrand1" id="doseBrand1-johnson" value="johnson & johnson">Johnson & Johnson</li>
+                                    <li><input type="radio" name="doseBrand1" id="doseBrand1-other" value="other">Other</li><!--If the  user select yes a text input box should be generated-->
                                 </ul>
                             </fieldset>  
-                            <div class="question">
-                                <label for="">Dose 1 date</label>
-                                <input type="date" name="" id="">
+                            <div class="question" id="doseBrand1Date">
+                                <label for="doseBrand1Date">Dose 1 date</label>
+                                <input type="date" name="doseBrand1Date" id="doseBrand1-date">
                             </div>                      
                         </div>
-                        <div class="questions multi-question">
-                            <fieldset class="question">
+                        <div class="questions multi-question" id="doseBrand2-set">
+                            <fieldset class="question" id="doseBrand2">
                                 <!--this is a conditional question based in the user answering yes to the question above-->
-                                <label for="">Dose 2 brand</label>
+                                <label for="doseBrand2">Dose 2 brand</label>
                                 <ul>
-                                    <li><input type="radio" name="" id="">Pfizer</li>
-                                    <li><input type="radio" name="" id="">Moderna</li>
-                                    <li><input type="radio" name="" id="">Johnson & Johnson</li>
-                                    <li><input type="radio" name="" id="">Other</li><!--If the  user select yes a text input box should be generated-->
+                                    <li><input type="radio" name="doseBrand2" id="doseBrand2-pfizer" value="pfizer">Pfizer</li>
+                                    <li><input type="radio" name="doseBrand2" id="doseBran2-moderna" value="moderna">Moderna</li>
+                                    <li><input type="radio" name="doseBrand2" id="doseBrand2-johnson" value="johnson & johnson">Johnson & Johnson</li>
+                                    <li><input type="radio" name="doseBrand2" id="doseBrand2-other" value="other">Other</li><!--If the  user select yes a text input box should be generated-->
                                 </ul>
                             </fieldset>  
-                            <div class="question">
-                                <label for="">Dose 2 date</label>
-                                <input type="date" name="" id="">
+                            <div class="question" id="doseBrand2Date">
+                                <label for="doseBrand2Date">Dose 2 date</label>
+                                <input type="date" name="doseBrand2Date" id="doseBrand2-date">
                             </div>                      
                         </div>
-                        <div class="questions multi-question">
-                            <fieldset class="question">
+                        <div class="questions multi-question" id="doseBrand3-set">
+                            <fieldset class="question" id="doseBrand3">
                                 <!--this is a conditional question based in the user answering yes to the question above-->
-                                <label for="">Dose 3 brand</label>
+                                <label for="doseBrand3">Dose 3 brand</label>
                                 <ul>
-                                    <li><input type="radio" name="" id="">Pfizer</li>
-                                    <li><input type="radio" name="" id="">Moderna</li>
-                                    <li><input type="radio" name="" id="">Johnson & Johnson</li>
-                                    <li><input type="radio" name="" id="">Other</li><!--If the  user select yes a text input box should be generated-->
+                                    <li><input type="radio" name="doseBrand3" id="doseBrand3-pfizer" value="pfizer">Pfizer</li>
+                                    <li><input type="radio" name="doseBrand3" id="doseBrand3-moderna" value="moderna">Moderna</li>
+                                    <li><input type="radio" name="doseBrand3" id="doseBrand3-johnson" value="johnson & johnson">Johnson & Johnson</li>
+                                    <li><input type="radio" name="doseBrand3" id="doseBrand3-other" value="other">Other</li><!--If the  user select yes a text input box should be generated-->
                                 </ul>
                             </fieldset>  
-                            <div class="question">
-                                <label for="">Dose 3 date</label>
-                                <input type="date" name="" id="">
+                            <div class="question" id="doseBrand3Date">
+                                <label for="doseBrand3Date">Dose 3 date</label>
+                                <input type="date" name="doseBrand3Date" id="doseBrand3-date">
                             </div>                      
                         </div>
-                        <div class="questions">
+                        <div class="questions" id="familyHistory">
                             <div class="label">
-                                <label for="">List medical conditions that run in your family and which of your relatives had this condition</label>
+                                <label for="familyHistory">List medical conditions that run in your family and which of your relatives had this condition</label>
                                 <p class="q-help-text">e.g. Diabetes, Heart attacks/Heart problems, Strokes, Cancers</p>
                             </div>
                             <div class="input">
-                                <input type="text" name="" id="">
+                                <input type="text" name="familyHistory" id="familyHistory-list">
                             </div>
                         </div>
-                        <fieldset class="questions">
-                            <label for="">Have you had any of the following vaccinations as an adult?</label>
+                        <fieldset class="questions" id="vaccinationHistory">
+                            <label for="vaccinationHistory">Have you had any of the following vaccinations as an adult?</label>
                             <ul>
-                                <li><input type="checkbox" name="" id="">Tetanus</li>
-                                <li><input type="checkbox" name="" id="">Flu</li>
-                                <li><input type="checkbox" name="" id="">Pneumonia</li>
-                                <li><input type="checkbox" name="" id="">Shingles/Chicken Pox</li>
+                                <li><input type="checkbox" name="vaccinationHistory" id="vaccinationHistory-tetanus" value="tetanus">Tetanus</li>
+                                <li><input type="checkbox" name="vaccinationHistory" id="vaccinationHistory-flu" value="flu">Flu</li>
+                                <li><input type="checkbox" name="vaccinationHistory" id="vaccinationHistory-pneumonia" value="pneumonia">Pneumonia</li>
+                                <li><input type="checkbox" name="vaccinationHistory" id="vaccinationHistory-shingles" value="singles/chicken pox">Shingles/Chicken Pox</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="advanceHealthcareDirective">
                             <div class="label">
-                                <label for="">Do you have an advanced healthcare directive?</label>
+                                <label for="advanceHealthcareDirective">Do you have an advanced healthcare directive?</label>
                                 <p class="q-help-text">living will/durable power of attorney</p>
                             </div>
                             <div class="input">
                                 <ul class="threeOrLess">
-                                    <li><input type="radio" name="" id="">Yes</li>
-                                    <li><input type="radio" name="" id="">No</li>
+                                    <li><input type="radio" name="advanceHealthcareDirective" id="advanceHealthcareDirective-yes" value="yes">Yes</li>
+                                    <li><input type="radio" name="advanceHealthcareDirective" id="advanceHealthcareDirective-no" value="no">No</li>
                                 </ul>
                             </div>
                         </fieldset>
                         <!--conditional question based on the users answering yes the question above-->
-                        <fieldset class="questions">
-                            <label for="">Would you like information provided about advanced healthcare directives?</label>
+                        <fieldset class="questions" id="advanceHealthcareDirectiveInquiry">
+                            <label for="advanceHealthcareDirectiveInquiry">Would you like information provided about advanced healthcare directives?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="advanceHealthcareDirectiveInquiry" id="advanceHealthcareDirectiveInquiry-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="advanceHealthcareDirectiveInquiry" id="advanceHealthcareDirectiveInquiry-no" value="no">No</li>
                             </ul>
                         </fieldset>
                     </div>
@@ -465,53 +465,53 @@
                         </div>
                     </div>
                     <div class="sub-section" id="tb-testing">
-                        <fieldset class="questions" id="tb1">
-                            <label for="tb1"> Have you previously tested positive for TB?</label>
+                        <fieldset class="questions" id="tb_testingHistory">
+                            <label for="tb_testingHistory"> Have you previously tested positive for TB?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="tb1" id="tb1yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="tb1" id="tb1no" value="no"> No  </li>
+                                <li><input type="radio" name="tb_testingHistory" id="tb_testingHistory-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="tb_testingHistory" id="tb_testingHistory-no" value="no"> No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="tb2">
-                            <label for="tb2">Have you been in close contact to someone with infectious TB disease at any time?</label>
+                        <fieldset class="questions" id="tb_testingContact">
+                            <label for="tb_testingContact">Have you been in close contact to someone with infectious TB disease at any time?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="tb2" id="tb2yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="tb2" id="tb2no" value="no"> No</li>
+                                <li><input type="radio" name="tb_testingContact" id="tb_testingContact-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="tb_testingContact" id="tb_testingContact-no" value="no"> No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="tb3">
+                        <fieldset class="questions" id="immunosuppression">
                             <div class="label">
-                                <label for="tb3">Do you currently have a weakened immune system(immunosuppression)?</label>
+                                <label for="immunosuppression">Do you currently have a weakened immune system(immunosuppression)?</label>
                                 <p class="q-help-text">This may include HIV infected, organ transplant recipents, and those treated with TNF-alpha antagonist/infliximab/etanercept/others, steroids/prenisone, or other immunosuppressive medications</p>
                             </div>
                             <div class="input">
                                 <ul class="threeOrLess">
-                                    <li><input type="radio" name="tb3" id="tb3yes" value="yes"> Yes</li>
-                                    <li><input type="radio" name="tb3" id="tb3no" value="no"> No</li>
+                                    <li><input type="radio" name="immunosuppression" id="immunosuppression-yes" value="yes"> Yes</li>
+                                    <li><input type="radio" name="immunosuppression" id="tb3no" value="immunosuppression-no"> No</li>
                                 </ul>
                             </div>                            
                         </fieldset>
-                        <fieldset class="questions" id="tb4">
+                        <fieldset class="questions" id="tb_ForiegnCountryExposure">
                             <div class="label">
-                                <label for="tb4">Have you given birth, traveled, or been a residence of at least 1 month in a country with elevated rate of TB?</label>
+                                <label for="tb_ForiegnCountryExposure">Have you given birth, traveled, or been a residence of at least 1 month in a country with elevated rate of TB?</label>
                                 <p class="q-help-text">Any country other than United States, Canada, Australia, New Zealand, or a country in western or northern Europe</p>
                             </div>
                             <div class="input">
                                 <ul class="threeOrLess">
-                                    <li><input type="radio" name="tb4" id="tb4yes" value="yes"> Yes</li>
-                                    <li><input type="radio" name="tb4" id="tb4no" value="no"> No</li>
+                                    <li><input type="radio" name="tb_ForiegnCountryExposure" id="tb_ForiegnCountryExposure-yes" value="yes"> Yes</li>
+                                    <li><input type="radio" name="tb_ForiegnCountryExposure" id="tb_ForiegnCountryExposure-no" value="no"> No</li>
                                 </ul>
                             </div>
                         </fieldset>
-                        <fieldset class="questions" id="tb5">
+                        <fieldset class="questions" id="tb_CongregateSettingExposure">
                             <div class="label">
                                 <label for="tb5">Have you been a resident, employee, or volunteer of a high-risk congregate setting or served clients who are at risk for active TB disease?</label>
                                 <p class="q-help-text">e.g, correctional facilities(including juvenile hall), long-term care facilities, homeless shelters, or homeless encampments</p>    
                             </div>
                             <div class="input">
                                 <ul class="threeOrLess">
-                                    <li><input type="radio" name="tb5" id="tb5yes" value="yes"> Yes</li>
-                                    <li><input type="radio" name="tb5" id="tb5no" value="no"> No</li>
+                                    <li><input type="radio" name="tb_CongregateSettingExposure" id="tb_CongregateSettingExposure-yes" value="yes"> Yes</li>
+                                    <li><input type="radio" name="tb_CongregateSettingExposure" id="tb_CongregateSettingExposure-no" value="no"> No</li>
                                 </ul>
                             </div>  
                         </fieldset>
@@ -526,77 +526,76 @@
                         </div>
                     </div>
                     <div class="sub-section" id="reproductive">
-                        <fieldset class="questions" id="rd-1">
-                            <label for="rd1">Are you currently pregnant?</label>
+                        <fieldset class="questions" id="pregnanciesStatus">
+                            <label for="pregnanciesStatus">Are you currently pregnant?</label>
                             <ul class="threeOrLess"> 
-                                <li><input type="radio" name="rd1" id="rd1yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="rd1" id="rd1no" value="no"> No</li>
-                                <li><input type="radio" name="rd1" id="rd1dk" value="dont know"> Don't know</li>
+                                <li><input type="radio" name="pregnanciesStatus" id="pregnanciesStatus-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="pregnanciesStatus" id="pregnanciesStatus-no" value="no"> No</li>
+                                <li><input type="radio" name="pregnanciesStatus" id="pregnanciesStatus-dontKnow" value="dont know"> Don't know</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="rd-2">
-                            <label for="rd2">Do you receive prenatal care?</label>
+                        <fieldset class="questions" id="prenatalCareStatus">
+                            <label for="prenatalCareStatus">Do you receive prenatal care?</label>
                             <ul class="threeOrLess">
                                
-                                <li><input type="radio" name="rd2" id="rd2yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="rd2" id="rd2no" value="no"> No</li>
-                                <li><input type="radio" name="rd2" id="rd2dk" value="dont know"> Don't know</li>
+                                <li><input type="radio" name="prenatalCareStatus" id="prenatalCareStatus-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="prenatalCareStatus" id="prenatalCareStatus-no" value="no"> No</li>
+                                <li><input type="radio" name="prenatalCareStatus" id="prenatalCareStatus-dontKnow" value="dont know"> Don't know</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="rd-3">
-                            <label for="rd3">Name of Doctor Providing Prenatal Care</label>
-                            <input type="text" name="rd3" id="rd3-1">
+                        <div class="questions" id="prenatalDoctor">
+                            <label for="prenatalDoctor">Name of Doctor Providing Prenatal Care</label>
+                            <input type="text" name="prenatalDoctor" id="prenatalDoctor-input">
                         </div>
-                        <div class="questions" id="rd-4">
-                            <label for="rd4">When was your last mentrual period?</label>
-                            <input type="date" name="rd4" id="rd4-1">
+                        <div class="questions" id="lastMentrualPeriod">
+                            <label for="lastMentrualPeriod">When was your last mentrual period?</label>
+                            <input type="date" name="lastMentrualPeriod" id="lastMentrualPeriod-answered">
                         </div>
-                        <fieldset class="questions" id="rd-5">
-                            <label for="rd5">In the past 6 months, have you had multiple or anonymous sex?</label>
+                        <fieldset class="questions" id="past6Months_multipleSexPartners">
+                            <label for="past6Months_multipleSexPartners">In the past 6 months, have you had multiple or anonymous sex?</label>
                             <ul class="threeOrLess">
                                
-                                <li><input type="radio" name="rd5" id="rd5yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="rd5" id="rd5no" value="no"> No</li>
-                                <li><input type="radio" name="rd5" id="rd5dk" value="decline"> Decline to specify</li>
+                                <li><input type="radio" name="past6Months_multipleSexPartners" id="past6Months_multipleSexPartners-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="past6Months_multipleSexPartners" id="past6Months_multipleSexPartners-no" value="no"> No</li>
+                                <li><input type="radio" name="past6Months_multipleSexPartners" id="past6Months_multipleSexPartners-dontKnow" value="decline"> Decline to specify</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="rd-6">
-                            <label for="rd6">What is your current method of birth control/prevention?</label>
-                            <input type="text" name="rd6" id="rd6-1">
+                        <div class="questions" id="birthControlMethod">
+                            <label for="birthControlMethod">What is your current method of birth control/prevention?</label>
+                            <input type="text" name="birthControlMethod" id="birthControlMethod-input">
                         </div>                    
-                        <fieldset class="questions" id="rd-7">
-                            <label for="rd7">Do you think you need the morning after pill(emergency contraception) today?</label>
+                        <fieldset class="questions" id="emergencyContraception">
+                            <label for="emergencyContraception">Do you think you need the morning after pill(emergency contraception) today?</label>
                             <ul class="threeOrLess">
                                 
-                                <li><input type="radio" name="rd7" id="rd7yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="rd7" id="rd7no" value="no"> No</li>
-                                <li><input type="radio" name="rd7" id="rd7dk" value="dont know"> Don't know</li>
+                                <li><input type="radio" name="emergencyContraception" id="emergencyContraception-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="emergencyContraception" id="emergencyContraception-no" value="no"> No</li>
+                                <li><input type="radio" name="emergencyContraception" id="emergencyContraception-dontKnow" value="dont know"> Don't know</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="rd-8">
-                            <label for="rd8">Have you ever been pregnant?</label>
+                        <fieldset class="questions" id="pregnanciesHistory">
+                            <label for="pregnanciesHistory">Have you ever been pregnant?</label>
                             <ul class="threeOrLess">
-                                
-                                <li><input type="radio" name="rd8" id="rd8yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="rd8" id="rd8no" value="no"> No</li>
+                                <li><input type="radio" name="pregnanciesHistory" id="pregnanciesHistory-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="pregnanciesHistory" id="pregnanciesHistory-no" value="no"> No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions multi-question" id="rd9-10-11-12">
-                            <div class="question" id="rd-9">
-                                <label for="rd9">How many pregnancies?</label>
-                                <input type="number" name="rd9" id="rd9-1" min="0">
+                        <div class="questions multi-question" id="pregnancyQuestion">
+                            <div class="question" id="pregnancies">
+                                <label for="pregnancies">How many pregnancies?</label>
+                                <input type="number" name="pregnancies" id="pregnancies-input" min="0">
                             </div>
-                            <div class="question" id="rd-10">
-                                <label for="rd10">How many living children?</label>
-                                <input type="number" name="rd10" id="rd10-1" min="0">
+                            <div class="question" id="liveBirths">
+                                <label for="liveBirths">How many living children?</label>
+                                <input type="number" name="liveBirths" id="liveBirths-input" min="0">
                             </div>
-                            <div class="question" id="rd-11">
-                                <label for="rd11">How many abortions?</label>
-                                <input type="number" name="rd11" id="rd11-1" min="0">
+                            <div class="question" id="abortions">
+                                <label for="abortions">How many abortions?</label>
+                                <input type="number" name="abortions" id="abortions-input" min="0">
                             </div>
-                            <div class="question" id="rd-12">
-                                <label for="rd12">How many miscarriages?</label>
-                                <input type="number" name="rd12" id="rd12-1" min="0">
+                            <div class="question" id="miscarriages">
+                                <label for="miscarriages">How many miscarriages?</label>
+                                <input type="number" name="miscarriages" id="miscarriages-input" min="0">
                             </div>
                         </div>
                         <div class="move">
