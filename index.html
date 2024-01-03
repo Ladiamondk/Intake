@@ -612,230 +612,230 @@
                     <div class="heading">
                         <div class="targetEl">
                             <h1 class="header">Health Care</h1>
-                            <p class="h-help-text">This will contain a brief explanation of the  text area</p>
+                            <p class="h-help-text">This will contain a brief explanation of the text area</p>
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions" id="hc-1">
-                            <label for="hc1">What is your current Health Insurance Plan?</label>
+                        <fieldset class="questions" id="healthInsurancePlan">
+                            <label for="healthInsurancePlan">What is your current Health Insurance Plan?</label>
                             <ul>
-                                <li><input type="radio" name="hc1" id="hc1-1" value="Alameda Alliance for Health"> Alameda Alliance for Health</li>
-                                <li><input type="radio" name="hc1" id="hc1-2" value="Anthem Blue Cross"> Anthem Blue Cross</li>
-                                <li><input type="radio" name="hc1" id="hc1-3" value="Medi-Cal"> Medi-Cal</li>
-                                <li><input type="radio" name="hc1" id="hc1-4" value="Medicare"> Medicare</li>
-                                <li><input type="radio" name="hc1" id="hc1-5" value="Valley Health Plan"> Valley Health Plan</li>
-                                <li><input type="radio" name="hc1" id="hc1-6" value="HealthPAC"> HealthPAC</li>
-                                <li><input type="radio" name="hc1" id="hc1-7" value="Kaiser"> Kaiser</li>
-                                <li><input type="radio" name="hc1" id="hc1-8" value="Veterans Administration"> Veterans Administration</li>
-                                <li><input type="radio" name="hc1" id="hc1-9" value="None"> None(Uninsured)</li>
-                                <li><input type="radio" name="hc1" id="hc1-10" value="Other"> Other</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-alamedaAlliance" value="Alameda Alliance for Health"> Alameda Alliance for Health</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-anthemBlueCross" value="Anthem Blue Cross"> Anthem Blue Cross</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-medical" value="Medi-Cal"> Medi-Cal</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-medicare" value="Medicare"> Medicare</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-valleyHealthPlan" value="Valley Health Plan"> Valley Health Plan</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-heathPAC" value="HealthPAC"> HealthPAC</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-kaiser" value="Kaiser"> Kaiser</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-veterans" value="Veterans Administration"> Veterans Administration</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-none" value="none"> None(Uninsured)</li>
+                                <li><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-other" value="other"> Other</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="hc-2">
-                            <label for="hc2">What is the policy number?</label>
-                            <input type="text" name="hc2" id="hc2-1">
+                        <div class="questions" id="policyNumber">
+                            <label for="policyNumber">What is the policy number?</label>
+                            <input type="text" name="policyNumber" id="policyNumber-input">
                         </div>
-                        <fieldset class="questions" id="hc-3">
-                            <label for="hc1-3">Do you have a regular primary care doctor?</label>
+                        <fieldset class="questions" id="primaryDoctor">
+                            <label for="primaryDoctor">Do you have a regular primary care doctor?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="hc3" id="hc3-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hc3" id="hc3-2" value="no">No</li>
+                                <li><input type="radio" name="primaryDoctor" id="primaryDoctor-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="primaryDoctor" id="primaryDoctor-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="hc-4">
-                            <label for="hc4">When did you last see your doctor?(conditional)</label>
-                            <input type="date" name="hc4" id="hc4-1">
+                        <div class="questions" id="lastPrimaryVisit">
+                            <label for="hc4">When did you last see your doctor?</label>
+                            <input type="date" name="lastPrimaryVisit" id="lastPrimaryVisit-input">
                         </div>
-                        <div class="questions" id="hc-5">
-                            <label for="hc5">What is the name of the doctor and location?(conditonal)</label>
-                            <input type="text" name="hc5" id="hc5-1">
+                        <div class="questions" id="primayDoctorNameLocation">
+                            <label for="primayDoctorNameLocation">What is the name of the doctor and location?</label>
+                            <input type="text" name="primayDoctorNameLocation" id="primayDoctorNameLocation-input">
                         </div>
-                        <fieldset class="questions" id="hc-6">
-                            <label for="hc6">Do you have a regular dentist?</label>
+                        <fieldset class="questions" id="regularDentist">
+                            <label for="regularDentist">Do you have a regular dentist?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="hc6" id="hc6-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hc6" id="hc6-2" value="no">No</li>
+                                <li><input type="radio" name="regularDentist" id="regularDentist-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="regularDentist" id="regularDentist-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="hc-7">
-                            <label for="hc7">When did you last see your dentist?(conditional)</label>
-                            <input type="date" name="hc7" id="hc7-1">
+                        <div class="questions" id="lastDentistVisit">
+                            <label for="lastDentistVisit">When did you last see your dentist?</label>
+                            <input type="date" name="lastDentistVisit" id="lastDentistVisit-input">
                         </div>
-                        <div class="questions" id="hc-8">
-                            <label for="hc8">What is the name of the dentist and the location?(conditional)</label>
-                            <input type="text" name="hc8" id="hc8-1">
+                        <div class="questions" id="dentistNameLocation">
+                            <label for="dentistNameLocation">What is the name of the dentist and the location?</label>
+                            <input type="text" name="dentistNameLocation" id="dentistNameLocation-input">
                         </div>
-                        <fieldset class="questions" id="hc-9">
-                            <label for="hc9">Do you have any other doctors, therapists, counselors?</label>
+                        <fieldset class="questions" id="doctorsTherapistsCounselors">
+                            <label for="doctorsTherapistsCounselors">Do you have any other doctors, therapists, counselors?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="hc9" id="hc9-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hc9" id="hc9-2" value="no">No</li>
+                                <li><input type="radio" name="doctorsTherapistsCounselors" id="doctorsTherapistsCounselors-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="doctorsTherapistsCounselors" id="doctorsTherapistsCounselors-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="hc-10">
-                            <label for="hc10">What are their names and locations?(conditional)</label>
-                            <input type="text" name="hc10" id="hc10-1">
+                        <div class="questions" id="doctorsTherapistsCounselorsNamesLocations">
+                            <label for="doctorsTherapistsCounselorsNamesLocations">What are their names and locations?</label>
+                            <input type="text" name="doctorsTherapistsCounselorsNamesLocations" id="doctorsTherapistsCounselorsNamesLocations-input">
                         </div> 
-                        <fieldset class="questions" id="hc-11">
-                            <label for="hc11">Do you have a case manager or social worker who helps you manage your healthcare?</label>
+                        <fieldset class="questions" id="HealthcareManagementSocialOrCaseWorker">
+                            <label for="HealthcareManagementSocialOrCaseWorker">Do you have a case manager or social worker who helps you manage your healthcare?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="hc11" id="hc11-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hc11" id="hc11-2" value="no">No</li>
+                                <li><input type="radio" name="HealthcareManagementSocialOrCaseWorker" id="HealthcareManagementSocialOrCaseWorker-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="HealthcareManagementSocialOrCaseWorker" id="HealthcareManagementSocialOrCaseWorker-no" value="no"> No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="hc-12">
-                            <label for="hc12">What is their name and location?(Conditional)</label>
-                            <input type="text" name="hc12" id="hc12-1">
+                        <div class="questions" id="CaseOrSocialWorkerNameLocation">
+                            <label for="CaseOrSocialWorkerNameLocation">What is their name and location?</label>
+                            <input type="text" name="CaseOrSocialWorkerNameLocation" id="CaseOrSocialWorkerNameLocation-input">
                         </div>
-                        <fieldset class="questions" id="hc-13">
-                            <label for="hc13">In general, would you say your health is:</label>
+                        <fieldset class="questions" id="selfHealthEvaluation">
+                            <label for="selfHealthEvaluation">In general, would you say your health is:</label>
                             <ul>
-                                <li><input type="radio" name="hc13" id="hc13-1">Poor</li>
-                                <li><input type="radio" name="hc13" id="hc13-2">Fair</li>
-                                <li><input type="radio" name="hc13" id="hc13-3">Good</li>
-                                <li><input type="radio" name="hc13" id="hc13-4">Very goog</li>
-                                <li><input type="radio" name="hc13" id="hc13-5">Excellent</li>
+                                <li><input type="radio" name="selfHealthEvaluation" id="selfHealthEvaluation-poor" value="poor">Poor</li>
+                                <li><input type="radio" name="selfHealthEvaluation" id="selfHealthEvaluation-fair" value="fair">Fair</li>
+                                <li><input type="radio" name="selfHealthEvaluation" id="selfHealthEvaluation-good" value="good">Good</li>
+                                <li><input type="radio" name="selfHealthEvaluation" id="selfHealthEvaluation-very good" value="very good">Very good</li>
+                                <li><input type="radio" name="selfHealthEvaluation" id="selfHealthEvaluation-excellent" value="excellent">Excellent</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="pastMonthPhysicalHealthSelfEval">
                             <label for="">During the past month, how often did poor physical health keep you from doing your 
                                 usual activities, work, or recreation?
                             </label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Some days</li>
-                                <li><input type="radio" name="" id="">More than half the days</li>
-                                <li><input type="radio" name="" id="">Every day</li>
+                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-never" value="never">Never</li>
+                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-somedays" value="Some days">Some days</li>
+                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-moveThanHalf" value="More than half the days">More than half the days</li>
+                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-everyDay" value="Everyday">Every day</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="diagnosedMedicalConditions">
                             <label for="">Have you ever been diagnosed with any of the following medical conditions (check all that apply)</label>
                             <ul>
-                                <li><input type="checkbox" name="" id="">Allergies</li>
-                                <li><input type="checkbox" name="" id="">Anemia</li>
-                                <li><input type="checkbox" name="" id="">Arthritis</li>
-                                <li><input type="checkbox" name="" id="">Asthma</li>
-                                <li><input type="checkbox" name="" id="">Cancer</li>
-                                <li><input type="checkbox" name="" id="">Congestive heart failure</li>
-                                <li><input type="checkbox" name="" id="">Diabetes</li>
-                                <li><input type="checkbox" name="" id="">Emphysema</li>
-                                <li><input type="checkbox" name="" id="">Heart disease</li>
-                                <li><input type="checkbox" name="" id="">Hepatitis</li>
-                                <li><input type="checkbox" name="" id="">High cholesterol</li>
-                                <li><input type="checkbox" name="" id="">High blood pressure</li>
-                                <li><input type="checkbox" name="" id="">Kidney disease</li>
-                                <li><input type="checkbox" name="" id="">Chronic pain</li>
-                                <li><input type="checkbox" name="" id="">Enlarged prostate</li>
-                                <li><input type="checkbox" name="" id="">Seizure</li>
-                                <li><input type="checkbox" name="" id="">Sexually transmitted disease</li>
-                                <li><input type="checkbox" name="" id="">None</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-allergies" value="Allergies">Allergies</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-anemia" value="Anemia">Anemia</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-arthritis" value="Arthritis">Arthritis</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-asthma" value="Asthma">Asthma</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-cancer" value="Cancer">Cancer</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-congestiveHeartFailure" value="Congestive heart failure">Congestive heart failure</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-diabetes" value="Diabetes">Diabetes</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-emphysema" value="Emphysema">Emphysema</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-heartDisease" value="Heart disease">Heart disease</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-hepatitis" value="Hepatitis">Hepatitis</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-highCholesterol" value="High cholesterol">High cholesterol</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-highBloodPressure" value="High blood pressure">High blood pressure</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-kidneyDisease" value="Kidney disease">Kidney disease</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-chronicPain" value="Chronic pain">Chronic pain</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-enlargedProstate" value="Enlarged prostate">Enlarged prostate</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-seizure" value="Seizure">Seizure</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-sexuallyTransmittedDisease" value="Sexually Transmitted Disease">Sexually transmitted disease</li>
+                                <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-none" value="none">None</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Have you had any of the following preventative screening tests?</label>
+                        <fieldset class="questions" id="preventativeScreeningTest">
+                            <label for="preventativeScreeningTest">Have you had any of the following preventative screening tests?</label>
                             <ul>
-                                <li><input type="checkbox" name="" id="">Test dor cervical cancer</li>
-                                <li><input type="checkbox" name="" id="">Blood test for diabetes</li>
-                                <li><input type="checkbox" name="" id="">Blood test for high cholesterol</li>
-                                <li><input type="checkbox" name="" id="">Blood test for HIV</li>
-                                <li><input type="checkbox" name="" id="">Blood test for Hepatitis C</li>
-                                <li><input type="checkbox" name="" id="">Mammogram for breast cancer</li>
-                                <li><input type="checkbox" name="" id="">Stool test for colon cancer</li>
-                                <li><input type="checkbox" name="" id="">Colonoscopy for colon cancer</li>
-                                <li><input type="checkbox" name="" id="">CT scan for lung cancer</li>
-                                <li><input type="checkbox" name="" id="">Scan for osteoporosis</li>
-                                <li><input type="checkbox" name="" id="">Ultrasound for aortic aneurysm</li>
-                                <li><input type="checkbox" name="" id="">None</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-cervicalCancer" value="Test for cervical cancer">Test for cervical cancer</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-diabetes" value="Blood test for diabetes">Blood test for diabetes</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-highCholesterol" value="Blood test for high cholesterol">Blood test for high cholesterol</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-HIV" value="Blood test for HIV">Blood test for HIV</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-hepatitisC" value="Blood test for Hepatitis C">Blood test for Hepatitis C</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-breastCancer" value="Mammogram for breat cancer">Mammogram for breast cancer</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-colonCancerStool" value="Stool test for colon cancer">Stool test for colon cancer</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-coloonCancerColonoscopy" value="Colonoscopy for colon cancer">Colonoscopy for colon cancer</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-lungCancer" value="CT scan for lung cancer">CT scan for lung cancer</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-osteoporosis" value="Scan for osteoporosis">Scan for osteoporosis</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-aorticAneurysm" value="Ultrasound for aortic aneurysm">Ultrasound for aortic aneurysm</li>
+                                <li><input type="checkbox" name="preventativeScreeningTest" id="preventativeScreeningTest-none" value="none">None</li>
                             </ul>
                         </fieldset>
                         <!--this is a conditional question based on the user selecting one or more of the screenings above-->
-                        <div class="questions">
+                        <div class="questions" id="lastYearScreening">
                             <label for="">Please list the last year of screening</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="lastYearScreening" id="lastYearScreening">
                         </div>
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="dailyModerateStrenuousExcercise">
                             <div class="label">
-                                <label for="">On average, how many days per week do you engage in moderate to strenuous exercise?</label>
+                                <label for="dailyModerateStrenuousExcercise">On average, how many days per week do you engage in moderate to strenuous exercise?</label>
                                 <p class="q-help-text">like walking fast, running, jogging, dancing, swimming, biking, or other activities 
                                     that cause a light or heavy sweat
                                 </p>
                             </div>
                             <div class="input">
                                 <ul>
-                                    <li><input type="radio" name="" id="">0 days</li>
-                                    <li><input type="radio" name="" id="">1-2 days</li>
-                                    <li><input type="radio" name="" id="">3-4 days</li>
-                                    <li><input type="radio" name="" id="">5-7 days</li>
+                                    <li><input type="radio" name="dailyModerateStrenuousExcercise" id="dailyModerateStrenuousExcercise0" value="0 days">0 days</li>
+                                    <li><input type="radio" name="dailyModerateStrenuousExcercise" id="dailyModerateStrenuousExcercise2" value="1-2 days">1-2 days</li>
+                                    <li><input type="radio" name="dailyModerateStrenuousExcercise" id="dailyModerateStrenuousExcercise4" value="3-4 days">3-4 days</li>
+                                    <li><input type="radio" name="dailyModerateStrenuousExcercise" id="dailyModerateStrenuousExcercise7" value="5-7 days">5-7 days</li>
                                 </ul>
                             </div>
                         </fieldset>
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="minuteModerateStrenuousExcercise">
                             <div class="label">
                                 <label for="">On average, how many minutes per day do you engage in moderate to strenuous excercise</label>
                                 <p class="q-help-text">like walking fast, running , jogging, dancing, swimming, 
                                     biking, or other activities that cause a light or heavy sweat
                                 </p>
                                 <ul>
-                                    <li><input type="radio" name="" id="">0 min</li>
-                                    <li><input type="radio" name="" id="">15 min</li>
-                                    <li><input type="radio" name="" id="">30 min</li>
-                                    <li><input type="radio" name="" id="">45 min</li>
-                                    <li><input type="radio" name="" id="">1 hour or more</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise0">0 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise15">15 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise30">30 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise45">45 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise60">1 hour or more</li>
                                 </ul>
                             </div>
                         </fieldset>
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="pastYearEmergencyRoomVisit">
                             <div class="label">
-                                <label for="">Over the past year, how many times did you go to the emergency room?</label>
+                                <label for="pastYearEmergencyRoomVisit">Over the past year, how many times did you go to the emergency room?</label>
                                 <p class="q-help-text">regular or psych emergency</p>
                             </div>
                             <div class="input">
                                 <ul>
-                                    <li><input type="radio" name="" id="">None</li>
-                                    <li><input type="radio" name="" id="">Once</li>
-                                    <li><input type="radio" name="" id="">Twice</li>
-                                    <li><input type="radio" name="" id="">Three times</li>
-                                    <li><input type="radio" name="" id="">Four or more times</li>
+                                    <li><input type="radio" name="pastYearEmergencyRoomVisit" id="pastYearEmergencyRoomVisit-none" value="none">None</li>
+                                    <li><input type="radio" name="pastYearEmergencyRoomVisit" id="pastYearEmergencyRoomVisit-once" value="once">Once</li>
+                                    <li><input type="radio" name="pastYearEmergencyRoomVisit" id="pastYearEmergencyRoomVisit-twice"  value="twice">Twice</li>
+                                    <li><input type="radio" name="pastYearEmergencyRoomVisit" id="pastYearEmergencyRoomVisit-threeTimes" value="three times">Three times</li>
+                                    <li><input type="radio" name="pastYearEmergencyRoomVisit" id="pastYearEmergencyRoomVisit-fourOrMore" value="four or more times">Four or more times</li>
                                 </ul>
                             </div>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Do you smoke cigarettes?</label>
+                        <fieldset class="questions" id="smokeCigarettesStatus">
+                            <label for="smokeCigarettesStatus">Do you smoke cigarettes?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="smokeCigarettesStatus" id="smokeCigarettesStatus-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="smokeCigarettesStatus" id="smokeCigarettesStatus-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How many cigarettes do you smoke per day?</label>
+                        <fieldset class="questions" id="cigarettesSmokedPerDay">
+                            <label for="cigarettesSmokedPerDay">How many cigarettes do you smoke per day?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Less than 1/2 a pack</li>
-                                <li><input type="radio" name="" id="">1/2-1 pack</li>
-                                <li><input type="radio" name="" id="">More than 1 pack</li>
+                                <li><input type="radio" name="cigarettesSmokedPerDay" id="cigarettesSmokedPerDay-lesshalf" value="less than 1/2 a pack">Less than 1/2 a pack</li>
+                                <li><input type="radio" name="cigarettesSmokedPerDay" id="cigarettesSmokedPerDay-moreHalf" value="1/2-1 pack">1/2-1 pack</li>
+                                <li><input type="radio" name="cigarettesSmokedPerDay" id="cigarettesSmokedPerDay-moreOnePack" value="more that 1 pack">More than 1 pack</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Do you use any tobacco or nicotine products beside cigarettes, such as chewing tobacco, snuff, cigars, or e-cigarettes?</label>
+                        <fieldset class="questions" id="tobaccoNicotineProducts">
+                            <label for="tobaccoNicotineProducts">Do you use any tobacco or nicotine products beside cigarettes, such as chewing tobacco, snuff, cigars, or e-cigarettes?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>                            </ul>
+                                <li><input type="radio" name="tobaccoNicotineProducts" id="tobaccoNicotineProducts-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="tobaccoNicotineProducts" id="tobaccoNicotineProducts-no" value="no">No</li>                            </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">When was the last time you smoked?</label>
+                        <fieldset class="questions" id="lastSmoke">
+                            <label for="lastSmoke">When was the last time you smoked?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Within the past few days</li>
-                                <li><input type="radio" name="" id="">1-2 months ago</li>
-                                <li><input type="radio" name="" id="">3-6 months ago</li>
-                                <li><input type="radio" name="" id="">6 months ago or more</li>
+                                <li><input type="radio" name="lastSmoke" id="lastSmoke-pastFewDays" value="Within the past few days">Within the past few days</li>
+                                <li><input type="radio" name="lastSmoke" id="lastSmoke-2monthsAgo" value="1-2 months ago">1-2 months ago</li>
+                                <li><input type="radio" name="lastSmoke" id="lastSmoke-6monthsAgo" value="3-6 months ago">3-6 months ago</li>
+                                <li><input type="radio" name="lastSmoke" id="lastSmoke-6monthMore" value="6 months ago or more">6 months ago or more</li>
                             </ul>
                         </fieldset>
                         <!--Remove the three of less rule for ul list bcause of the length of the answers-->
-                        <fieldset class="questions">
-                            <label for="">How frequently do you smoke?</label>
+                        <fieldset class="questions" id="smokeFrequency">
+                            <label for="smokeFrequency">How frequently do you smoke?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Every day or almost every day</li>
-                                <li><input type="radio" name="" id=""> Once or twice a week</li>
-                                <li><input type="radio" name="" id="">Once a month</li>
+                                <li><input type="radio" name="smokeFrequency" id="smokeFrequency-everyDay" value="Every day or almost every day">Every day or almost every day</li>
+                                <li><input type="radio" name="smokeFrequency" id="smokeFrequency-twiceWeek" value="Once or twice a week"> Once or twice a week</li>
+                                <li><input type="radio" name="smokeFrequency" id="smokeFrequency-monthly" value="Once a month">Once a month</li>
                             </ul>
                         </fieldset>
                         <div class="move">

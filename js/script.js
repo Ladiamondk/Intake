@@ -672,8 +672,145 @@ if(pregnanciesHistory){
         }
     })
 }
+//Preventative  area of the form
+        //healthInsurancePlan dynamic functionality
+const healthInsurancePlan = document.getElementById('healthInsurancePlan');
+const policyNumber = document.getElementById('policyNumber');
+policyNumber.style.display = 'none';
+if(healthInsurancePlan){
+    let policy;
+    const healthInsurancePlanRadios = healthInsurancePlan.querySelectorAll('input[type="radio"]');
+    healthInsurancePlan.addEventListener('click', () => {
+        for(let i = 0; i < healthInsurancePlanRadios.length; i++){
+            if(healthInsurancePlanRadios[i].checked){
+                policy = healthInsurancePlanRadios[i].value;
+                if(policy == 'none'){
+                    policyNumber.style.display = 'block';
+                }else{
+                    policyNumber.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+        //primary doctor dynamic functionality
+const primaryDoctor = document.getElementById('primaryDoctor');
+const primayDoctorNameLocation = document.getElementById('primayDoctorNameLocation');
+primayDoctorNameLocation.style.display = 'none';
+const lastPrimaryVisit = document.getElementById('lastPrimaryVisit');
+lastPrimaryVisit.style.display = 'none';
 
-
-
-
-
+if(primaryDoctor){
+    let doctor;
+    const primaryDoctorRadios = primaryDoctor.querySelectorAll('input[type="radio"]');
+    primaryDoctor.addEventListener('click', () => {
+        for(let i = 0; i < primaryDoctorRadios.length; i++){
+            if(primaryDoctorRadios[i].checked){
+                doctor = primaryDoctorRadios[i].value;
+                if(doctor == 'yes'){
+                    primayDoctorNameLocation.style.display = 'block';
+                    lastPrimaryVisit.style.display = 'block';
+                }else{
+                    primayDoctorNameLocation.style.display = 'none';
+                    lastPrimaryVisit.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+        //regularDentist dynamic functionality
+const regularDentist = document.getElementById('regularDentist');
+const lastDentistVisit = document.getElementById('lastDentistVisit');
+lastDentistVisit.style.display = 'none';
+const dentistNameLocation = document.getElementById('dentistNameLocation');
+dentistNameLocation.style.display = 'none';
+if(regularDentist){
+    let dentist;
+    const regularDentistRadios = regularDentist.querySelectorAll('input[type="radio"]');
+    regularDentist.addEventListener('click', () => {
+        for(let i = 0; i < regularDentistRadios.length; i++){
+            if(regularDentistRadios[i].checked){
+                dentist = regularDentistRadios[i].value;
+                if(dentist == 'yes'){
+                    lastDentistVisit.style.display = 'block';
+                    dentistNameLocation.style.display = 'block';
+                }else{
+                    dentistNameLocation.style.display = 'none';
+                    lastDentistVisit.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+        //doctorsTherapistsCounselors dynamic functionality
+const doctorsTherapistsCounselors = document.getElementById('doctorsTherapistsCounselors');
+const doctorsTherapistsCounselorsNamesLocations = document.getElementById('doctorsTherapistsCounselorsNamesLocations');
+doctorsTherapistsCounselorsNamesLocations.style.display = 'none';
+if(doctorsTherapistsCounselors){
+    let additionalDoctors;
+    const doctorsTherapistsCounselorsRadios = doctorsTherapistsCounselors.querySelectorAll('input[type="radio"]');
+    doctorsTherapistsCounselors.addEventListener('click', () => {
+        for(let i = 0; i < doctorsTherapistsCounselorsRadios.length; i++){
+            if(doctorsTherapistsCounselorsRadios[i].checked){
+                additionalDoctors = doctorsTherapistsCounselorsRadios[i].value;
+                if(additionalDoctors == 'yes'){
+                    doctorsTherapistsCounselorsNamesLocations.style.display = 'block';
+                }else{
+                    doctorsTherapistsCounselorsNamesLocations.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+        //HealthcareManagementSocialOrCaseWorker dynamic functionality
+const HealthcareManagementSocialOrCaseWorker = document.getElementById('HealthcareManagementSocialOrCaseWorker');
+const CaseOrSocialWorkerNameLocation = document.getElementById('CaseOrSocialWorkerNameLocation');
+CaseOrSocialWorkerNameLocation.style.display = 'none';
+if(HealthcareManagementSocialOrCaseWorker){
+    let healthcareManagement;
+    const HealthcareManagementSocialOrCaseWorkerRadios = HealthcareManagementSocialOrCaseWorker.querySelectorAll('input[type="radio"]');
+    HealthcareManagementSocialOrCaseWorker.addEventListener('click', () => {
+        for(let i = 0; i < HealthcareManagementSocialOrCaseWorkerRadios.length; i++){
+            if(HealthcareManagementSocialOrCaseWorkerRadios[i].checked){
+                healthcareManagement = HealthcareManagementSocialOrCaseWorkerRadios[i].value;
+                if(healthcareManagement == 'yes'){
+                    CaseOrSocialWorkerNameLocation.style.display = 'block';
+                }else{
+                    CaseOrSocialWorkerNameLocation.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+        //smokeCigarettesStatus dynamic functionality
+const smokeCigarettesStatus = document.getElementById('smokeCigarettesStatus');
+const cigarettesSmokedPerDay = document.getElementById('cigarettesSmokedPerDay');
+cigarettesSmokedPerDay.style.display = 'none';
+const tobaccoNicotineProducts = document.getElementById('tobaccoNicotineProducts');
+tobaccoNicotineProducts.style.display = 'none';
+const lastSmoke = document.getElementById('lastSmoke');
+lastSmoke.style.display = 'none';
+const smokeFrequency = document.getElementById('smokeFrequency');
+smokeFrequency.style.display = 'none';
+if(smokeCigarettesStatus){
+    let smoke;
+    const smokeCigarettesStatusRadios = smokeCigarettesStatus.querySelectorAll('input[type="radio"]');
+    smokeCigarettesStatus.addEventListener('click', () => {
+        for(let i = 0; i < smokeCigarettesStatusRadios.length; i++){
+            if(smokeCigarettesStatusRadios[i].checked){
+                smoke = smokeCigarettesStatusRadios[i].value;
+                if(smoke == 'yes'){
+                    cigarettesSmokedPerDay.style.display = 'block';
+                    tobaccoNicotineProducts.style.display = 'block';
+                    lastSmoke.style.display = 'block';
+                    smokeFrequency.style.display = 'block';
+                }else{
+                    cigarettesSmokedPerDay.style.display = 'none';
+                    tobaccoNicotineProducts.style.display = 'none';
+                    lastSmoke.style.display = 'none';
+                    smokeFrequency.style.display = 'none';
+                }
+            }
+        }
+    })
+}
