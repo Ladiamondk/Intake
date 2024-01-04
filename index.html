@@ -643,7 +643,7 @@
                             </ul>
                         </fieldset>
                         <div class="questions" id="lastPrimaryVisit">
-                            <label for="hc4">When did you last see your doctor?</label>
+                            <label for="lastPrimaryVisit">When did you last see your doctor?</label>
                             <input type="date" name="lastPrimaryVisit" id="lastPrimaryVisit-input">
                         </div>
                         <div class="questions" id="primayDoctorNameLocation">
@@ -676,16 +676,16 @@
                             <label for="doctorsTherapistsCounselorsNamesLocations">What are their names and locations?</label>
                             <input type="text" name="doctorsTherapistsCounselorsNamesLocations" id="doctorsTherapistsCounselorsNamesLocations-input">
                         </div> 
-                        <fieldset class="questions" id="HealthcareManagementSocialOrCaseWorker">
-                            <label for="HealthcareManagementSocialOrCaseWorker">Do you have a case manager or social worker who helps you manage your healthcare?</label>
+                        <fieldset class="questions" id="healthcareManagementSocialOrCaseWorker">
+                            <label for="healthcareManagementSocialOrCaseWorker">Do you have a case manager or social worker who helps you manage your healthcare?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="HealthcareManagementSocialOrCaseWorker" id="HealthcareManagementSocialOrCaseWorker-yes" value="yes"> Yes</li>
-                                <li><input type="radio" name="HealthcareManagementSocialOrCaseWorker" id="HealthcareManagementSocialOrCaseWorker-no" value="no"> No</li>
+                                <li><input type="radio" name="healthcareManagementSocialOrCaseWorker" id="healthcareManagementSocialOrCaseWorker-yes" value="yes"> Yes</li>
+                                <li><input type="radio" name="healthcareManagementSocialOrCaseWorker" id="healthcareManagementSocialOrCaseWorker-no" value="no"> No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="CaseOrSocialWorkerNameLocation">
-                            <label for="CaseOrSocialWorkerNameLocation">What is their name and location?</label>
-                            <input type="text" name="CaseOrSocialWorkerNameLocation" id="CaseOrSocialWorkerNameLocation-input">
+                        <div class="questions" id="caseOrSocialWorkerNameLocation">
+                            <label for="caseOrSocialWorkerNameLocation">What is their name and location?</label>
+                            <input type="text" name="caseOrSocialWorkerNameLocation" id="caseOrSocialWorkerNameLocation-input">
                         </div>
                         <fieldset class="questions" id="selfHealthEvaluation">
                             <label for="selfHealthEvaluation">In general, would you say your health is:</label>
@@ -698,7 +698,7 @@
                             </ul>
                         </fieldset>
                         <fieldset class="questions" id="pastMonthPhysicalHealthSelfEval">
-                            <label for="">During the past month, how often did poor physical health keep you from doing your 
+                            <label for="pastMonthPhysicalHealthSelfEval">During the past month, how often did poor physical health keep you from doing your 
                                 usual activities, work, or recreation?
                             </label>
                             <ul>
@@ -709,7 +709,7 @@
                             </ul>
                         </fieldset>
                         <fieldset class="questions" id="diagnosedMedicalConditions">
-                            <label for="">Have you ever been diagnosed with any of the following medical conditions (check all that apply)</label>
+                            <label for="diagnosedMedicalConditions">Have you ever been diagnosed with any of the following medical conditions (check all that apply)</label>
                             <ul>
                                 <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-allergies" value="Allergies">Allergies</li>
                                 <li><input type="checkbox" name="diagnosedMedicalConditions" id="diagnosedMedicalConditions-anemia" value="Anemia">Anemia</li>
@@ -750,7 +750,7 @@
                         </fieldset>
                         <!--this is a conditional question based on the user selecting one or more of the screenings above-->
                         <div class="questions" id="lastYearScreening">
-                            <label for="">Please list the last year of screening</label>
+                            <label for="lastYearScreening">Please list the last year of screening</label>
                             <input type="text" name="lastYearScreening" id="lastYearScreening">
                         </div>
                         <fieldset class="questions" id="dailyModerateStrenuousExcercise">
@@ -771,7 +771,7 @@
                         </fieldset>
                         <fieldset class="questions" id="minuteModerateStrenuousExcercise">
                             <div class="label">
-                                <label for="">On average, how many minutes per day do you engage in moderate to strenuous excercise</label>
+                                <label for="minuteModerateStrenuousExcercise">On average, how many minutes per day do you engage in moderate to strenuous excercise</label>
                                 <p class="q-help-text">like walking fast, running , jogging, dancing, swimming, 
                                     biking, or other activities that cause a light or heavy sweat
                                 </p>
@@ -856,33 +856,33 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions" id="h-1">
-                            <label for="h1">Which of the following best describes the place you live now?</label>
+                        <fieldset class="questions" id="housingSituation">
+                            <label for="housingSituation">Which of the following best describes the place you live now?</label>
                             <ul>
-                                <li><input type="radio" name="h1" id="h1-1">I owm a house or apartment</li>
-                                <li><input type="radio" name="h1" id="h1-2">I rent a house or apartment</li>
-                                <li><input type="radio" name="h1" id="h1-3">Hotel</li>
-                                <li><input type="radio" name="h1" id="h1-4">A Treatment Facility or Group Home</li>
-                                <li><input type="radio" name="h1" id="h1-5">An Emergency Shelter</li>
-                                <li><input type="radio" name="h1" id="h1-6">Couch Surfing</li>
-                                <li><input type="radio" name="h1" id="h1-7">I have no housing (I'm sleeping on the street, in a park, a vehicle, or a bus or train station)</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-ownHome" value="I own a house or apartment">I own a house or apartment</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-rentHome" value="I rent a house or apartment">I rent a house or apartment</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-hotel" value="hotel">Hotel</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-communityHousing" value="a treastment facility or group home">A Treatment Facility or Group Home</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-emergencyShelter" value="an emergency shelter">An Emergency Shelter</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-couchSurfing" value="couch surfing">Couch Surfing</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-noHousing" value="I have no housing (I'm sleeping on the street, in a park, a vehicle, or a bus or train station)">I have no housing (I'm sleeping on the street, in a park, a vehicle, or a bus or train station)</li>
                             </ul>
                         </fieldset>
                         <!--conditional question based of the user ansering 'no housing' to the question above-->
-                        <div class="questions" >
-                            <label for="h2">Please specify your location</label>
-                            <input type="text" name="h2" id="h2-1">
+                        <div class="questions" id="housingLocation">
+                            <label for="housingLocation">Please specify your location</label>
+                            <input type="text" name="housingLocation" id="housingLocation-input">
                         </div>
-                        <fieldset class="questions">
-                            <label for="">Over the past 3 months, did you ever have to sleep in an emergency shelter, in a vehicle, or on the street or park, or stay temporarily with friends
+                        <fieldset class="questions" id="past3MonthsLackOfHousing">
+                            <label for="past3MonthsLackOfHousing">Over the past 3 months, did you ever have to sleep in an emergency shelter, in a vehicle, or on the street or park, or stay temporarily with friends
                                 because of the lack of housing?
                             </label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Once or Twice</li>
-                                <li><input type="radio" name="" id="">Several Days</li>
-                                <li><input type="radio" name="" id="">Most Days</li>
-                                <li><input type="radio" name="" id="">Every Day</li>
+                                <li><input type="radio" name="past3MonthsLackOfHousing" id="past3MonthsLackOfHousing-never" value="never">Never</li>
+                                <li><input type="radio" name="past3MonthsLackOfHousing" id="past3MonthsLackOfHousing-twice" value="once or twice">Once or Twice</li>
+                                <li><input type="radio" name="past3MonthsLackOfHousing" id="past3MonthsLackOfHousing-severalDays" value="several days">Several Days</li>
+                                <li><input type="radio" name="past3MonthsLackOfHousing" id="past3MonthsLackOfHousing-mostDays" value="most days">Most Days</li>
+                                <li><input type="radio" name="past3MonthsLackOfHousing" id="past3MonthsLackOfHousing-everyDay" value="every day">Every Day</li>
                             </ul>
                         </fieldset>
                     </div> 
@@ -896,44 +896,44 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="servingsFruitTypicalDay">
                             <label for="">How many pieces or servings of fruit, any sort, do you eat on a typical day?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">None</li>
-                                <li><input type="radio" name="" id="">One</li>
-                                <li><input type="radio" name="" id="">Two</li>
-                                <li><input type="radio" name="" id="">Three or more</li>
+                                <li><input type="radio" name="servingsFruitTypicalDay" id="servingsFruitTypicalDay-none" value="none">None</li>
+                                <li><input type="radio" name="servingsFruitTypicalDay" id="servingsFruitTypicalDay-one" value="one">One</li>
+                                <li><input type="radio" name="servingsFruitTypicalDay" id="servingsFruitTypicalDay-two" value="two">Two</li>
+                                <li><input type="radio" name="servingsFruitTypicalDay" id="servingsFruitTypicalDay-moreThree" value="three or more">Three or more</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="whereGetMajorityFood">
                             <label for="">Where do you get the majority of your food?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Grocery</li>
-                                <li><input type="radio" name="" id="">Farmer's Market</li>
-                                <li><input type="radio" name="" id="">Fast food</li>
-                                <li><input type="radio" name="" id="">Corner store/convenience store</li>
-                                <li><input type="radio" name="" id="">Food pantry</li>
+                                <li><input type="radio" name="whereGetMajorityFood" id="whereGetMajorityFood-grocery" value="grocery">Grocery</li>
+                                <li><input type="radio" name="whereGetMajorityFood" id="whereGetMajorityFood-farmersMarket" value="farmer's market">Farmer's Market</li>
+                                <li><input type="radio" name="whereGetMajorityFood" id="whereGetMajorityFood-fastFood" value="fast food">Fast food</li>
+                                <li><input type="radio" name="whereGetMajorityFood" id="whereGetMajorityFood-convenienceStore" value="corner store/convenience store">Corner store/convenience store</li>
+                                <li><input type="radio" name="whereGetMajorityFood" id="whereGetMajorityFood-foodPantry" value="food pantry">Food pantry</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Within the past 12 months, we worried whether our food would run out 
+                        <fieldset class="questions" id="past12MonthsWorriedAboutFoodRunningOut">
+                            <label for="past12MonthsWorriedAboutFoodRunningOut">Within the past 12 months, we worried whether our food would run out 
                                 before we got money to buy more?
                             </label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Occasionally</li>
-                                <li><input type="radio" name="" id="">Sometimes</li>
-                                <li><input type="radio" name="" id="">Often</li>
+                                <li><input type="radio" name="past12MonthsWorriedAboutFoodRunningOut" id="past12MonthsWorriedAboutFoodRunningOut-never" value="never">Never</li>
+                                <li><input type="radio" name="past12MonthsWorriedAboutFoodRunningOut" id="past12MonthsWorriedAboutFoodRunningOut-occasionally" value="occasionally">Occasionally</li>
+                                <li><input type="radio" name="past12MonthsWorriedAboutFoodRunningOut" id="past12MonthsWorriedAboutFoodRunningOut-sometimes" value="sometimes">Sometimes</li>
+                                <li><input type="radio" name="past12MonthsWorriedAboutFoodRunningOut" id="past12MonthsWorriedAboutFoodRunningOut-other" value="often">Often</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Within the past 12 months the food we bought just didn't last and we 
+                        <fieldset class="questions" id="past12MonthsFoodRanOut">
+                            <label for="past12MonthsFoodRanOut">Within the past 12 months the food we bought just didn't last and we 
                                 didn't have money to get more?
                             </label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Sometimes</li>
-                                <li><input type="radio" name="" id="">Often</li>
+                                <li><input type="radio" name="past12MonthsFoodRanOut" id="past12MonthsFoodRanOut-never" value="never">Never</li>
+                                <li><input type="radio" name="past12MonthsFoodRanOut" id="past12MonthsFoodRanOut-sometimes" value="sometimes">Sometimes</li>
+                                <li><input type="radio" name="past12MonthsFoodRanOut" id="past12MonthsFoodRanOut-often" value="often">Often</li>
                             </ul>
                         </fieldset>
                     </div> 
@@ -947,35 +947,35 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions">
-                            <label for="">Over the past 3 months, did you ever have difficulties in paying your bills for 
+                        <fieldset class="questions" id="past3MonthsDifficultiesPayingEssentialBills">
+                            <label for="past3MonthsDifficultiesPayingEssentialBills">Over the past 3 months, did you ever have difficulties in paying your bills for 
                                 expenses like housing, utilities, child care, transportation, telephone, medical care, or 
                                 other basic needs?
                             </label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">One Month</li>
-                                <li><input type="radio" name="" id="">Two Months</li>
-                                <li><input type="radio" name="" id="">Every Month</li>
+                                <li><input type="radio" name="past3MonthsDifficultiesPayingEssentialBills" id="past3MonthsDifficultiesPayingEssentialBills-never" value="never">Never</li>
+                                <li><input type="radio" name="past3MonthsDifficultiesPayingEssentialBills" id="past3MonthsDifficultiesPayingEssentialBills-oneMonth" value="one month">One Month</li>
+                                <li><input type="radio" name="past3MonthsDifficultiesPayingEssentialBills" id="past3MonthsDifficultiesPayingEssentialBills-twoMonths" value="two months">Two Months</li>
+                                <li><input type="radio" name="past3MonthsDifficultiesPayingEssentialBills" id="past3MonthsDifficultiesPayingEssentialBills-everyMonth" value="every month">Every Month</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Does your income generally cover your basic household expenses?</label>
+                        <fieldset class="questions" id="incomeCoverHouseholdExpenses">
+                            <label for="incomeCoverHouseholdExpenses">Does your income generally cover your basic household expenses?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="incomeCoverHouseholdExpenses" id="incomeCoverHouseholdExpenses-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="incomeCoverHouseholdExpenses" id="incomeCoverHouseholdExpenses-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Over the past 3 months, did you ever cut the size of your meals or skip 
+                        <fieldset class="questions" id="past3MonthsCutSkipMealSize">
+                            <label for="past3MonthsCutSkipMealSize">Over the past 3 months, did you ever cut the size of your meals or skip 
                                 meals, because there wasn't enough money for food?
                             </label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Once or Twice</li>
-                                <li><input type="radio" name="" id="">Several Days</li>
-                                <li><input type="radio" name="" id="">Most Days</li>
-                                <li><input type="radio" name="" id="">Every Day</li>
+                                <li><input type="radio" name="past3MonthsCutSkipMealSize" id="past3MonthsCutSkipMealSize-never" value="never">Never</li>
+                                <li><input type="radio" name="past3MonthsCutSkipMealSize" id="past3MonthsCutSkipMealSize-twice" value="once or twice">Once or Twice</li>
+                                <li><input type="radio" name="past3MonthsCutSkipMealSize" id="past3MonthsCutSkipMealSize-severaldays" value="several days">Several Days</li>
+                                <li><input type="radio" name="past3MonthsCutSkipMealSize" id="past3MonthsCutSkipMealSize-mostdays" value="most days">Most Days</li>
+                                <li><input type="radio" name="past3MonthsCutSkipMealSize" id="past3MonthsCutSkipMealSize-everyday" value="every day">Every Day</li>
                             </ul>
                         </fieldset>
                         <!--Theres another question that goes 
@@ -991,59 +991,59 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions">
-                            <label for="">What is the highest level of education you have completed?</label>
+                        <fieldset class="questions" id="highestLevelEducation">
+                            <label for="highestLevelEducation">What is the highest level of education you have completed?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">None</li>
-                                <li><input type="radio" name="" id="">Up to 8th grade</li>
-                                <li><input type="radio" name="" id="">Some high school</li>
-                                <li><input type="radio" name="" id="">High school diploma</li>
-                                <li><input type="radio" name="" id="">GED</li>
-                                <li><input type="radio" name="" id="">Trade/tech/vocational training</li>
-                                <li><input type="radio" name="" id="">Associate degree</li>
-                                <li><input type="radio" name="" id="">Some college</li>
-                                <li><input type="radio" name="" id="">Bachelor's degree</li>
-                                <li><input type="radio" name="" id="">Graduate/prof.degree</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-none" value="none">None</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-8thGrade" value="up to 8th grade">Up to 8th grade</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-someHighSchool" value="some high school">Some high school</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-highSchoolDiploma" value="high school diploma">High school diploma</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-ged" value="GED">GED</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-trade" value="trade/tech/vocational training">Trade/tech/vocational training</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-associate" value="Associate degree">Associate degree</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-someCollege" value="some college">Some college</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-bachelorDegree" value="Bachelor's degree">Bachelor's degree</li>
+                                <li><input type="radio" name="highestLevelEducation" id="highestLevelEducation-gradute" value="graduate/prof.degree">Graduate/prof.degree</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Which of the following best describes your work situation today?</label>
+                        <fieldset class="questions" id="todaysWorkSituation">
+                            <label for="todaysWorkSituation">Which of the following best describes your work situation today?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">I am employed full-time</li>
-                                <li><input type="radio" name="" id="">I am employed part-time</li>
-                                <li><input type="radio" name="" id="">I am self-employed</li>
-                                <li><input type="radio" name="" id="">I do odd jobs/occasional work</li>
-                                <li><input type="radio" name="" id="">I am unemployed, but looking for work</li>
-                                <li><input type="radio" name="" id="">I am unemployed but not looking for work</li>
-                                <li><input type="radio" name="" id="">I care for a child or family member full time</li>
-                                <li><input type="radio" name="" id="">I am temporarily disabled</li>
-                                <li><input type="radio" name="" id="">I am permanently disabled</li>
-                                <li><input type="radio" name="" id="">I am retired from work</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-fulltime" value="I am employed full-time">I am employed full-time</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-parttime" value="I am employed part-time">I am employed part-time</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-selfEmployed" value="I am self-employed">I am self-employed</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-occasionalWork" value="I do odd jobs/occasional work">I do odd jobs/occasional work</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-lookingForWork" value="I am unemployed, but looking for work">I am unemployed, but looking for work</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-notlookingForWork" value="I am unemployed but not looking for work">I am unemployed but not looking for work</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-relativeCare" value="I care for a child or family member full time">I care for a child or family member full time</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-tempDisable" value="I am temporarily disabled">I am temporarily disabled</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-permDisable" value="I am permanently disabled">I am permanently disabled</li>
+                                <li><input type="radio" name="todaysWorkSituation" id="todaysWorkSituation-retired" value="I am retired from work">I am retired from work</li>
                             </ul>
                         </fieldset>
                         <!--This is a conditional based on user indicating they are employed in the question above-->
-                        <div class="questions">
-                            <label for="">What is the name and location of your employer?</label>
-                            <input type="text" name="" id="">
+                        <div class="questions" id="employerNameLocation">
+                            <label for="employerNameLocation">What is the name and location of your employer?</label>
+                            <input type="text" name="employerNameLocation" id="employerNameLocation">
                         </div>
-                        <fieldset class="questions">
-                            <label for="">Are you currently participating in an educational or training program to improve your work opportunities?</label>
+                        <fieldset class="questions" id="educationTrainingParticipating">
+                            <label for="educationTrainingParticipating">Are you currently participating in an educational or training program to improve your work opportunities?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No, but I would like to</li>
-                                <li><input type="radio" name="" id="">No, and I am not interested</li>
-                                <li><input type="radio" name="" id="">No, but I have in the past</li>
+                                <li><input type="radio" name="educationTrainingParticipating" id="educationTrainingParticipating-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="educationTrainingParticipating" id="educationTrainingParticipating-noButWant" value="no, but I would like to">No, but I would like to</li>
+                                <li><input type="radio" name="educationTrainingParticipating" id="educationTrainingParticipating-noNotInterested" value="no, and I am not interested">No, and I am not interested</li>
+                                <li><input type="radio" name="educationTrainingParticipating" id="educationTrainingParticipating-noHave" value="no, but I have in the past">No, but I have in the past</li>
                             </ul>
                         </fieldset>
                         <!--this is a conditonal question based on the user answering yes to the question above-->
-                        <div class="questions">
-                            <label for="">What is the name of the program or school?</label>
-                            <input type="text" name="" id="">
+                        <div class="questions" id="programSchoolName">
+                            <label for="programSchoolName">What is the name of the program or school?</label>
+                            <input type="text" name="programSchoolName" id="programSchoolName-input">
                         </div>
                         <!--this question is a conditional based on the user answering 'No, but I have in the past' to the question above-->
-                        <div class="questions">
-                            <label for="">What is the name of the program and the dates/year attended?</label>
-                            <input type="text" name="" id="">
+                        <div class="questions" id="pastProgramAttended">
+                            <label for="pastProgramAttended">What is the name of the program and the dates/year attended?</label>
+                            <input type="text" name="pastProgramAttended" id="pastProgramAttended">
                         </div>
                     </div> 
                 </div>
@@ -1056,36 +1056,36 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions" id="ss-1">
-                            <label for="ss1">Is there someone now that you can depend on if you ever needed help to do a task,
+                        <fieldset class="questions" id="someoneDependableForHelp">
+                            <label for="someoneDependableForHelp">Is there someone now that you can depend on if you ever needed help to do a task,
                                 like getting a ride somewhere, or help with shopping or cooking a meal?
                             </label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ss1" id="ss1-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ss1" id="ss1-2" value="no">No</li>
-                                <li><input type="radio" name="ss1" id="ss1-3" value="dont know">Don't know</li>
+                                <li><input type="radio" name="someoneDependableForHelp" id="someoneDependableForHelp-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="someoneDependableForHelp" id="someoneDependableForHelp-no" value="no">No</li>
+                                <li><input type="radio" name="someoneDependableForHelp" id="someoneDependableForHelp-dontKnow" value="dont know">Don't know</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ss-2">
-                            <label for="ss2">Are you currently involved with any church, community group, club, etc?</label>
+                        <fieldset class="questions" id="clubCommunityGroupInvolvement">
+                            <label for="clubCommunityGroupInvolvement">Are you currently involved with any church, community group, club, etc?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ss2" id="ss2-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ss2" id="ss2-2" value="no">No</li>
+                                <li><input type="radio" name="clubCommunityGroupInvolvement" id="clubCommunityGroupInvolvement-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="clubCommunityGroupInvolvement" id="clubCommunityGroupInvolvement-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ss-3">
-                            <label for="ss3">Is there someone you can call when you're feeling down or stressed?</label>
+                        <fieldset class="questions" id="someoneToCallWhenDownStressed">
+                            <label for="someoneToCallWhenDownStressed">Is there someone you can call when you're feeling down or stressed?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ss3" id="ss3-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ss3" id="ss3-2" value="no">No</li>
+                                <li><input type="radio" name="someoneToCallWhenDownStressed" id="someoneToCallWhenDownStressed-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="someoneToCallWhenDownStressed" id="someoneToCallWhenDownStressed-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ss-4">
-                            <label for="ss4">Does a partner, or anyone at home, hurt, hit or threaten you?</label>
+                        <fieldset class="questions" id="domesticAbuseFromHousingOccupants">
+                            <label for="domesticAbuseFromHousingOccupants">Does a partner, or anyone at home, hurt, hit or threaten you?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ss4" id="ss4-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ss4" id="ss4-2" value="no">No</li>
-                                <li><input type="radio" name="ss4" id="ss4-3" value="prefer not to say">Prefer not to say</li>
+                                <li><input type="radio" name="domesticAbuseFromHousingOccupants" id="domesticAbuseFromHousingOccupants-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="domesticAbuseFromHousingOccupants" id="domesticAbuseFromHousingOccupants-no" value="no">No</li>
+                                <li><input type="radio" name="domesticAbuseFromHousingOccupants" id="domesticAbuseFromHousingOccupants-notAnswered" value="prefer not to say">Prefer not to say</li>
                             </ul>
                         </fieldset>
                     </div> 
@@ -1099,97 +1099,97 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions" id="ls-1">
-                            <label for="ls1">Have you ever been arrested?</label>
+                        <fieldset class="questions" id="arrestHistory">
+                            <label for="arrestHistory">Have you ever been arrested?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls1" id="ls1-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls1" id="ls1-2" value="no">No</li>
-                                <li><input type="radio" name="ls1" id="ls1-3" value="prefer not to say">Prefer not to say</li>
+                                <li><input type="radio" name="arrestHistory" id="arrestHistory-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="arrestHistory" id="arrestHistory-no" value="no">No</li>
+                                <li><input type="radio" name="arrestHistory" id="arrestHistory-notAnswered" value="prefer not to say">Prefer not to say</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ls-2">
-                            <label for="ls2">Do you have an on going criminal case?</label>
+                        <fieldset class="questions" id="onGoingCriminalCase">
+                            <label for="onGoingCriminalCase">Do you have an on going criminal case?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls2" id="ls2-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls2" id="ls2-2" value="no">No</li>
-                                <li><input type="radio" name="ls2" id="ls2-3" value="prefer not to say">Prefer not to say</li>
+                                <li><input type="radio" name="onGoingCriminalCase" id="onGoingCriminalCase-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="onGoingCriminalCase" id="onGoingCriminalCase-no" value="no">No</li>
+                                <li><input type="radio" name="onGoingCriminalCase" id="onGoingCriminalCase-notAnswered" value="prefer not to say">Prefer not to say</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ls3">
-                            <label for="ls3">Have you ever been in prison or jail?</label>
+                        <fieldset class="questions" id="prisonHistory">
+                            <label for="prisonHistory">Have you ever been in prison or jail?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls3" id="ls3-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls3" id="ls3-2" value="no">No</li>
-                                <li><input type="radio" name="ls3" id="ls3-3" value="prefer not to say">Prefer not to say</li>
+                                <li><input type="radio" name="prisonHistory" id="prisonHistory-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="prisonHistory" id="prisonHistory-no" value="no">No</li>
+                                <li><input type="radio" name="prisonHistory" id="prisonHistory-noAnswer" value="prefer not to say">Prefer not to say</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="ls-4">
-                            <label for="ls4">When were you last released? What is your CDC/PFN #?(conditional)</label>
-                            <input type="text" name="ls4" id="ls4-1">
+                        <div class="questions" id="lastReleaseCDCPFN">
+                            <label for="lastReleaseCDCPFN">When were you last released? What is your CDC/PFN #?</label>
+                            <input type="text" name="lastReleaseCDCPFN" id="lastReleaseCDCPFN-input">
                         </div>
-                        <fieldset class="questions" id="ls-5">
-                            <label for="ls5">Do you owe restitution?</label>
+                        <fieldset class="questions" id="restitution">
+                            <label for="restitution">Do you owe restitution?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls5" id="ls5-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls5" id="ls5-2" value="no">No</li>
+                                <li><input type="radio" name="restitution" id="restitution-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="restitution" id="restitution-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="ls-6">
-                            <label for="ls6">How much?</label>
-                            <input type="text" name="ls6" id="ls6-1">
+                        <div class="questions" id="restitutionAmount">
+                            <label for="restitutionAmount">How much?</label>
+                            <input type="text" name="restitutionAmount" id="restitutionAmount-input">
                         </div>
-                        <fieldset class="questions" id="ls-7">
-                            <label for="ls7">Are you interested in criminal record clearing?</label>
+                        <fieldset class="questions" id="criminalRecordClearing">
+                            <label for="criminalRecordClearing">Are you interested in criminal record clearing?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls7" id="ls7-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls7" id="ls7-2" value="no">No</li>
+                                <li><input type="radio" name="criminalRecordClearing" id="criminalRecordClearing-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="criminalRecordClearing" id="criminalRecordClearing-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ls-8">
-                            <label for="ls8">Are you currently on parole or probation?</label>
+                        <fieldset class="questions" id="paroleProbationStatus">
+                            <label for="paroleProbationStatus">Are you currently on parole or probation?</label>
                             <ul>
-                                <li><input type="radio" name="ls8" id="ls8-1" value="no">No</li>
-                                <li><input type="radio" name="ls8" id="ls8-2" value="parole">Parole</li>
-                                <li><input type="radio" name="ls8" id="ls8-3" value="probation">Probation</li>
-                                <li><input type="radio" name="ls8" id="ls8-4" value="prefer not to say">Prefer not to say</li>
+                                <li><input type="radio" name="paroleProbationStatus" id="paroleProbationStatus-no" value="no">No</li>
+                                <li><input type="radio" name="paroleProbationStatus" id="paroleProbationStatus-parole" value="parole">Parole</li>
+                                <li><input type="radio" name="paroleProbationStatus" id="paroleProbationStatus-probation" value="probation">Probation</li>
+                                <li><input type="radio" name="paroleProbationStatus" id="paroleProbationStatus-noAnswer" value="prefer not to say">Prefer not to say</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="ls-9">
-                            <label for="ls9">What is your parole or probation end date?(conditional)</label>
-                            <input type="date" name="ls9" id="ls9-1">
+                        <div class="questions" id="paroleProbationEndDate">
+                            <label for="paroleProbationEndDate">What is your parole or probation end date?</label>
+                            <input type="date" name="paroleProbationEndDate" id="paroleProbationEndDate-input">
                         </div>
-                        <fieldset class="questions" id="ls-10">
-                            <label for="ls10">Are you currently having difficulties in getting a job, housing, or any government
+                        <fieldset class="questions" id="jobsHousingGovBenefitsDifficultiesBasedOnBackground">
+                            <label for="jobsHousingGovBenefitsDifficultiesBasedOnBackground">Are you currently having difficulties in getting a job, housing, or any government
                                 benefits because of your legal status, background or a criminal record?
                             </label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls10" id="ls10-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls10" id="ls10-2" value="no">No</li>
-                                <li><input type="radio" name="ls10" id="ls10-3" value="prefer not to say">Prefer not to say</li>
+                                <li><input type="radio" name="jobsHousingGovBenefitsDifficultiesBasedOnBackground" id="jobsHousingGovBenefitsDifficultiesBasedOnBackground-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="jobsHousingGovBenefitsDifficultiesBasedOnBackground" id="jobsHousingGovBenefitsDifficultiesBasedOnBackground-no" value="no">No</li>
+                                <li><input type="radio" name="jobsHousingGovBenefitsDifficultiesBasedOnBackground" id="jobsHousingGovBenefitsDifficultiesBasedOnBackground-noAnswered" value="prefer not to say">Prefer not to say</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ls-11">
-                            <label for="ls11">Do you have a government issued ID or driver's license?</label>
+                        <fieldset class="questions" id="governmentIssuedIDOrLicense">
+                            <label for="governmentIssuedIDOrLicense">Do you have a government issued ID or driver's license?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls11" id="ls11-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls11" id="ls11-2" value="no">No</li>
+                                <li><input type="radio" name="governmentIssuedIDOrLicense" id="governmentIssuedIDOrLicense-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="governmentIssuedIDOrLicense" id="governmentIssuedIDOrLicense-no" value="no">No</li>
                         </fieldset>
-                        <fieldset class="questions" id="ls-12">
-                            <label for="ls12">Do you have concerns about your family's immigration status?</label>
+                        <fieldset class="questions" id="familyImmigrationStatusConcern">
+                            <label for="familyImmigrationStatusConcern">Do you have concerns about your family's immigration status?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="ls12" id="ls12-1" value="yes">Yes</li>
-                                <li><input type="radio" name="ls12" id="ls12-2" value="no">No</li>
+                                <li><input type="radio" name="familyImmigrationStatusConcern" id="familyImmigrationStatusConcern-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="familyImmigrationStatusConcern" id="familyImmigrationStatusConcern-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="ls-13">
+                        <fieldset class="questions" id="concernWithLandlord">
                             <div class="label">
-                                <label for="ls13">Do you have concerns with or disputes with your landlord?</label>
+                                <label for="concernWithLandlord">Do you have concerns with or disputes with your landlord?</label>
                                 <p class="q-help-text">threats of eviction, etc.</p>
                             </div>
                             <div class="input">
                                 <ul class="threeOrLess">
-                                    <li><input type="radio" name="ls13" id="ls13-1" value="yes">Yes</li>
-                                    <li><input type="radio" name="ls13" id="ls13-2" value="no">No</li>
+                                    <li><input type="radio" name="concernWithLandlord" id="concernWithLandlord-yes" value="yes">Yes</li>
+                                    <li><input type="radio" name="concernWithLandlord" id="concernWithLandlord-no" value="no">No</li>
                                 </ul>
                             </div>
                         </fieldset>
@@ -1204,23 +1204,23 @@
                         </div>
                     </div>
                     <div class="sub-section">
-                        <fieldset class="questions">
-                            <label for="">Do you have a personal phone where we can easily reach you?</label>
+                        <fieldset class="questions" id="ownPersonalPhone">
+                            <label for="ownPersonalPhone">Do you have a personal phone where we can easily reach you?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="ownPersonalPhone" id="ownPersonalPhone-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="ownPersonalPhone" id="ownPersonalPhone-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Over the past year, did you ever have difficulty going to work, school, 
+                        <fieldset class="questions" id="pastYearLackOfConvenientTransportation">
+                            <label for="pastYearLackOfConvenientTransportation">Over the past year, did you ever have difficulty going to work, school, 
                                 shopping, or an appointment, because the lack of convenient transportation?
                             </label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Once or Twice</li>
-                                <li><input type="radio" name="" id="">Several Days</li>
-                                <li><input type="radio" name="" id="">Most Days</li>
-                                <li><input type="radio" name="" id="">Every Day</li>
+                                <li><input type="radio" name="pastYearLackOfConvenientTransportation" id="pastYearLackOfConvenientTransportation-never" value="never">Never</li>
+                                <li><input type="radio" name="pastYearLackOfConvenientTransportation" id="pastYearLackOfConvenientTransportation-twice" value="once or twice">Once or Twice</li>
+                                <li><input type="radio" name="pastYearLackOfConvenientTransportation" id="pastYearLackOfConvenientTransportation-serveralDays" value="several days">Several Days</li>
+                                <li><input type="radio" name="pastYearLackOfConvenientTransportation" id="pastYearLackOfConvenientTransportation-mostDays" value="most days">Most Days</li>
+                                <li><input type="radio" name="pastYearLackOfConvenientTransportation" id="pastYearLackOfConvenientTransportation-everyDay" value="every day">Every Day</li>
                             </ul>
                         </fieldset>
                         <fieldset class="questions">
@@ -1231,14 +1231,14 @@
                                 <li><input type="radio" name="" id="">Don't know</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Which of the following modes of transportation will you typically use to get to Roots?</label>
+                        <fieldset class="questions" id="typicalTransportationToRoots">
+                            <label for="typicalTransportationToRoots">Which of the following modes of transportation will you typically use to get to Roots?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Public Transportation</li>
-                                <li><input type="radio" name="" id="">My own car</li>
-                                <li><input type="radio" name="" id="">Ride from friend/family</li>
-                                <li><input type="radio" name="" id="">Walk, but I live within 1 mile</li>
-                                <li><input type="radio" name="" id="">Walk, but I live more than 1 mile away</li>
+                                <li><input type="radio" name="typicalTransportationToRoots" id="typicalTransportationToRoots-public" value="public transportation">Public Transportation</li>
+                                <li><input type="radio" name="typicalTransportationToRoots" id="typicalTransportationToRoots-ownCar" value="my own car">My own car</li>
+                                <li><input type="radio" name="typicalTransportationToRoots" id="typicalTransportationToRoots-ride" value="ride from friend/family">Ride from friend/family</li>
+                                <li><input type="radio" name="typicalTransportationToRoots" id="typicalTransportationToRoots-walkLess1mile" value="Walk, but I live within 1 mile">Walk, but I live within 1 mile</li>
+                                <li><input type="radio" name="typicalTransportationToRoots" id="typicalTransportationToRoots-walkMore1mile" value="Walk, but I live more than 1 mile away">Walk, but I live more than 1 mile away</li>
                             </ul>
                         </fieldset>
                          <div class="move">

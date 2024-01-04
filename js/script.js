@@ -685,9 +685,9 @@ if(healthInsurancePlan){
             if(healthInsurancePlanRadios[i].checked){
                 policy = healthInsurancePlanRadios[i].value;
                 if(policy == 'none'){
-                    policyNumber.style.display = 'block';
-                }else{
                     policyNumber.style.display = 'none';
+                }else{
+                    policyNumber.style.display = 'block';
                 }
             }
         }
@@ -763,8 +763,8 @@ if(doctorsTherapistsCounselors){
     })
 }
         //HealthcareManagementSocialOrCaseWorker dynamic functionality
-const HealthcareManagementSocialOrCaseWorker = document.getElementById('HealthcareManagementSocialOrCaseWorker');
-const CaseOrSocialWorkerNameLocation = document.getElementById('CaseOrSocialWorkerNameLocation');
+const HealthcareManagementSocialOrCaseWorker = document.getElementById('healthcareManagementSocialOrCaseWorker');
+const CaseOrSocialWorkerNameLocation = document.getElementById('caseOrSocialWorkerNameLocation');
 CaseOrSocialWorkerNameLocation.style.display = 'none';
 if(HealthcareManagementSocialOrCaseWorker){
     let healthcareManagement;
@@ -809,6 +809,153 @@ if(smokeCigarettesStatus){
                     tobaccoNicotineProducts.style.display = 'none';
                     lastSmoke.style.display = 'none';
                     smokeFrequency.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+//Social area of the for section
+//Housing
+        //housingSituation
+const housingSituation = document.getElementById('housingSituation');
+const housingLocation = document.getElementById('housingLocation');
+housingLocation.style.display = 'none';
+if(housingSituation){
+    let housing;
+    const housingSituationRadios = housingSituation.querySelectorAll('input[type="radio"]');
+    housingSituation.addEventListener('click', () => {
+        for(let i = 0; i < housingSituationRadios.length; i++){
+            if(housingSituationRadios[i].checked){
+                housing = housingSituationRadios[i].value;
+                if(housing == 'I have no housing(I\'m sleeping on the StorageEvent, in a park, a vehicle, or a bus or train station)'){
+                    housingLocation.style.display = 'block';
+                }else{
+                    housingLocation.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+//education
+        //todaysWorkSituation dynamic functionality
+const todaysWorkSituation = document.getElementById('todaysWorkSituation');
+const employerNameLocation = document.getElementById('employerNameLocation');
+employerNameLocation.style.display = 'none'
+if(todaysWorkSituation){
+    let work;
+    const todaysWorkSituationRadios = todaysWorkSituation.querySelectorAll('input[type="radio"]');
+    todaysWorkSituation.addEventListener('click', () => {
+        for(let i = 0; i < todaysWorkSituationRadios.length; i++){
+            if(todaysWorkSituationRadios[i].checked){
+                work = todaysWorkSituationRadios[i].value;
+                if(work == 'I am employed full-time' || work == 'I am employed part-time' || work == 'I am self-employed'|| work == 'I do odd jobs/occasional work'){
+                    employerNameLocation.style.display = 'none';
+                }else{
+                    employerNameLocation.style.display = 'block';
+                }
+            }
+        }
+    })
+}
+        //educationTrainingParticipating dynamic functionality
+const educationTrainingParticipating = document.getElementById('educationTrainingParticipating');
+const programSchoolName = document.getElementById('programSchoolName');
+programSchoolName.style.display = 'none';
+const pastProgramAttended = document.getElementById('pastProgramAttended');
+pastProgramAttended.style.display = 'none';
+if(educationTrainingParticipating){
+    let education;
+    const educationTrainingParticipatingRadios = educationTrainingParticipating.querySelectorAll('input[type="radio"]');
+    educationTrainingParticipating.addEventListener('click', () => {
+        for(let i = 0; educationTrainingParticipatingRadios.length; i++){
+            if(educationTrainingParticipatingRadios[i].checked){
+                education = educationTrainingParticipatingRadios[i].value;
+                if(education == 'yes'){
+                    programSchoolName.style.display = 'block';
+                    pastProgramAttended.style.display = 'none';
+                }else if(education == 'no, but I have in the past'){
+                    pastProgramAttended.style.display = 'block';
+                    programSchoolName.style.display = 'none';
+                }else{
+                    pastProgramAttended.style.display = 'none';
+                    programSchoolName.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+//legal status
+        //arrestHistory dynamic functionality
+const arrestHistory = document.getElementById('arrestHistory');
+const onGoingCriminalCase = document.getElementById('onGoingCriminalCase');
+onGoingCriminalCase.style.display = 'none';
+const prisonHistory = document.getElementById('prisonHistory');
+prisonHistory.style.display = 'none';
+const lastReleaseCDCPFN = document.getElementById('lastReleaseCDCPFN');
+lastReleaseCDCPFN.style.display = 'none'
+const restitution = document.getElementById('restitution');
+restitution.style.display = 'none';
+const restitutionAmount = document.getElementById('restitutionAmount');
+restitutionAmount.style.display = 'none';
+const criminalRecordClearing = document.getElementById('criminalRecordClearing');
+criminalRecordClearing.style.display = 'none'
+const paroleProbationStatus = document.getElementById('paroleProbationStatus');
+paroleProbationStatus.style.display = 'none';
+const paroleProbationEndDate = document.getElementById('paroleProbationEndDate');
+paroleProbationEndDate.style.display = 'none';
+if(arrestHistory){
+    let arrest;
+    const arrestHistoryRadios = arrestHistory.querySelectorAll('input[type="radio"]');
+    arrestHistory.addEventListener('click', () => {
+        for(let i = 0; i < arrestHistoryRadios.length; i++){
+            if(arrestHistoryRadios[i].checked){
+                arrest = arrestHistoryRadios[i].value;
+                if(arrest == 'yes'){
+                    prisonHistory.style.display = 'block';
+                    onGoingCriminalCase.style.display = 'block';
+                    restitution.style.display = 'block';
+                    criminalRecordClearing.style.display = 'block';
+                    paroleProbationStatus.style.display = 'block';
+                }else{
+                    prisonHistory.style.display = 'block';
+                    onGoingCriminalCase.style.display = 'block';
+                    restitution.style.display = 'block';
+                    criminalRecordClearing.style.display = 'block';
+                    paroleProbationStatus.style.display = 'block';
+                }
+            }
+        }
+    })
+}
+        //prisonHistory dynamic functionality
+if(prisonHistory){
+    let jail;
+    const prisonHistoryRadios = prisonHistory.querySelectorAll('input[type="radio"]');
+    prisonHistory.addEventListener('click', () => {
+        for(let i = 0; i < prisonHistoryRadios.length; i++){
+            if(prisonHistoryRadios[i].checked){
+                jail = prisonHistoryRadios[i].value;
+                if(jail == 'yes'){
+                    lastReleaseCDCPFN.style.display = 'block';
+                }else{
+                    lastReleaseCDCPFN.style.display = 'none';
+                }
+            }
+        }
+    })
+}
+        //restitution dynamic functionality
+if(restitution){
+    let owed;
+    const restitutionRadios = restitution.querySelectorAll('input[type="radio"]');
+    restitution.addEventListener('click', () => {
+        for(let i = 0; i < restitutionRadios.length; i++){
+            if(restitutionRadios[i].checked){
+                owed = restitutionRadios[i].value;
+                if(owed == 'yes'){
+                    restitutionAmount.style.display = 'block'
+                }else{
+                    restitutionAmount.style.display = 'none'
                 }
             }
         }
