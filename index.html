@@ -35,31 +35,44 @@
                 </div>
                 <!--sub-section for demographics-->
                 <div class="sub-section" >
-                    <div class="questions multi-question" id="dg1-2">
-                        <div class="question q-w-help" id="todaysdate">
-                            <div class="label">
-                                <label for="todays_date">Today's Date</label>
-                                <p class="q-help-text">Date form is filled out</p>
-                            </div>
-                            <div class="input">
-                                <input type="date" name="todays_date" id="todays_date">
-                            </div>
+                    <div class="questions q-w-help" id="todaysdate">
+                        <div class="label">
+                            <label for="todays_date">Today's Date</label>
+                            <p class="q-help-text">Date form is filled out</p>
                         </div>
+                        <div class="input">
+                            <input type="date" name="todays_date" id="todays_date">
+                        </div>
+                    </div>
+                    <div class="questions multi-question" id="dg1-2">
+                        <fieldset class="question" id="clientOrNavigator" >
+                            <label for="clientOrNavigator">Are you the client or the navigator?</label>
+                            <ul class="threeOrLess">
+                                <li><input type="radio" name="clientOrNavigator" id="clientOrNavigator-client" value="client">Client</li>
+                                <li><input type="radio" name="clientOrNavigator" id="clientOrNavigator-navigator" value="navigator">Roots Staff on behalf of client</li>
+                            </ul>
+                        </fieldset>
                         <div class="question" id="rootsemail">
                             <label for="roots_email">Roots Staff Email Address</label>
                             <input type="email" name="roots_email" id="roots_email">
                         </div>
                     </div>
-                    <fieldset class="questions" id="rootsSite">
-                        <label for="roots_site">Roots Site</label>
-                        <ul>
-                            <li><input type="radio" name="roots_site" id="roots_site-main" value="Main-9925 International"> Main-9925 International</li>
-                            <li><input type="radio" name="roots_site" id="roots_site-hq" value="HQ-7272 Macarthur"> HQ-7272 Macarthur</li>
-                            <li><input type="radio" name="roots_site" id="roots_site-stomp" value="STOMP"> STOMP</li>
-                            <li><input type="radio" name="roots_site" id="roots_site-south" value="South Bay (San Jose)"> South Bay(San Jose)</li>
-                            <li><input type="radio" name="roots_site" id="roots_site-turning" value="Turning Point"> Turning Point</li>
-                            <li><input type="radio" name="roots_site" id="roots_site-other" value="other"> Other</li>
-                        </ul>
+                    <fieldset class="questions q-w-help" id="rootsSite" style="display: flex; flex-direction: column;">
+                        <div class="label">
+                            <label for="roots_site">Roots Site</label>
+                            <p class="q-help-text">Where are you filling out the form today (if remotely, what site do you normally attend or plan to attend?)</p>       
+                        </div>
+                        <div class="input">
+                            <ul>
+                                <li><input type="radio" name="roots_site" id="roots_site-main" value="Main-9925 International"> Main-9925 International</li>
+                                <li><input type="radio" name="roots_site" id="roots_site-hq" value="HQ-7272 Macarthur"> HQ-7272 Macarthur</li>
+                                <li><input type="radio" name="roots_site" id="roots_site-stomp" value="STOMP"> STOMP</li>
+                                <li><input type="radio" name="roots_site" id="roots_site-south1898" value="South Bay (San Jose) Clinic - 1898 The Alameda"> South Bay(San Jose) Clinic - 1898 The Alameda</li>
+                                <li><input type="radio" name="roots_site" id="roots_site-south1811" value="South Bay (San Jose) Navigation - 1811 South 7th St">South Bay (San Jose) Navigation - 1811 South 7th St</li>
+                                <li><input type="radio" name="roots_site" id="roots_site-turning" value="Turning Point"> Turning Point</li>
+                                <li><input type="radio" name="roots_site" id="roots_site-other" value="other"> Other</li>
+                            </ul>
+                        </div>
                     </fieldset>
                     <fieldset class="questions" id="visit_purpose">
                         <label for="visit_purpose">Why are you here today?</label>
@@ -897,7 +910,7 @@
                     </div>
                     <div class="sub-section">
                         <fieldset class="questions" id="servingsFruitTypicalDay">
-                            <label for="">How many pieces or servings of fruit, any sort, do you eat on a typical day?</label>
+                            <label for="servingsFruitTypicalDay">How many pieces or servings of fruit, any sort, do you eat on a typical day?</label>
                             <ul>
                                 <li><input type="radio" name="servingsFruitTypicalDay" id="servingsFruitTypicalDay-none" value="none">None</li>
                                 <li><input type="radio" name="servingsFruitTypicalDay" id="servingsFruitTypicalDay-one" value="one">One</li>
@@ -906,7 +919,7 @@
                             </ul>
                         </fieldset>
                         <fieldset class="questions" id="whereGetMajorityFood">
-                            <label for="">Where do you get the majority of your food?</label>
+                            <label for="whereGetMajorityFood">Where do you get the majority of your food?</label>
                             <ul>
                                 <li><input type="radio" name="whereGetMajorityFood" id="whereGetMajorityFood-grocery" value="grocery">Grocery</li>
                                 <li><input type="radio" name="whereGetMajorityFood" id="whereGetMajorityFood-farmersMarket" value="farmer's market">Farmer's Market</li>
@@ -1223,12 +1236,12 @@
                                 <li><input type="radio" name="pastYearLackOfConvenientTransportation" id="pastYearLackOfConvenientTransportation-everyDay" value="every day">Every Day</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Is there someone now that you can depend on if you ever needed help to do a task, like getting a ride somewhere, or help with shopping or cooking a meal?</label>
+                        <fieldset class="questions" id="dependableSupportPerson">
+                            <label for="dependableSupportPerson">Is there someone now that you can depend on if you ever needed help to do a task, like getting a ride somewhere, or help with shopping or cooking a meal?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
-                                <li><input type="radio" name="" id="">Don't know</li>
+                                <li><input type="radio" name="dependableSupportPerson" id="dependableSupportPerson-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="dependableSupportPerson" id="dependableSupportPerson-no" value="no">No</li>
+                                <li><input type="radio" name="dependableSupportPerson" id="dependableSupportPerson-dontKnow" value="don't know">Don't know</li>
                             </ul>
                         </fieldset>
                         <fieldset class="questions" id="typicalTransportationToRoots">
@@ -1255,7 +1268,7 @@
                     <div class="heading">
                         <div class="targetEl">
                             <h1 class="header">Mental Health</h1>
-                            <p class="h-help-text">This will contain a brief explanation of the  text area</p>
+                            <p class="h-help-text">This will contain a brief explanation of the text area</p>
                         </div>
                     </div>
 
@@ -1263,46 +1276,46 @@
                     <div>
                         <strong>The Alcohol Use Disorders Identification Test (AUDIT)</strong>
                     </div>
-                        <fieldset class="questions">
-                            <label for="">Have you ever been diagnosed with any of the following mental health conditions (check all that apply)</label>
+                        <fieldset class="questions" id="mentalHealthDiagnose">
+                            <label for="mentalHealthDiagnose">Have you ever been diagnosed with any of the following mental health conditions (check all that apply)</label>
                             <ul>
-                                <li><input type="checkbox" name="" id="">Anxiety</li>
-                                <li><input type="checkbox" name="" id="">Biploar Disorder</li>
-                                <li><input type="checkbox" name="" id="">Depression</li>
-                                <li><input type="checkbox" name="" id="">PTSD</li>
-                                <li><input type="checkbox" name="" id="">Schizophrenia</li>
-                                <li><input type="checkbox" name="" id="">None</li>
+                                <li><input type="checkbox" name="mentalHealthDiagnose" id="mentalHealthDiagnose-anxiety" value="anxiety">Anxiety</li>
+                                <li><input type="checkbox" name="mentalHealthDiagnose" id="mentalHealthDiagnose-bipolar" value="bipolar disorder">Bipolar Disorder</li>
+                                <li><input type="checkbox" name="mentalHealthDiagnose" id="mentalHealthDiagnose-depression" value="depression">Depression</li>
+                                <li><input type="checkbox" name="mentalHealthDiagnose" id="mentalHealthDiagnose-PTSD" value="PTSD">PTSD</li>
+                                <li><input type="checkbox" name="mentalHealthDiagnose" id="mentalHealthDiagnose-schizophrenia" value="Schizophrenia">Schizophrenia</li>
+                                <li><input type="checkbox" name="mentalHealthDiagnose" id="mentalHealthDiagnose-none" value="none">None</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">During the past month, how often did poor mental health keep you from doing your usual activities, work, or recreation?</label>
+                        <fieldset class="questions" id="pastMonthMentalHealthInterferedActivitiesWorkRecreation">
+                            <label for="pastMonthMentalHealthInterferedActivitiesWorkRecreation">During the past month, how often did poor mental health keep you from doing your usual activities, work, or recreation?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Some Days</li>
-                                <li><input type="radio" name="" id="">More than half the days</li>
-                                <li><input type="radio" name="" id="">Every Day</li>
+                                <li><input type="radio" name="pastMonthMentalHealthInterferedActivitiesWorkRecreation" id="pastMonthMentalHealthInterferedActivitiesWorkRecreation-never" value="never">Never</li>
+                                <li><input type="radio" name="pastMonthMentalHealthInterferedActivitiesWorkRecreation" id="pastMonthMentalHealthInterferedActivitiesWorkRecreation-someDays" value="some days">Some Days</li>
+                                <li><input type="radio" name="pastMonthMentalHealthInterferedActivitiesWorkRecreation" id="pastMonthMentalHealthInterferedActivitiesWorkRecreation-morehalfDays" value="more than half the days">More than half the days</li>
+                                <li><input type="radio" name="pastMonthMentalHealthInterferedActivitiesWorkRecreation" id="pastMonthMentalHealthInterferedActivitiesWorkRecreation-everyDay" value="every day">Every Day</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">During the past month, how often did you suffer excessive worry about work, school, family, relationships or another important thing in your life?</label>
+                        <fieldset class="questions" id="pastMonthWorryAboutLifeCommitments">
+                            <label for="pastMonthWorryAboutLifeCommitments">During the past month, how often did you suffer excessive worry about work, school, family, relationships or another important thing in your life?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Some Days</li>
-                                <li><input type="radio" name="" id="">More thhan half the days</li>
-                                <li><input type="radio" name="" id="">Every Day</li>
+                                <li><input type="radio" name="pastMonthWorryAboutLifeCommitments" id="pastMonthWorryAboutLifeCommitments-never" value="never">Never</li>
+                                <li><input type="radio" name="pastMonthWorryAboutLifeCommitments" id="pastMonthWorryAboutLifeCommitments-someDays" value="some days">Some Days</li>
+                                <li><input type="radio" name="pastMonthWorryAboutLifeCommitments" id="pastMonthWorryAboutLifeCommitments-moreHalfDays" value="more than half the days">More than half the days</li>
+                                <li><input type="radio" name="pastMonthWorryAboutLifeCommitments" id="pastMonthWorryAboutLifeCommitments-everyDay" value="every day">Every Day</li>
                             </ul>
                         </fieldset>
                         <!--Question belongs here but waiting
                              for structure direction-->
-                        <fieldset class="questions">
-                            <label for="">If you checked off any problem in this questionaire so far, how difficult have these problems made 
+                        <fieldset class="questions" id="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult">
+                            <label for="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult">If you checked off any problem in this questionaire so far, how difficult have these problems made 
                                 it for you to do your work, take care of things at home, or get along with other people?
                             </label>
                             <ul>
-                                <li><input type="radio" name="" id="">Not difficult at all</li>
-                                <li><input type="radio" name="" id="">Somewhat difficult</li>
-                                <li><input type="radio" name="" id="">Very difficult</li>
-                                <li><input type="radio" name="" id="">Extremely difficult</li>
+                                <li><input type="radio" name="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult" id="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult-not" value="not difficult at all">Not difficult at all</li>
+                                <li><input type="radio" name="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult" id="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult-somewhat" value="somewhat difficult">Somewhat difficult</li>
+                                <li><input type="radio" name="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult" id="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult-very" value="very difficult">Very difficult</li>
+                                <li><input type="radio" name="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult" id="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult-extremely" value="extremely difficult">Extremely difficult</li>
                             </ul>
                         </fieldset>
                     </div>
@@ -1320,216 +1333,216 @@
                         <!--theres a calculation on this question based on the answers 
                         there maybe a condition based on the calculation of users answers at 
                         certain points of the screening-->
-                        <fieldset class="questions">
-                            <label for="">How often do you have a drink containing alcohol?</label>
+                        <fieldset class="questions" id="drinkAlcoholFrequency">
+                            <label for="drinkAlcoholFrequency">How often do you have a drink containing alcohol?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Monthly or less</li>
-                                <li><input type="radio" name="" id="">2 to 4 times a month</li>
-                                <li><input type="radio" name="" id="">2 to 3 times a week</li>
-                                <li><input type="radio" name="" id="">4 or more times a week</li>
+                                <li><input type="radio" name="drinkAlcoholFrequency" id="drinkAlcoholFrequency-never" value="never">Never</li>
+                                <li><input type="radio" name="drinkAlcoholFrequency" id="drinkAlcoholFrequency-lessMonthly" value="monthly or less">Monthly or less</li>
+                                <li><input type="radio" name="drinkAlcoholFrequency" id="drinkAlcoholFrequency-4timesMonthly" value="2 to 4 times a month">2 to 4 times a month</li>
+                                <li><input type="radio" name="drinkAlcoholFrequency" id="drinkAlcoholFrequency-3timesWeekly" value="2 to 3 times week">2 to 3 times a week</li>
+                                <li><input type="radio" name="drinkAlcoholFrequency" id="drinkAlcoholFrequency-4moretimesWeek" value="4 or more times a week">4 or more times a week</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How many drinks containing alcohol do you have on a typical day when you are drinking?</label>
+                        <fieldset class="questions" id="alcoholDrinksAmountTypicalDayDrink">
+                            <label for="alcoholDrinksAmountTypicalDayDrink">How many drinks containing alcohol do you have on a typical day when you are drinking?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">1 or 2</li>
-                                <li><input type="radio" name="" id="">3 or 4</li>
-                                <li><input type="radio" name="" id="">5 or 6</li>
-                                <li><input type="radio" name="" id="">7, 8, or 9</li>
-                                <li><input type="radio" name="" id="">10 or more</li>
+                                <li><input type="radio" name="alcoholDrinksAmountTypicalDayDrink" id="alcoholDrinksAmountTypicalDayDrink-12" value="1 or 2">1 or 2</li>
+                                <li><input type="radio" name="alcoholDrinksAmountTypicalDayDrink" id="alcoholDrinksAmountTypicalDayDrink-34" value="3 or 4">3 or 4</li>
+                                <li><input type="radio" name="alcoholDrinksAmountTypicalDayDrink" id="alcoholDrinksAmountTypicalDayDrink-56" value="5 or 6">5 or 6</li>
+                                <li><input type="radio" name="alcoholDrinksAmountTypicalDayDrink" id="alcoholDrinksAmountTypicalDayDrink-678" value="7, 8, or 9">7, 8, or 9</li>
+                                <li><input type="radio" name="alcoholDrinksAmountTypicalDayDrink" id="alcoholDrinksAmountTypicalDayDrink-10more" value="10 or more">10 or more</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How often do you have six or more drinks on one occasion?</label>
+                        <fieldset class="questions" id="sixOrMoreDrinksOccasion">
+                            <label for="sixOrMoreDrinksOccasion">How often do you have six or more drinks on one occasion?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Less than monthly</li>
-                                <li><input type="radio" name="" id="">Monthly</li>
-                                <li><input type="radio" name="" id="">Weekly</li>
-                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                                <li><input type="radio" name="sixOrMoreDrinksOccasion" id="sixOrMoreDrinksOccasion-never" value="never">Never</li>
+                                <li><input type="radio" name="sixOrMoreDrinksOccasion" id="sixOrMoreDrinksOccasion-lessMonthly" value="less than monthly">Less than monthly</li>
+                                <li><input type="radio" name="sixOrMoreDrinksOccasion" id="sixOrMoreDrinksOccasion-monthly" value="monthly">Monthly</li>
+                                <li><input type="radio" name="sixOrMoreDrinksOccasion" id="sixOrMoreDrinksOccasion-weekly" value="Weekly">Weekly</li>
+                                <li><input type="radio" name="sixOrMoreDrinksOccasion" id="sixOrMoreDrinksOccasion-daily" value="daily or almost daily">Daily or almost daily</li>
                             </ul>
                         </fieldset>
                         <!--if the tally = 0 after answering questions 3 and for skip th redt of the alcohol related questions-->
-                        <fieldset class="questions">
-                            <label for="">How often during the last year have you found that you were not able to stop drinking once you had started?</label>
+                        <fieldset class="questions" id="lastYearCantStopDrinkOnceStart">
+                            <label for="lastYearCantStopDrinkOnceStart">How often during the last year have you found that you were not able to stop drinking once you had started?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Less than monthly</li>
-                                <li><input type="radio" name="" id="">Monthly</li>
-                                <li><input type="radio" name="" id="">Weekly</li>
-                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                                <li><input type="radio" name="lastYearCantStopDrinkOnceStart" id="" value="never">Never</li>
+                                <li><input type="radio" name="lastYearCantStopDrinkOnceStart" id="" value="less than monthly">Less than monthly</li>
+                                <li><input type="radio" name="lastYearCantStopDrinkOnceStart" id="" value="monthly">Monthly</li>
+                                <li><input type="radio" name="lastYearCantStopDrinkOnceStart" id="" value="weekly">Weekly</li>
+                                <li><input type="radio" name="lastYearCantStopDrinkOnceStart" id="" value="daily or almost daily">Daily or almost daily</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How often during the last year have you failed to do what was normally expected from you because of drinking?</label>
+                        <fieldset class="questions" id="lastYearFailedNormalDutiesFromDrinking">
+                            <label for="lastYearFailedNormalDutiesFromDrinking">How often during the last year have you failed to do what was normally expected from you because of drinking?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Less than monthly</li>
-                                <li><input type="radio" name="" id="">Monthly</li>
-                                <li><input type="radio" name="" id="">Weekly</li>
-                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                                <li><input type="radio" name="lastYearFailedNormalDutiesFromDrinking" id="lastYearFailedNormalDutiesFromDrinking-never" value="never">Never</li>
+                                <li><input type="radio" name="lastYearFailedNormalDutiesFromDrinking" id="lastYearFailedNormalDutiesFromDrinking-lessMonthly" value="less than monthly">Less than monthly</li>
+                                <li><input type="radio" name="lastYearFailedNormalDutiesFromDrinking" id="lastYearFailedNormalDutiesFromDrinking-monthly" value="monthly">Monthly</li>
+                                <li><input type="radio" name="lastYearFailedNormalDutiesFromDrinking" id="lastYearFailedNormalDutiesFromDrinking-weekly" value="weekly">Weekly</li>
+                                <li><input type="radio" name="lastYearFailedNormalDutiesFromDrinking" id="lastYearFailedNormalDutiesFromDrinking-daily" value="daily or almost daily">Daily or almost daily</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How often during the last year have you needed a first drink in the morning to get yourself going after a heavy drinking session?</label>
+                        <fieldset class="questions" id="lastYearFirstDrinkNeededAfterHeavySession">
+                            <label for="lastYearFirstDrinkNeededAfterHeavySession">How often during the last year have you needed a first drink in the morning to get yourself going after a heavy drinking session?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Less than monthly</li>
-                                <li><input type="radio" name="" id="">Monthly</li>
-                                <li><input type="radio" name="" id="">Weekly</li>
-                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                                <li><input type="radio" name="lastYearFirstDrinkNeededAfterHeavySession" id="lastYearFirstDrinkNeededAfterHeavySession-never" value="never">Never</li>
+                                <li><input type="radio" name="lastYearFirstDrinkNeededAfterHeavySession" id="lastYearFirstDrinkNeededAfterHeavySession-lessMonthly" value="less than monthly">Less than monthly</li>
+                                <li><input type="radio" name="lastYearFirstDrinkNeededAfterHeavySession" id="lastYearFirstDrinkNeededAfterHeavySession-monthly" value="monthly">Monthly</li>
+                                <li><input type="radio" name="lastYearFirstDrinkNeededAfterHeavySession" id="lastYearFirstDrinkNeededAfterHeavySession-weekly" value="weekly">Weekly</li>
+                                <li><input type="radio" name="lastYearFirstDrinkNeededAfterHeavySession" id="lastYearFirstDrinkNeededAfterHeavySession-daily" value="daily or almost daily">Daily or almost daily</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How often during the last year have you had a feeling of guilt or remorse after drinking?</label>
+                        <fieldset class="questions" id="lastYearGuiltRemorseAfterDrinking">
+                            <label for="lastYearGuiltRemorseAfterDrinking">How often during the last year have you had a feeling of guilt or remorse after drinking?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Less than monthly</li>
-                                <li><input type="radio" name="" id="">Monthly</li>
-                                <li><input type="radio" name="" id="">Weekly</li>
-                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                                <li><input type="radio" name="lastYearGuiltRemorseAfterDrinking" id="lastYearGuiltRemorseAfterDrinking-never" value="never">Never</li>
+                                <li><input type="radio" name="lastYearGuiltRemorseAfterDrinking" id="lastYearGuiltRemorseAfterDrinking-lessMonthly" value="less than monthly">Less than monthly</li>
+                                <li><input type="radio" name="lastYearGuiltRemorseAfterDrinking" id="lastYearGuiltRemorseAfterDrinking-monthly" value="monthly">Monthly</li>
+                                <li><input type="radio" name="lastYearGuiltRemorseAfterDrinking" id="lastYearGuiltRemorseAfterDrinking-weekly" value="weekly">Weekly</li>
+                                <li><input type="radio" name="lastYearGuiltRemorseAfterDrinking" id="lastYearGuiltRemorseAfterDrinking-daily" value="daily or almost daily">Daily or almost daily</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How often during the last year have you been unable to remember what happened the night before because you had been drinking?</label>
+                        <fieldset class="questions" id="lastYearMemoryLostDueToDrinking">
+                            <label for="lastYearMemoryLostDueToDrinking">How often during the last year have you been unable to remember what happened the night before because you had been drinking?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Less than monthly</li>
-                                <li><input type="radio" name="" id="">Monthly</li>
-                                <li><input type="radio" name="" id="">Weekly</li>
-                                <li><input type="radio" name="" id="">Daily or almosy daily</li>
+                                <li><input type="radio" name="lastYearMemoryLostDueToDrinking" id="lastYearMemoryLostDueToDrinking-never" value="never">Never</li>
+                                <li><input type="radio" name="lastYearMemoryLostDueToDrinking" id="lastYearMemoryLostDueToDrinking-lessMonthly" value="less than monthly">Less than monthly</li>
+                                <li><input type="radio" name="lastYearMemoryLostDueToDrinking" id="lastYearMemoryLostDueToDrinking-monthly" value="monthly">Monthly</li>
+                                <li><input type="radio" name="lastYearMemoryLostDueToDrinking" id="lastYearMemoryLostDueToDrinking-weekly" value="weekly">Weekly</li>
+                                <li><input type="radio" name="lastYearMemoryLostDueToDrinking" id="lastYearMemoryLostDueToDrinking-daily" value="daily or almost daily">Daily or almost daily</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Have you or someone else been injured as a result of your drinking?</label>
+                        <fieldset class="questions" id="injuryResultOfYourDrinking">
+                            <label for="injuryResultOfYourDrinking">Have you or someone else been injured as a result of your drinking?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">No</li>
-                                <li><input type="radio" name="" id="">Yes, but not in the last year</li>
-                                <li><input type="radio" name="" id="">Yes, during the last year</li>
+                                <li><input type="radio" name="injuryResultOfYourDrinking" id="injuryResultOfYourDrinking-no" value="no">No</li>
+                                <li><input type="radio" name="injuryResultOfYourDrinking" id="injuryResultOfYourDrinking-yesNotLastYear" value="Yes, but not in the last year">Yes, but not in the last year</li>
+                                <li><input type="radio" name="injuryResultOfYourDrinking" id="injuryResultOfYourDrinking-yesDuringLAstYear" value="Yes, during the last year">Yes, during the last year</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">Has a relative or friend or a doctor or another health worker been concerned about your drinking or suggest you cut down?</label>
+                        <fieldset class="questions" id="relativeHealthWorkerRaisedConcernOfDrinking">
+                            <label for="relativeHealthWorkerRaisedConcernOfDrinking">Has a relative or friend or a doctor or another health worker been concerned about your drinking or suggest you cut down?</label>
                             <ul >
-                                <li><input type="radio" name="" id="">No</li>
-                                <li><input type="radio" name="" id="">Yes, but not in the last year</li>
-                                <li><input type="radio" name="" id="">Yes, during the last year</li>
+                                <li><input type="radio" name="relativeHealthWorkerRaisedConcernOfDrinking" id="relativeHealthWorkerRaisedConcernOfDrinking-no" value="no">No</li>
+                                <li><input type="radio" name="relativeHealthWorkerRaisedConcernOfDrinking" id="relativeHealthWorkerRaisedConcernOfDrinking-yesNotLastYear" value="yes, but not in the last year">Yes, but not in the last year</li>
+                                <li><input type="radio" name="relativeHealthWorkerRaisedConcernOfDrinking" id="relativeHealthWorkerRaisedConcernOfDrinking-yesDuringLastYear" value="yes, during the last year">Yes, during the last year</li>
                             </ul>
                         </fieldset>
                         <div>
                             <Strong>Drug Screening Questionaire (DAST)</Strong>
                         </div>
-                        <fieldset class="questions">
-                            <label for="">Which of the following drugs have you used?</label>
+                        <fieldset class="questions" id="drugsUsed">
+                            <label for="drugsUsed">Which of the following drugs have you used?</label>
                             <ul>
-                                <li><input type="checkbox" name="" id="">Methamphetamines (speed, crystal)</li>
-                                <li><input type="checkbox" name="" id="">Cocaine</li>
-                                <li><input type="checkbox" name="" id="">Cannabis (marijuana, pot)</li>
-                                <li><input type="checkbox" name="" id="">Narcotics (heroin, methadone, oxycodone, etc.)</li>
-                                <li><input type="checkbox" name="" id="">Inhalants (paint thinner, aerosol, glue)</li>
-                                <li><input type="checkbox" name="" id="">Hallucinogens (LSD, mushrooms)</li>
-                                <li><input type="checkbox" name="" id="">Tranquilizers (valium)</li>
-                                <li><input type="checkbox" name="" id="">None</li>
-                                <li><input type="checkbox" name="" id="">Other</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-methamphetamines" value="methamphetamines (speed, crystal)">Methamphetamines (speed, crystal)</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-cocaine" value="cocaine">Cocaine</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-cannabis" value="cannabis (marijuana, pot)">Cannabis (marijuana, pot)</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-narcotics" value="narcotics (heroin, methadone, oxycodone, etc.)">Narcotics (heroin, methadone, oxycodone, etc.)</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-inhalants" value="inhalants (paint thinner, aerosol, glue)">Inhalants (paint thinner, aerosol, glue)</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-hallucinogens" value="hallucinogens (LSD, mushrooms)">Hallucinogens (LSD, mushrooms)</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-tranquilizers" value="tranquilizers (valium)">Tranquilizers (valium)</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-none" value="none">None</li>
+                                <li><input type="checkbox" name="drugsUsed" id="drugsUsed-other" value="other">Other</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions">
-                            <label for="">How often have you used these drugs</label>
+                        <fieldset class="questions" id="drugUseFrequency">
+                            <label for="drugUseFrequency">How often have you used these drugs</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Monthly or less</li>
-                                <li><input type="radio" name="" id="">Weekly</li>
-                                <li><input type="radio" name="" id="">Daily or almost daily</li>
+                                <li><input type="radio" name="drugUseFrequency" id="drugUseFrequency-lessMonthly" value="monthly or less">Monthly or less</li>
+                                <li><input type="radio" name="drugUseFrequency" id="drugUseFrequency-weekly" value="weekly">Weekly</li>
+                                <li><input type="radio" name="drugUseFrequency" id="drugUseFrequency-daily" value="daily or almost daily">Daily or almost daily</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Have you ever injected drugs?</label>
+                        <fieldset class="questions" id="injectedDrugs">
+                            <label for="injectedDrugs">Have you ever injected drugs?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Yes, in the past 90 days</li>
-                                <li><input type="radio" name="" id="">Yes, more than 90 days ago</li>
+                                <li><input type="radio" name="injectedDrugs" id="injectedDrugs-never" value="never">Never</li>
+                                <li><input type="radio" name="injectedDrugs" id="injectedDrugs-yesPast90Days" value="yes, in the past 90 days">Yes, in the past 90 days</li>
+                                <li><input type="radio" name="injectedDrugs" id="injectedDrugs-yesMore90Days" value="yes, more than 90 days ago">Yes, more than 90 days ago</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Have you ever been treated for substance abuse?</label>
+                        <fieldset class="questions" id="treatedForSubstanceAbuse">
+                            <label for="treatedForSubstanceAbuse">Have you ever been treated for substance abuse?</label>
                             <ul>
-                                <li><input type="radio" name="" id="">Never</li>
-                                <li><input type="radio" name="" id="">Currently</li>
-                                <li><input type="radio" name="" id="">In the past</li>
+                                <li><input type="radio" name="treatedForSubstanceAbuse" id="treatedForSubstanceAbuse-never" value="never">Never</li>
+                                <li><input type="radio" name="treatedForSubstanceAbuse" id="treatedForSubstanceAbuse-currently" value="currently">Currently</li>
+                                <li><input type="radio" name="treatedForSubstanceAbuse" id="treatedForSubstanceAbuse-past" value="in the past">In the past</li>
                             </ul>
                         </fieldset>                       
-                        <fieldset class="questions">
-                            <label for="">Have you used drugs other than those required for medical reasons?</label>
+                        <fieldset class="questions" id="useOfNonPrescribedDrugs">
+                            <label for="useOfNonPrescribedDrugs">Have you used drugs other than those required for medical reasons?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="useOfNonPrescribedDrugs" id="useOfNonPrescribedDrugs-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="useOfNonPrescribedDrugs" id="useOfNonPrescribedDrugs-no" value="no">No</li>
                             </ul>
                         </fieldset>                      
-                        <fieldset class="questions">
-                            <label for="">Do you abuse more than one drug at a time?</label>
+                        <fieldset class="questions" id="abuseMoreThanOneDrugAtTime">
+                            <label for="abuseMoreThanOneDrugAtTime">Do you abuse more than one drug at a time?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="abuseMoreThanOneDrugAtTime" id="abuseMoreThanOneDrugAtTime-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="abuseMoreThanOneDrugAtTime" id="abuseMoreThanOneDrugAtTime-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Are you unable to stop using drugs when you want to?</label>
+                        <fieldset class="questions" id="ableStopDrugsWhenWant">
+                            <label for="ableStopDrugsWhenWant">Are you unable to stop using drugs when you want to?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="ableStopDrugsWhenWant" id="ableStopDrugsWhenWant-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="ableStopDrugsWhenWant" id="ableStopDrugsWhenWant-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Have you ever had blackouts or flashbacks as a result of drug use?</label>
+                        <fieldset class="questions" id="blackoutsFlashbacksFromDrugUse">
+                            <label for="blackoutsFlashbacksFromDrugUse">Have you ever had blackouts or flashbacks as a result of drug use?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="blackoutsFlashbacksFromDrugUse" id="blackoutsFlashbacksFromDrugUse-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="blackoutsFlashbacksFromDrugUse" id="blackoutsFlashbacksFromDrugUse-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Do you ever feel bad or guilty about your drug use?</label>
+                        <fieldset class="questions" id="feelBadGuiltAboutDrugUse">
+                            <label for="feelBadGuiltAboutDrugUse">Do you ever feel bad or guilty about your drug use?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="feelBadGuiltAboutDrugUse" id="feelBadGuiltAboutDrugUse-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="feelBadGuiltAboutDrugUse" id="feelBadGuiltAboutDrugUse-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Does your spouse (or parent) ever complain about your involvement with drugs?</label>
+                        <fieldset class="questions" id="spouseParentComplainAboutDrugUse">
+                            <label for="spouseParentComplainAboutDrugUse">Does your spouse (or parent) ever complain about your involvement with drugs?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="spouseParentComplainAboutDrugUse" id="spouseParentComplainAboutDrugUse-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="spouseParentComplainAboutDrugUse" id="spouseParentComplainAboutDrugUse-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Have you neglected your family because of your use of drugs?</label>
+                        <fieldset class="questions" id="neglectedFamilyDueToDrugUse">
+                            <label for="neglectedFamilyDueToDrugUse">Have you neglected your family because of your use of drugs?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="neglectedFamilyDueToDrugUse" id="neglectedFamilyDueToDrugUse-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="neglectedFamilyDueToDrugUse" id="neglectedFamilyDueToDrugUse-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Have you engaged in illegal activities in order to obtain drugs?</label>
+                        <fieldset class="questions" id="illegalActivitiesEngagmentToObtainDrugUSe">
+                            <label for="illegalActivitiesEngagmentToObtainDrugUSe">Have you engaged in illegal activities in order to obtain drugs?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="illegalActivitiesEngagmentToObtainDrugUSe" id="illegalActivitiesEngagmentToObtainDrugUSe-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="illegalActivitiesEngagmentToObtainDrugUSe" id="illegalActivitiesEngagmentToObtainDrugUSe-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
-                            <label for="">Have you ever experiences withdrawal symptoms (felt sick) when you stopped taking drugs?</label>
+                        <fieldset class="questions" id="experiencedWithdrawSymptoms">
+                            <label for="experiencedWithdrawSymptoms">Have you ever experiences withdrawal symptoms (felt sick) when you stopped taking drugs?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="" id="">Yes</li>
-                                <li><input type="radio" name="" id="">No</li>
+                                <li><input type="radio" name="experiencedWithdrawSymptoms" id="experiencedWithdrawSymptoms-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="experiencedWithdrawSymptoms" id="experiencedWithdrawSymptoms-no" value="no">No</li>
                             </ul>
                         </fieldset>                        
-                        <fieldset class="questions">
+                        <fieldset class="questions" id="medicalProblemsDueToDrugUse">
                             <div class="label">
-                                <label for="">Have you had medical problems as a result of your drug use?</label>
+                                <label for="medicalProblemsDueToDrugUse">Have you had medical problems as a result of your drug use?</label>
                                 <p class="q-help-text">e.g. memmory loss, hepatitis, convulsions, bleeding</p>
                             </div>
                             <div class="input">
                                 <ul class="threeOrLess">
-                                    <li><input type="radio" name="" id="">Yes</li>
-                                    <li><input type="radio" name="" id="">No</li>
+                                    <li><input type="radio" name="medicalProblemsDueToDrugUse" id="medicalProblemsDueToDrugUse-yes" value="yes">Yes</li>
+                                    <li><input type="radio" name="medicalProblemsDueToDrugUse" id="medicalProblemsDueToDrugUse-no" value="no">No</li>
                                 </ul>
                             </div>
                         </fieldset>                        
@@ -1592,11 +1605,11 @@
                                 <li> If you are a no call/no show for 3 consecutive appointments, the Patient Care Coordinator will contact you in efforts to create a plan that supports your continuity of care.</li>
                             </ul>
                         </div>
-                        <fieldset class="questions" id="cc-1">
-                            <label for="cc1">I have read and understand the Roots Community Code.</label>
+                        <fieldset class="questions" id="agreementsRootsCommunityCode">
+                            <label for="agreementsRootsCommunityCode">I have read and understand the Roots Community Code.</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="cc1" id="cc1-1" value="yes">Yes</li>
-                                <li><input type="radio" name="cc1" id="cc1-2" value="no">No</li>
+                                <li><input type="radio" name="agreementsRootsCommunityCode" id="agreementsRootsCommunityCode-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="agreementsRootsCommunityCode" id="agreementsRootsCommunityCode-no" value="no">No</li>
                             </ul>
                         </fieldset>
                         <div class="questions">
@@ -1660,30 +1673,30 @@
                                 We will not disclose your health care information without your written authorization except as described in this notice. 
                             </p>
                         </div>
-                        <fieldset class="questions" id="cc-2">
-                            <label for="cc2">I have read and understood the Roots Community Health Clinic Notice of Privacy Practices and that I need to sign this form the next time I am at the clinic.</label>
+                        <fieldset class="questions" id="agreementsRootsCommunityHealthClinicNoticeOfPolicy">
+                            <label for="agreementsRootsCommunityHealthClinicNoticeOfPolicy">I have read and understood the Roots Community Health Clinic Notice of Privacy Practices and that I need to sign this form the next time I am at the clinic.</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="cc2" id="cc2-1" value="yes">Yes</li>
-                                <li><input type="radio" name="cc2" id="cc2-2" value="no">No</li>
+                                <li><input type="radio" name="agreementsRootsCommunityHealthClinicNoticeOfPolicy" id="agreementsRootsCommunityHealthClinicNoticeOfPolicy-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="agreementsRootsCommunityHealthClinicNoticeOfPolicy" id="agreementsRootsCommunityHealthClinicNoticeOfPolicy-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <fieldset class="questions" id="cc-3">
-                            <label for="cc3">Would you like to designate an authorized individual to receive your information and initiate care on your behalf?</label>
+                        <fieldset class="questions" id="designateAuthorizedOnBehalf">
+                            <label for="designateAuthorizedOnBehalf">Would you like to designate an authorized individual to receive your information and initiate care on your behalf?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="cc3" id="cc3-1" value="yes">Yes</li>
-                                <li><input type="radio" name="cc3" id="cc3-2" value="no">No</li>
+                                <li><input type="radio" name="designateAuthorizedOnBehalf" id="designateAuthorizedOnBehalf-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="designateAuthorizedOnBehalf" id="designateAuthorizedOnBehalf-no" value="no">No</li>
                             </ul>
                         </fieldset>
-                        <div class="questions" id="cc-4">
-                            <label for="cc4">What is the name of the authorized individual?</label>
-                            <input type="text" name="cc4" id="cc4-1">
+                        <div class="questions" id="nameOfAuthorized">
+                            <label for="nameOfAuthorized">What is the name of the authorized individual?</label>
+                            <input type="text" name="nameOfAuthorized" id="nameOfAuthorized-input">
                         </div>
-                        <div class="questions" id="cc-5">
+                        <div class="questions" id="receivingNavigationServices">
                             <!--Conditional question is Yes is selct then Heath measures is displayed-->
-                            <label for="cc5">Will you be receiving navigation services?</label>
+                            <label for="receivingNavigationServices">Will you be receiving navigation services?</label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="cc5" id="cc5-1" value="yes">Yes</li>
-                                <li><input type="radio" name="cc5" id="cc5-2" value="no">No</li>
+                                <li><input type="radio" name="receivingNavigationServices" id="receivingNavigationServices-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="receivingNavigationServices" id="receivingNavigationServices-no" value="no">No</li>
                             </ul>
                         </div>
                     </div> 
@@ -1726,13 +1739,13 @@
                                 or denied services provided at Roofs based on your inability to pay, or your insurance status.
                             </p>
                         </div>
-                        <fieldset class="questions" id="hm-2">
-                            <label for="hm2">I have read and understood the Targeted Case Management form and that I need to sign
+                        <fieldset class="questions" id="agreementsTargetCaseManagement">
+                            <label for="agreementsTargetCaseManagement">I have read and understood the Targeted Case Management form and that I need to sign
                                  sign this form the next time I am at the clinic.
                             </label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="hm2" id="hm2-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hm2" id="hm2-2" value="no">No</li>
+                                <li><input type="radio" name="agreementsTargetCaseManagement" id="agreementsTargetCaseManagement-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="agreementsTargetCaseManagement" id="agreementsTargetCaseManagement-no" value="no">No</li>
                             </ul>
                         </fieldset>
                         <div class="questions">
@@ -1794,20 +1807,13 @@
                                 Noha Aboelata, MD CEO
                             </p>
                         </div>
-                        <fieldset class="questions" id="hm-3">
+                        <fieldset class="questions" id="agreementsHealthyMeasures">
                             <label for="hm3">I have read and understood the Healthy Measures: Health Care Connections Services for Formerly Incarcerated form and that 
                                 I need to sign this form the next time I am at the clinic.
                             </label>
                             <ul class="threeOrLess">
-                                <li><input type="radio" name="hm3" id="hm3-1" value="yes">Yes</li>
-                                <li><input type="radio" name="hm3" id="hm3-2" value="no">No</li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class="questions" id="hm-4">
-                            <label for="hm4">Are you the client or the navigator?</label>
-                            <ul class="threeOrLess">
-                                <li><input type="radio" name="hm4" id="hm4-1">Client</li>
-                                <li><input type="radio" name="hm4" id="hm4-2">Navigator</li>
+                                <li><input type="radio" name="agreementsHealthyMeasures" id="agreementsHealthyMeasures-yes" value="yes">Yes</li>
+                                <li><input type="radio" name="agreementsHealthyMeasures" id="agreementsHealthyMeasures-no" value="no">No</li>
                             </ul>
                         </fieldset>
                         <div class="move">

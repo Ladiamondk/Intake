@@ -118,10 +118,82 @@ app.post('/registration', async(req, res) => {
             cigarettesSmokedPerDay,
             tobaccoNicotineProducts,
             lastSmoke,
-            smokeFrequency
+            smokeFrequency,
+            typicalTransportationToRoots,
+            dependableSupportPerson,
+            pastYearLackOfConvenientTransportation,
+            ownPersonalPhone,
+            concernWithLandlord,
+            familyImmigrationStatusConcern,
+            governmentIssuedIDOrLicense,
+            jobsHousingGovBenefitsDifficultiesBasedOnBackground,
+            paroleProbationEndDate,
+            paroleProbationStatus,
+            criminalRecordClearing,
+            restitutionAmount,
+            restitution,
+            lastReleaseCDCPFN,
+            prisonHistory,
+            onGoingCriminalCase,
+            arrestHistory,
+            domesticAbuseFromHousingOccupants,
+            someoneToCallWhenDownStressed,
+            clubCommunityGroupInvolvement,
+            someoneDependableForHelp,
+            pastProgramAttended,
+            programSchoolName,
+            educationTrainingParticipating,
+            employerNameLocation,
+            todaysWorkSituation,
+            highestLevelEducation,
+            past3MonthsCutSkipMealSize,
+            incomeCoverHouseholdExpenses,
+            past3MonthsDifficultiesPayingEssentialBills,
+            past12MonthsFoodRanOut, 
+            past12MonthsWorriedAboutFoodRunningOut, 
+            whereGetMajorityFood, 
+            servingsFruitTypicalDay,
+            past3MonthsLackOfHousing,
+            housingLocation,
+            housingSituation,
+            mentalHealthDiagnose,
+            pastMonthMentalHealthInterferedActivitiesWorkRecreation,
+            pastMonthWorryAboutLifeCommitments,
+            mentalHealthIssuesMakeWorkHouseWorkSocialDifficult,
+            drinkAlcoholFrequency,
+            alcoholDrinksAmountTypicalDayDrink,
+            sixOrMoreDrinksOccasion,
+            lastYearCantStopDrinkOnceStart,
+            lastYearFailedNormalDutiesFromDrinking,
+            lastYearFirstDrinkNeededAfterHeavySession,
+            lastYearguiltRemorseAfterDrinking,
+            lastYearMemoryLostDueToDrinking,
+            injuryResultOfYourDrinking,
+            relativeHealthWorkerRaisedConcernOfDrinking,
+            drugsUsed,
+            drugUseFrequency,
+            injectedDrugs,
+            treatedForSubstanceAbuse,
+            useOfNonPrescribedDrugs,
+            abuseMoreThanOneDrugAtTime,
+            ableStopDrugsWhenWant,
+            blackoutsFlashbacksFromDrugUse,
+            feelBadGuiltAboutDrugUse,
+            spouseParentComplainAboutDrugUse,
+            neglectedFamilyDueToDrugUse,
+            illegalActivitiesEngagmentToObtainDrugUSe,
+            experiencedWithdrawSymptoms,
+            medicalProblemsDueToDrugUse,
+            agreementsRootsCommunityCode,
+            agreementsRootsCommunityHealthClinicNoticeOfPolicy,
+            designateAuthorizedOnBehalf,
+            nameOfAuthorized,
+            receivingNavigationServices,
+            agreementsTargetCaseManagement,
+            agreementsHealthyMeasures
         } = req.body;
 
-        await pool.query('INSERT INTO demographics (todays_date, roots_email, roots_site, visit_purpose, first_name, last_name, middle_name, preferred_name, birth_date, ssn, sex, gender_identity, pronouns, sexual_orientation, personal_email, home_phone, cell_phone, address, preferred_contact_method, emergency_contact_name1, emergency_contact_relationship1, emergency_contact_number1, emergency_contact_name2, emergency_contact_relationship2, emergency_contact_number2, children_name_age, child_development_concern, last_12months_child_pcp_visit, pediatric_care_interest, pharmacy, identified_race, identified_ethnicity, languages_spoken, martial_status, veterans_status) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34,$35)', [
+        const demographics = await pool.query('INSERT INTO demographics (todays_date, roots_email, roots_site, visit_purpose, first_name, last_name, middle_name, preferred_name, birth_date, ssn, sex, gender_identity, pronouns, sexual_orientation, personal_email, home_phone, cell_phone, address, preferred_contact_method, emergency_contact_name1, emergency_contact_relationship1, emergency_contact_number1, emergency_contact_name2, emergency_contact_relationship2, emergency_contact_number2, children_name_age, child_development_concern, last_12months_child_pcp_visit, pediatric_care_interest, pharmacy, identified_race, identified_ethnicity, languages_spoken, martial_status, veterans_status) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34,$35)', [
             todays_date,
             roots_email,
             roots_site,
@@ -158,8 +230,9 @@ app.post('/registration', async(req, res) => {
             martial_status,
             veterans_status,       
         ]);
+        console.log(demographics);
 
-        await pool.query('INSERT INTO medical_history (smokingHistory, currentlySmoke, dateQuit, prescription, allergies, hospitalizations, covidVaccinationHistory, doseBrand1, doseBrand1Date, doseBrand2, doseBrand2Date, doseBrand3, doseBrand3Date, familyHistory, vaccinationHistory, advanceHealthcareDirective, advanceHealthcareDirectiveInquiry, tb_testingHistory, tb_testingContact, immunosuppression, tb_ForiegnCountryExposure, tb_CongregateSettingExposure, pregnanciesStatus, prenatalCareStatus, prenatalDoctor, lastMentrualPeriod, past6Months_multipleSexPartners, birthControlMethod, emergencyContraception, pregnanciesHistory, pregnancies, liveBirths, abortions, miscarriages) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34)', [
+        const medicalHistory = await pool.query('INSERT INTO medical_history (smokingHistory, currentlySmoke, dateQuit, prescription, allergies, hospitalizations, covidVaccinationHistory, doseBrand1, doseBrand1Date, doseBrand2, doseBrand2Date, doseBrand3, doseBrand3Date, familyHistory, vaccinationHistory, advanceHealthcareDirective, advanceHealthcareDirectiveInquiry, tb_testingHistory, tb_testingContact, immunosuppression, tb_ForiegnCountryExposure, tb_CongregateSettingExposure, pregnanciesStatus, prenatalCareStatus, prenatalDoctor, lastMentrualPeriod, past6Months_multipleSexPartners, birthControlMethod, emergencyContraception, pregnanciesHistory, pregnancies, liveBirths, abortions, miscarriages) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34)', [
             smokingHistory,
             currentlySmoke,
             dateQuit,
@@ -195,7 +268,7 @@ app.post('/registration', async(req, res) => {
             abortions,
             miscarriages,
         ]);
-
+        console.log(medicalHistory);
         const preventative = await pool.query('INSERT INTO preventative (healthInsurancePlan, policyNumber, primaryDoctor, lastPrimaryVisit, primayDoctorNameLocation, regularDentist, lastDentistVisit, dentistNameLocation, doctorsTherapistsCounselors, doctorsTherapistsCounselorsNamesLocations, healthcareManagementSocialOrCaseWorker, caseOrSocialWorkerNameLocation, selfHealthEvaluation, pastMonthPhysicalHealthSelfEval, diagnosedMedicalConditions, preventativeScreeningTest, lastYearScreening, dailyModerateStrenuousExcercise, minuteModerateStrenuousExcercise, pastYearEmergencyRoomVisit, smokeCigarettesStatus, cigarettesSmokedPerDay, tobaccoNicotineProducts, lastSmoke, smokeFrequency) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25)', [
             healthInsurancePlan,
             policyNumber,
@@ -224,7 +297,92 @@ app.post('/registration', async(req, res) => {
             smokeFrequency,
         ]);
         console.log(preventative);
+
+        const social = await pool.query('INSERT INTO social (typicalTransportationToRoots, dependableSupportPerson, pastYearLackOfConvenientTransportation, ownPersonalPhone, concernWithLandlord, familyImmigrationStatusConcern, governmentIssuedIDOrLicense, jobsHousingGovBenefitsDifficultiesBasedOnBackground, paroleProbationEndDate, paroleProbationStatus, criminalRecordClearing, restitutionAmount, restitution, lastReleaseCDCPFN, prisonHistory, onGoingCriminalCase, arrestHistory, domesticAbuseFromHousingOccupants, someoneToCallWhenDownStressed, clubCommunityGroupInvolvement, someoneDependableForHelp, pastProgramAttended, programSchoolName, educationTrainingParticipating, employerNameLocation, todaysWorkSituation, highestLevelEducation, past3MonthsCutSkipMealSize, incomeCoverHouseholdExpenses, past3MonthsDifficultiesPayingEssentialBills, past12MonthsFoodRanOut, past12MonthsWorriedAboutFoodRunningOut, whereGetMajorityFood, servingsFruitTypicalDay, past3MonthsLackOfHousing, housingLocation, housingSituation) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34,$35,$36,$37)', [
+            typicalTransportationToRoots,
+            dependableSupportPerson,
+            pastYearLackOfConvenientTransportation,
+            ownPersonalPhone,
+            concernWithLandlord,
+            familyImmigrationStatusConcern,
+            governmentIssuedIDOrLicense,
+            jobsHousingGovBenefitsDifficultiesBasedOnBackground,
+            paroleProbationEndDate,
+            paroleProbationStatus,
+            criminalRecordClearing,
+            restitutionAmount,
+            restitution,
+            lastReleaseCDCPFN,
+            prisonHistory,
+            onGoingCriminalCase,
+            arrestHistory,
+            domesticAbuseFromHousingOccupants,
+            someoneToCallWhenDownStressed,
+            clubCommunityGroupInvolvement,
+            someoneDependableForHelp,
+            pastProgramAttended,
+            programSchoolName,
+            educationTrainingParticipating,
+            employerNameLocation,
+            todaysWorkSituation,
+            highestLevelEducation,
+            past3MonthsCutSkipMealSize,
+            incomeCoverHouseholdExpenses,
+            past3MonthsDifficultiesPayingEssentialBills,
+            past12MonthsFoodRanOut, 
+            past12MonthsWorriedAboutFoodRunningOut, 
+            whereGetMajorityFood, 
+            servingsFruitTypicalDay,
+            past3MonthsLackOfHousing,
+            housingLocation,
+            housingSituation,
+        ]);
+        console.log(social);
+
+        const screening = await pool.query('INSERT INTO screening (mentalHealthDiagnose, pastMonthMentalHealthInterferedActivitiesWorkRecreation, pastMonthWorryAboutLifeCommitments, mentalHealthIssuesMakeWorkHouseWorkSocialDifficult, drinkAlcoholFrequency, alcoholDrinksAmountTypicalDayDrink, sixOrMoreDrinksOccasion, lastYearCantStopDrinkOnceStart, lastYearFailedNormalDutiesFromDrinking, lastYearFirstDrinkNeededAfterHeavySession, lastYearguiltRemorseAfterDrinking, lastYearMemoryLostDueToDrinking, injuryResultOfYourDrinking, relativeHealthWorkerRaisedConcernOfDrinking, drugsUsed, drugUseFrequency, injectedDrugs, treatedForSubstanceAbuse, useOfNonPrescribedDrugs, abuseMoreThanOneDrugAtTime, ableStopDrugsWhenWant, blackoutsFlashbacksFromDrugUse, feelBadGuiltAboutDrugUse, spouseParentComplainAboutDrugUse, neglectedFamilyDueToDrugUse, illegalActivitiesEngagmentToObtainDrugUSe, experiencedWithdrawSymptoms, medicalProblemsDueToDrugUse) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28)', [
+            mentalHealthDiagnose,
+            pastMonthMentalHealthInterferedActivitiesWorkRecreation,
+            pastMonthWorryAboutLifeCommitments,
+            mentalHealthIssuesMakeWorkHouseWorkSocialDifficult,
+            drinkAlcoholFrequency,
+            alcoholDrinksAmountTypicalDayDrink,
+            sixOrMoreDrinksOccasion,
+            lastYearCantStopDrinkOnceStart,
+            lastYearFailedNormalDutiesFromDrinking,
+            lastYearFirstDrinkNeededAfterHeavySession,
+            lastYearguiltRemorseAfterDrinking,
+            lastYearMemoryLostDueToDrinking,
+            injuryResultOfYourDrinking,
+            relativeHealthWorkerRaisedConcernOfDrinking,
+            drugsUsed,
+            drugUseFrequency,
+            injectedDrugs,
+            treatedForSubstanceAbuse,
+            useOfNonPrescribedDrugs,
+            abuseMoreThanOneDrugAtTime,
+            ableStopDrugsWhenWant,
+            blackoutsFlashbacksFromDrugUse,
+            feelBadGuiltAboutDrugUse,
+            spouseParentComplainAboutDrugUse,
+            neglectedFamilyDueToDrugUse,
+            illegalActivitiesEngagmentToObtainDrugUSe,
+            experiencedWithdrawSymptoms,
+            medicalProblemsDueToDrugUse
+        ]);
+        console.log(screening);
+
+        const agreements = await pool.query('INSERT INTO agreements (agreementsRootsCommunityCode, agreementsRootsCommunityHealthClinicNoticeOfPolicy, designateAuthorizedOnBehalf, nameOfAuthorized, receivingNavigationServices, agreementsTargetCaseManagement, agreementsHealthyMeasures) VALUES ($1,$2,$3,$4,$5,$6,$7)', [
+            agreementsRootsCommunityCode,
+            agreementsRootsCommunityHealthClinicNoticeOfPolicy,
+            designateAuthorizedOnBehalf,
+            nameOfAuthorized,
+            receivingNavigationServices,
+            agreementsTargetCaseManagement,
+            agreementsHealthyMeasures
+        ]);
+        console.log(agreements);
         res.send('Form submitted successfully!');
+
     } catch(error){
         console.error('Error processing form data:', error);
         console.error(error.stack);

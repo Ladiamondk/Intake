@@ -115,6 +115,27 @@ amprev.addEventListener('click', () => {
     pScreen.innerText = 'Screening';
 })
 //Demographics section of the form
+
+        //clientOrNavigator displays root email if navigator is selected
+const clientOrNavigator = document.getElementById('clientOrNavigator')
+const rootsemail = document.getElementById('rootsemail');
+rootsemail.style.display = 'none';
+if(clientOrNavigator){
+    let nav;
+    const clientOrNavigatorRadios = clientOrNavigator.querySelectorAll('input[type="radio"]');
+    clientOrNavigator.addEventListener('click', () => {
+        for(let i = 0; i < clientOrNavigatorRadios.length; i++){
+            if(clientOrNavigatorRadios[i].checked){
+                nav = clientOrNavigatorRadios[i].value;
+                if(nav == 'navigator'){
+                    rootsemail.style.display = 'block';
+                }else{
+                    rootsemail.style.display = 'none';
+                }
+            }
+        }
+    })
+}
 //creates a text input element if other is selected
         //rootg_site question
 const roots_site = document.getElementById('rootsSite');
@@ -145,6 +166,7 @@ if(roots_site){
                         input.name = 'roots_site';
                         input.value = '';
                         input.placeholder = 'Please specify';
+                        input.style.width = '170px';
                         //append to the element you want it to displayed
                         roots_site.appendChild(input)
                     }
