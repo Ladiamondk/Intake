@@ -68,7 +68,7 @@
                                 <li><input type="radio" name="roots_site" id="roots_site-hq" value="HQ-7272 Macarthur"> HQ-7272 Macarthur</li>
                                 <li><input type="radio" name="roots_site" id="roots_site-stomp" value="STOMP"> STOMP</li>
                                 <li><input type="radio" name="roots_site" id="roots_site-south1898" value="South Bay (San Jose) Clinic - 1898 The Alameda"> South Bay(San Jose) Clinic - 1898 The Alameda</li>
-                                <li><input type="radio" name="roots_site" id="roots_site-south1811" value="South Bay (San Jose) Navigation - 1811 South 7th St">South Bay (San Jose) Navigation - 1811 South 7th St</li>
+                                <li><input type="radio" name="roots_site" id="roots_site-south1811" value="South Bay (San Jose) Navigation - 1811 South 7th St"> South Bay (San Jose) Navigation - 1811 South 7th St</li>
                                 <li><input type="radio" name="roots_site" id="roots_site-turning" value="Turning Point"> Turning Point</li>
                                 <li><input type="radio" name="roots_site" id="roots_site-other" value="other"> Other</li>
                             </ul>
@@ -142,7 +142,7 @@
                         <ul class="threeOrLess">
                             <li><input type="radio" name="pronouns" id="pronouns-she" value="she/her">She/her</li>
                             <li><input type="radio" name="pronouns" id="pronouns-he" value="he/him">He/him</li>
-                            <li><input type="radio" name="pronouns" id="pronouns-other" value="other">Other</li>
+                            <li id="pronounsList"><input type="radio" name="pronouns" id="pronouns-other" value="other">Other</li>
                         </ul>
                     </fieldset>
                     <fieldset class="questions" id="sexual_orientation">
@@ -286,7 +286,7 @@
                         <ul class="threeOrLess">
                             <li><input type="radio" name="identified_ethnicity" id="identified_ethnicity-latino" value="latino/hispanic">Latino/Hispanic</li>
                             <li><input type="radio" name="identified_ethnicity" id="identified_ethnicity-notLatino" value="not latino/hispanic">Not Latino/Hispanic</li>
-                            <li><input type="radio" name="identified_ethnicity" id="identified_ethnicity-other" value="other">Other</li>
+                            <li id="ethnicityList"><input type="radio" name="identified_ethnicity" id="identified_ethnicity-other" value="other">Other</li>
                         </ul>
                     </fieldset>
                     <fieldset class="questions" id="languagesSpoken">
@@ -878,7 +878,7 @@
                                 <li><input type="radio" name="housingSituation" id="housingSituation-communityHousing" value="a treastment facility or group home">A Treatment Facility or Group Home</li>
                                 <li><input type="radio" name="housingSituation" id="housingSituation-emergencyShelter" value="an emergency shelter">An Emergency Shelter</li>
                                 <li><input type="radio" name="housingSituation" id="housingSituation-couchSurfing" value="couch surfing">Couch Surfing</li>
-                                <li><input type="radio" name="housingSituation" id="housingSituation-noHousing" value="I have no housing (I'm sleeping on the street, in a park, a vehicle, or a bus or train station)">I have no housing (I'm sleeping on the street, in a park, a vehicle, or a bus or train station)</li>
+                                <li><input type="radio" name="housingSituation" id="housingSituation-noHousing" value="I have no housing">I have no housing (I'm sleeping on the street, in a park, a vehicle, or a bus or train station)</li>
                             </ul>
                         </fieldset>
                         <!--conditional question based of the user ansering 'no housing' to the question above-->
@@ -1273,9 +1273,6 @@
                     </div>
 
                     <div class="sub-section">                    
-                    <div>
-                        <strong>The Alcohol Use Disorders Identification Test (AUDIT)</strong>
-                    </div>
                         <fieldset class="questions" id="mentalHealthDiagnose">
                             <label for="mentalHealthDiagnose">Have you ever been diagnosed with any of the following mental health conditions (check all that apply)</label>
                             <ul>

@@ -129,8 +129,10 @@ if(clientOrNavigator){
                 nav = clientOrNavigatorRadios[i].value;
                 if(nav == 'navigator'){
                     rootsemail.style.display = 'block';
-                }else{
+                }
+                if(nav == 'client'){
                     rootsemail.style.display = 'none';
+                    rootsemail.querySelector('input').value = '';
                 }
             }
         }
@@ -225,6 +227,7 @@ if(pronouns){
     let input;
 
     const pronounsRadios = pronouns.querySelectorAll('input[type="radio"]');
+    const pronounsList = document.getElementById('pronounsList');
     pronouns.addEventListener('click',() =>{
         for(let i = 0; i < pronounsRadios.length; i++){
             if(pronounsRadios[i].checked){
@@ -236,7 +239,7 @@ if(pronouns){
                         input.value = '';
                         input.placeholder = 'Please specify';
 
-                        pronouns.appendChild(input);
+                        pronounsList.appendChild(input);
                     }
                     input.style.display = 'inline';
                 } else {
@@ -338,6 +341,7 @@ if(identifiedRace){
 }
         //identifiedEthnicity question
 const identifiedEthnicity = document.getElementById('identifiedEthnicity');
+const ethnicityList = document.getElementById('ethnicityList');
 if(identifiedEthnicity){
     let input;
     let OtherIdentifiedEthnicity;
@@ -354,7 +358,7 @@ if(identifiedEthnicity){
                         input.value = '';
                         input.placeholder = 'Please specify';
 
-                        identifiedEthnicity.appendChild(input);
+                        ethnicityList.appendChild(input);
                     }
                     input.style.display = 'inline';
                 } else {
@@ -454,7 +458,7 @@ if(doseBrand1){
                         input.value = '';
                         input.placeholder = 'Please specify';
                         input.name = 'doseBrand1';
-
+                        input.id = 'doseBrand1Text';
                         doseBrand1.appendChild(input);
                     }
                     input.style.display = 'inline';
@@ -486,7 +490,7 @@ if(doseBrand2){
                         input.value = '';
                         input.placeholder = 'Please specify';
                         input.name = 'doseBrand2';
-        
+                        input.id = 'doseBrand2Text';
                         doseBrand2.appendChild(input);
                     }
                     input.style.display = 'inline';
@@ -517,8 +521,8 @@ if(doseBrand3){
                         input = document.createElement('input');
                         input.value = '';
                         input.placeholder = 'Please specify';
-                        input.name = 'doseBrand1';
-        
+                        input.name = 'doseBrand3';
+                        input.id = 'doseBrand3Text';
                         doseBrand3.appendChild(input);
                     }
                     input.style.display = 'inline';
@@ -550,6 +554,8 @@ if(smokingHistory){
                     currentlySmoke.style.display = 'block';
                 } else {
                     currentlySmoke.style.display = 'none';
+                    dateQuit.style.display = 'none';
+                    dateQuit.querySelector('input').value = '';
                     const currentlySmokeRadios = currentlySmoke.querySelectorAll('input[type="radio"]');
                     currentlySmokeRadios.forEach(radio => {
                         radio.checked = false;
@@ -572,6 +578,7 @@ if(currentlySmoke){
                     dateQuit.style.display = 'block';
                 } else {
                     dateQuit.style.display = 'none';
+                    dateQuit.querySelector('input').value = '';
                 }
             }
 
@@ -600,8 +607,20 @@ if(covidVaccinationHistory){
                     doseBrand3Set.style.display = 'block'
                 } else {
                     doseBrand1Set.style.display = 'none'
+                    const doseBrand1Radios = doseBrand1.querySelectorAll('input[type="radio"]');
+                    doseBrand1Radios.forEach(radio => {radio.checked = false});
+                    document.getElementById('doseBrand1-date').value = '';
+                    document.getElementById('doseBrand1Text').value = '';
                     doseBrand2Set.style.display = 'none'
+                    const doseBrand2Radios = doseBrand2.querySelectorAll('input[type="radio"]');
+                    doseBrand2Radios.forEach(radio => {radio.checked = false});
+                    document.getElementById('doseBrand2-date').value = '';
+                    document.getElementById('doseBrand2Text').value = '';
                     doseBrand3Set.style.display = 'none' 
+                    const doseBrand3Radios = doseBrand3.querySelectorAll('input[type="radio"]');
+                    doseBrand3Radios.forEach(radio => {radio.checked = false});
+                    document.getElementById('doseBrand3-date').value = '';
+                    document.getElementById('doseBrand3Text').value = '';
                 }
             }
         }
@@ -643,12 +662,16 @@ const emergencyContraception = document.getElementById('emergencyContraception')
 if(pregnanciesStatus){
     let pregVal;
     const pregRadios = pregnanciesStatus.querySelectorAll('input[type="radio"]');
+    const prenatalradio = prenatalCareStatus.querySelectorAll('input[type="radio"]');
     pregnanciesStatus.addEventListener('click', () => {
         for(let i = 0; i < pregRadios.length; i++){
             if(pregRadios[i].checked){
                 pregVal = pregRadios[i].value;
                 if(pregVal == 'no' || pregVal == 'dont know'){
                     prenatalCareStatus.style.display = 'none';
+                    prenatalDoctor.style.display = 'none';
+                    prenatalDoctor.querySelector('input').value = '';
+                    prenatalradio.forEach(radio => {radio.checked = false});
                     emergencyContraception.style.display = 'block';
                 } else if(pregVal == 'yes'){
                     prenatalCareStatus.style.display = 'block';
@@ -668,6 +691,7 @@ if(prenatalCareStatus){
                 prenatalVal = prenatalRadios[i].value;
                 if(prenatalVal == 'no'||prenatalVal == 'dont know'){
                     prenatalDoctor.style.display = 'none';
+                    prenatalDoctor.querySelector('input').value = 'none';
                 }else{
                     prenatalDoctor.style.display = 'block';
                 }
@@ -687,6 +711,10 @@ if(pregnanciesHistory){
                 pregnanciesVal = pregnanciesRadios[i].value;
                 if(pregnanciesVal == 'no'){
                     pregnancyQuestion.style.display = 'none';
+                    document.getElementById('pregnancies-input').value = 'none';
+                    document.getElementById('liveBirths-input').value = 'none';
+                    document.getElementById('abortions-input').value = 'none';
+                    document.getElementById('miscarriages-input').value = 'none';
                 }else{
                     pregnancyQuestion.style.display = 'grid';
                 }
@@ -708,6 +736,7 @@ if(healthInsurancePlan){
                 policy = healthInsurancePlanRadios[i].value;
                 if(policy == 'none'){
                     policyNumber.style.display = 'none';
+                    policyNumber.querySelector('input').value = '';
                 }else{
                     policyNumber.style.display = 'block';
                 }
@@ -734,7 +763,9 @@ if(primaryDoctor){
                     lastPrimaryVisit.style.display = 'block';
                 }else{
                     primayDoctorNameLocation.style.display = 'none';
+                    primayDoctorNameLocation.querySelector('input').value = '';
                     lastPrimaryVisit.style.display = 'none';
+                    lastPrimaryVisit.querySelector('input').value = '';
                 }
             }
         }
@@ -758,7 +789,9 @@ if(regularDentist){
                     dentistNameLocation.style.display = 'block';
                 }else{
                     dentistNameLocation.style.display = 'none';
+                    dentistNameLocation.querySelector('input').value = '';
                     lastDentistVisit.style.display = 'none';
+                    lastDentistVisit.querySelector('input').value = '';
                 }
             }
         }
@@ -779,6 +812,7 @@ if(doctorsTherapistsCounselors){
                     doctorsTherapistsCounselorsNamesLocations.style.display = 'block';
                 }else{
                     doctorsTherapistsCounselorsNamesLocations.style.display = 'none';
+                    doctorsTherapistsCounselorsNamesLocations.querySelector('input').value = '';
                 }
             }
         }
@@ -799,6 +833,7 @@ if(HealthcareManagementSocialOrCaseWorker){
                     CaseOrSocialWorkerNameLocation.style.display = 'block';
                 }else{
                     CaseOrSocialWorkerNameLocation.style.display = 'none';
+                    CaseOrSocialWorkerNameLocation.querySelector('input').value = '';
                 }
             }
         }
@@ -817,6 +852,10 @@ smokeFrequency.style.display = 'none';
 if(smokeCigarettesStatus){
     let smoke;
     const smokeCigarettesStatusRadios = smokeCigarettesStatus.querySelectorAll('input[type="radio"]');
+    const perdayRadio = cigarettesSmokedPerDay.querySelectorAll('input[type="radio"]');
+    const tobaccoRadio = tobaccoNicotineProducts.querySelectorAll('input[type="radio"]');
+    const smokeRadio = lastSmoke.querySelectorAll('input[type="radio"]');
+    const smokeFrequencyRadio = smokeFrequency.querySelectorAll('input[type="radio"]');
     smokeCigarettesStatus.addEventListener('click', () => {
         for(let i = 0; i < smokeCigarettesStatusRadios.length; i++){
             if(smokeCigarettesStatusRadios[i].checked){
@@ -828,9 +867,13 @@ if(smokeCigarettesStatus){
                     smokeFrequency.style.display = 'block';
                 }else{
                     cigarettesSmokedPerDay.style.display = 'none';
+                    perdayRadio.forEach(radio => {radio.checked = false});
                     tobaccoNicotineProducts.style.display = 'none';
+                    tobaccoRadio.forEach(radio => {radio.checked = false});
                     lastSmoke.style.display = 'none';
+                    smokeRadio.forEach(radio => {radio.checked = false});
                     smokeFrequency.style.display = 'none';
+                    smokeFrequencyRadio.forEach(radio => {radio.checked = false});
                 }
             }
         }
@@ -849,10 +892,11 @@ if(housingSituation){
         for(let i = 0; i < housingSituationRadios.length; i++){
             if(housingSituationRadios[i].checked){
                 housing = housingSituationRadios[i].value;
-                if(housing == 'I have no housing(I\'m sleeping on the StorageEvent, in a park, a vehicle, or a bus or train station)'){
+                if(housing == 'I have no housing'){
                     housingLocation.style.display = 'block';
                 }else{
                     housingLocation.style.display = 'none';
+                    housingLocation.querySelector('input').value = '';
                 }
             }
         }
@@ -871,9 +915,10 @@ if(todaysWorkSituation){
             if(todaysWorkSituationRadios[i].checked){
                 work = todaysWorkSituationRadios[i].value;
                 if(work == 'I am employed full-time' || work == 'I am employed part-time' || work == 'I am self-employed'|| work == 'I do odd jobs/occasional work'){
-                    employerNameLocation.style.display = 'none';
-                }else{
                     employerNameLocation.style.display = 'block';
+                }else{
+                    employerNameLocation.style.display = 'none';
+                    employerNameLocation.querySelector('input').value = '';
                 }
             }
         }
@@ -895,12 +940,16 @@ if(educationTrainingParticipating){
                 if(education == 'yes'){
                     programSchoolName.style.display = 'block';
                     pastProgramAttended.style.display = 'none';
+                    pastProgramAttended.querySelector('input').value = '';
                 }else if(education == 'no, but I have in the past'){
                     pastProgramAttended.style.display = 'block';
                     programSchoolName.style.display = 'none';
+                    programSchoolName.querySelector('input').value = '';
                 }else{
                     pastProgramAttended.style.display = 'none';
-                    programSchoolName.style.display = 'none';
+                    pastProgramAttended.querySelector('input').value = '';
+                    programSchoolName.style.display = 'none';                    
+                    programSchoolName.querySelector('input').value = '';
                 }
             }
         }
@@ -928,6 +977,13 @@ paroleProbationEndDate.style.display = 'none';
 if(arrestHistory){
     let arrest;
     const arrestHistoryRadios = arrestHistory.querySelectorAll('input[type="radio"]');
+
+    const prisonHistoryRadios = prisonHistory.querySelectorAll('input[type="radio"]');
+    const onGoingCriminalCaseRadios = onGoingCriminalCase.querySelectorAll('input[type="radio"]');
+    const restitutionRadios = restitution.querySelectorAll('input[type="radio"]');
+    const criminalRecordClearingRadios = criminalRecordClearing.querySelectorAll('input[type="radio"]');
+    const paroleProbationStatusRadios = paroleProbationStatus.querySelectorAll('input[type="radio"]');
+
     arrestHistory.addEventListener('click', () => {
         for(let i = 0; i < arrestHistoryRadios.length; i++){
             if(arrestHistoryRadios[i].checked){
@@ -939,11 +995,16 @@ if(arrestHistory){
                     criminalRecordClearing.style.display = 'block';
                     paroleProbationStatus.style.display = 'block';
                 }else{
-                    prisonHistory.style.display = 'block';
-                    onGoingCriminalCase.style.display = 'block';
-                    restitution.style.display = 'block';
-                    criminalRecordClearing.style.display = 'block';
-                    paroleProbationStatus.style.display = 'block';
+                    prisonHistory.style.display = 'none';
+                    prisonHistoryRadios.forEach(radio => {radio.checked =false});
+                    onGoingCriminalCase.style.display = 'none';
+                    onGoingCriminalCaseRadios.forEach(radio => {radio.checked =false});
+                    restitution.style.display = 'none';
+                    restitutionRadios.forEach(radio => {radio.checked =false});
+                    criminalRecordClearing.style.display = 'none';
+                    criminalRecordClearingRadios.forEach(radio => {radio.checked =false});
+                    paroleProbationStatus.style.display = 'none';
+                    paroleProbationStatusRadios.forEach(radio => {radio.checked =false});
                 }
             }
         }
@@ -961,6 +1022,7 @@ if(prisonHistory){
                     lastReleaseCDCPFN.style.display = 'block';
                 }else{
                     lastReleaseCDCPFN.style.display = 'none';
+                    lastReleaseCDCPFN.querySelector('input').value = '';
                 }
             }
         }
@@ -978,6 +1040,7 @@ if(restitution){
                     restitutionAmount.style.display = 'block'
                 }else{
                     restitutionAmount.style.display = 'none'
+                    restitutionAmount.querySelector('input').value = '';
                 }
             }
         }
