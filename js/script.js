@@ -1046,3 +1046,110 @@ if(restitution){
         }
     })
 }
+//Alcohol screening
+        //drinkAlcoholFrequency dynamic functionality
+const drinkAlcoholFrequency = document.getElementById('drinkAlcoholFrequency');
+const alcoholDrinksAmountTypicalDayDrink = document.getElementById('alcoholDrinksAmountTypicalDayDrink')
+const sixOrMoreDrinksOccasion = document.getElementById('sixOrMoreDrinksOccasion')
+const lastYearCantStopDrinkOnceStart = document.getElementById('lastYearCantStopDrinkOnceStart')
+const lastYearFailedNormalDutiesFromDrinking = document.getElementById('lastYearFailedNormalDutiesFromDrinking')
+const lastYearFirstDrinkNeededAfterHeavySession = document.getElementById('lastYearFirstDrinkNeededAfterHeavySession')
+const lastYearGuiltRemorseAfterDrinking = document.getElementById('lastYearGuiltRemorseAfterDrinking')
+const lastYearMemoryLostDueToDrinking = document.getElementById('lastYearMemoryLostDueToDrinking')
+const injuryResultOfYourDrinking = document.getElementById('injuryResultOfYourDrinking')
+const relativeHealthWorkerRaisedConcernOfDrinking = document.getElementById('relativeHealthWorkerRaisedConcernOfDrinking')
+if(drinkAlcoholFrequency){
+    let drink;
+    const drinkAlcoholFrequencyRadios = drinkAlcoholFrequency.querySelectorAll('input[type="radio"]');
+    drinkAlcoholFrequency.addEventListener('click', () => {
+        for(let i = 0; i < drinkAlcoholFrequencyRadios.length; i++){
+            if(drinkAlcoholFrequencyRadios[i].checked){
+                drink = drinkAlcoholFrequencyRadios[i].value;
+                if(drink == 'never'){
+                    alcoholDrinksAmountTypicalDayDrink.style.display = 'none';
+                    alcoholDrinksAmountTypicalDayDrink.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    sixOrMoreDrinksOccasion.style.display = 'none';
+                    sixOrMoreDrinksOccasion.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    lastYearCantStopDrinkOnceStart.style.display = 'none';
+                    lastYearCantStopDrinkOnceStart.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    lastYearFailedNormalDutiesFromDrinking.style.display = 'none';
+                    lastYearFailedNormalDutiesFromDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    lastYearFirstDrinkNeededAfterHeavySession.style.display = 'none';
+                    lastYearFirstDrinkNeededAfterHeavySession.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    lastYearGuiltRemorseAfterDrinking.style.display = 'none';
+                    lastYearGuiltRemorseAfterDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    lastYearMemoryLostDueToDrinking.style.display = 'none';
+                    lastYearMemoryLostDueToDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    injuryResultOfYourDrinking.style.display = 'none';
+                    injuryResultOfYourDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                    relativeHealthWorkerRaisedConcernOfDrinking.style.display = 'none';
+                    relativeHealthWorkerRaisedConcernOfDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+                }else{
+                    alcoholDrinksAmountTypicalDayDrink.style.display = 'block';
+                    sixOrMoreDrinksOccasion.style.display = 'block';
+                    lastYearCantStopDrinkOnceStart.style.display = 'block';
+                    lastYearFailedNormalDutiesFromDrinking.style.display = 'block';
+                    lastYearFirstDrinkNeededAfterHeavySession.style.display = 'block';
+                    lastYearGuiltRemorseAfterDrinking.style.display = 'block';
+                    lastYearMemoryLostDueToDrinking.style.display = 'block';
+                    injuryResultOfYourDrinking.style.display = 'block';
+                    relativeHealthWorkerRaisedConcernOfDrinking.style.display = 'block';
+                }
+            }
+        }
+    })
+}
+        // alcoholDrinksAmountTypicalDayDrink scoreing synamic functionality
+let alcoholDrinksAmountTypicalDayDrinkAnswer;
+if(alcoholDrinksAmountTypicalDayDrink){
+    const alcoholDrinksAmountTypicalDayDrinkRadios = alcoholDrinksAmountTypicalDayDrink.querySelectorAll('input[type="radio"]');
+    alcoholDrinksAmountTypicalDayDrink.addEventListener('click', () => {
+        for(let i = 0; i < alcoholDrinksAmountTypicalDayDrinkRadios.length; i++){
+            if(alcoholDrinksAmountTypicalDayDrinkRadios[i].checked){
+                alcoholDrinksAmountTypicalDayDrinkAnswer = alcoholDrinksAmountTypicalDayDrinkRadios[i].value;
+                checkConditions();
+            }
+        }
+    })
+}
+
+let sixOrMoreDrinksOccasionAnswer;
+if(sixOrMoreDrinksOccasion){
+    const sixOrMoreDrinksOccasionRadios = sixOrMoreDrinksOccasion.querySelectorAll('input[type="radio"]');
+    sixOrMoreDrinksOccasion.addEventListener('click', () => {
+        for(let i = 0; i < sixOrMoreDrinksOccasionRadios.length; i++){
+            if(sixOrMoreDrinksOccasionRadios[i].checked){
+                sixOrMoreDrinksOccasionAnswer = sixOrMoreDrinksOccasionRadios[i].value;
+                checkConditions();
+            }
+        }
+    })
+}
+
+function checkConditions() {
+    if (alcoholDrinksAmountTypicalDayDrinkAnswer === '1 or 2' && sixOrMoreDrinksOccasionAnswer === 'never') {
+        lastYearCantStopDrinkOnceStart.style.display = 'none';
+        lastYearCantStopDrinkOnceStart.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+        lastYearFailedNormalDutiesFromDrinking.style.display = 'none';
+        lastYearFailedNormalDutiesFromDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+        lastYearFirstDrinkNeededAfterHeavySession.style.display = 'none';
+        lastYearFirstDrinkNeededAfterHeavySession.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+        lastYearGuiltRemorseAfterDrinking.style.display = 'none';
+        lastYearGuiltRemorseAfterDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+        lastYearMemoryLostDueToDrinking.style.display = 'none';
+        lastYearMemoryLostDueToDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+        injuryResultOfYourDrinking.style.display = 'none';
+        injuryResultOfYourDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+        relativeHealthWorkerRaisedConcernOfDrinking.style.display = 'none';
+        relativeHealthWorkerRaisedConcernOfDrinking.querySelectorAll('input[type="radio"]').forEach(radio => {radio.checked = false});
+    } else {
+        lastYearCantStopDrinkOnceStart.style.display = 'block';
+        lastYearFailedNormalDutiesFromDrinking.style.display = 'block';
+        lastYearFirstDrinkNeededAfterHeavySession.style.display = 'block';
+        lastYearGuiltRemorseAfterDrinking.style.display = 'block';
+        lastYearMemoryLostDueToDrinking.style.display = 'block';
+        injuryResultOfYourDrinking.style.display = 'block';
+        relativeHealthWorkerRaisedConcernOfDrinking.style.display = 'block';
+    }
+}
+

@@ -190,7 +190,16 @@ app.post('/registration', async(req, res) => {
             nameOfAuthorized,
             receivingNavigationServices,
             agreementsTargetCaseManagement,
-            agreementsHealthyMeasures
+            agreementsHealthyMeasures,
+            financial_security,
+            employment_education,
+            mobility_communication,
+            healthcare,
+            social_supports,
+            legat_satus,
+            mental_health,
+            substance_use,
+            food_access
         } = req.body;
 
         const demographics = await pool.query('INSERT INTO demographics (todays_date, roots_email, roots_site, visit_purpose, first_name, last_name, middle_name, preferred_name, birth_date, ssn, sex, gender_identity, pronouns, sexual_orientation, personal_email, home_phone, cell_phone, address, preferred_contact_method, emergency_contact_name1, emergency_contact_relationship1, emergency_contact_number1, emergency_contact_name2, emergency_contact_relationship2, emergency_contact_number2, children_name_age, child_development_concern, last_12months_child_pcp_visit, pediatric_care_interest, pharmacy, identified_race, identified_ethnicity, languages_spoken, martial_status, veterans_status) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24,$25,$26,$27,$28,$29,$30,$31,$32,$33,$34,$35)', [
@@ -381,6 +390,31 @@ app.post('/registration', async(req, res) => {
             agreementsHealthyMeasures
         ]);
         console.log(agreements);
+        let housingscore;
+        if ((housingSituation == 'I own a house or apartment' || housingSituation == 'I rent a house or apartment') && past3MonthsLackOfHousing == 'never'){
+            housingscore = 'low';
+        } else if (housingSituation == 'a treatment facility or group home' && past3MonthsLackOfHousing !== 'never') {
+            housingscore = 'medium';
+        } else if (housingSituation !== 'I rent a house or apartment' && housingSituation !== 'I own a house or apartment' && housingSituation !== 'a treatment facility or group home' && past3MonthsLackOfHousing !== 'never'){
+            housingscore = 'high';
+        } else {
+            housingscore = 'low';
+        }
+        console.log(past3MonthsLackOfHousing);
+        console.log(housingSituation);
+        console.log(housingscore);
+        const socialVitalSigns = await pool.query('INSERT INTO social_vital_signs (housing, financial_security, employment_education, mobility_communication, healthcare, social_supports, legat_satus, mental_health, substance_use, food_access) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)',[
+            housingscore,
+            financial_security,
+            employment_education,
+            mobility_communication,
+            healthcare,
+            social_supports,
+            legat_satus,
+            mental_health,
+            substance_use,
+            food_access
+        ])
         res.send('Form submitted successfully!');
 
     } catch(error){
