@@ -241,6 +241,15 @@
                     <!--A question goes here but 
                         will for out the structure 
                         next week-->
+                    <div class="questions" id="householdResidents">
+                        <label for="householdResidents">How many people in your household are:</label>
+                        <ul>
+                            <li> Children between the age of 0-5<input type="text" name="householdchildren0_5" id="householdchildren0_5"></li>
+                            <li> Children between the age of 6-17<input type="text" name="householdchildren6_17" id="householdchildren0_5"></li>
+                            <li> Adults between the age of 18-65<input type="text" name="householdadults18_65" id="householdadults18_65"></li>
+                            <li> Adults over the age 65+<input type="text" name="householdadults65_plus" id="householdadults65_plus"></li>
+                        </ul>
+                    </div>
                     <div class="questions" id="childrenNameAge">
                         <label for="children_name_age">Names and ages of your children</label>
                         <input type="text" name="children_name_age" id="children_name_age">
@@ -716,9 +725,9 @@
                             </label>
                             <ul>
                                 <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-never" value="never">Never</li>
-                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-somedays" value="Some days">Some days</li>
-                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-moveThanHalf" value="More than half the days">More than half the days</li>
-                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-everyDay" value="Everyday">Every day</li>
+                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-somedays" value="some days">Some days</li>
+                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-moveThanHalf" value="more than half the days">More than half the days</li>
+                                <li><input type="radio" name="pastMonthPhysicalHealthSelfEval" id="pastMonthPhysicalHealthSelfEval-everyDay" value="every day">Every day</li>
                             </ul>
                         </fieldset>
                         <fieldset class="questions" id="diagnosedMedicalConditions">
@@ -789,11 +798,11 @@
                                     biking, or other activities that cause a light or heavy sweat
                                 </p>
                                 <ul>
-                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise0">0 min</li>
-                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise15">15 min</li>
-                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise30">30 min</li>
-                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise45">45 min</li>
-                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise60">1 hour or more</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise0" value="0 min">0 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise15" value="15 min">15 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise30" value="30 min">30 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise45" value="45 min">45 min</li>
+                                    <li><input type="radio" name="minuteModerateStrenuousExcercise" id="minuteModerateStrenuousExcercise60" value="1 hour or more">1 hour or more</li>
                                 </ul>
                             </div>
                         </fieldset>
@@ -993,6 +1002,25 @@
                         </fieldset>
                         <!--Theres another question that goes 
                             here but waying for structural input-->
+                        <div class="questions" id="benefits">
+                            <label for="benefits">Have you applied for or do you receive benefits or cash assistance from any of the following programs?</label>
+                            <ul>
+                                <li>Calworks Benefits (TANF)<input list="response" name="TANF" id="TANF"></li>
+                                <li>Social Security Disability Insurance (SSI)<input list="response" name="SSI" id="SSI"></li>
+                                <li>General Assistance (GA)<input list="response" name="GA" id="GA"></li>
+                                <li>CalFresh Benefits (SNAP)<input list="response" name="SNAP" id="SNAP"></li>
+                                <li>Women, Infant & Children Benefits (WIC)<input list="response" name="WIC" id="WIC"></li>
+                                <li>Unemployment Benefits<input list="response" name="unemployment" id="unemployment"></li>
+                                <li>State Disability Insurance Benefits (SDI)<input list="response" name="SDI" id="SDI"></li>
+                                <li>Rental Assistance Benefits (e.g. Section 8 housing)<input list="response" name="rentalAssistance" id="rentalAssistance"></li>
+                            </ul>
+                            <datalist id="response">
+                                <option value="Receiving">
+                                <option value="Pending">
+                                <option value="Applied & Denied">
+                                <option value="Never Applied">
+                              </datalist>
+                        </div>
                     </div> 
                 </div>
                 <div class="form">

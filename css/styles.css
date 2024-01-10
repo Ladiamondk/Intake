@@ -212,14 +212,27 @@ button{
 #demographics{
     visibility: visible;
 }
+#householdResidents ul li{
+    margin-left: .5em;
+}
+#householdResidents ul li input{
+    margin-left: 1em;
+}
 #medical{
     display: none;
 }
 fieldset{
     border: none;
 }
+/* preventative area*/
 #preventative{
     display: none;
+}
+#benefits ul li{
+    margin-left: .5em;
+}
+#benefits ul li input{
+    margin-left: 1em;
 }
 #social{
     display: none;
