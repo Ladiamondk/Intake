@@ -234,11 +234,26 @@ fieldset{
 #benefits ul li input{
     margin-left: 1em;
 }
+/*Social Area*/
 #social{
     display: none;
 }
+/*Screening Area*/
 #screening{
     display: none;
+}
+#depressionScreeningPHQ9 ul li{
+    margin-left: .5em;
+    min-width: 40em;
+}
+#depressionScreeningPHQ9 ul li input{
+    margin-left: 1em;
+}
+.depressionScreeningList{
+    display: flex;
+    align-items: center;
+    max-width: 55em;
+    text-indent: -.4em;
 }
 /*Agreement area of the form*/
 .agreements{

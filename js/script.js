@@ -1153,3 +1153,40 @@ function checkConditions() {
     }
 }
 
+        //screening dynamic
+//PHQ-9
+// Get the first two input elements
+const depressionScreeningLittleInterestPleasure = document.getElementById('depressionScreeningLittleInterestPleasure');
+const depressionScreeningDownDepressedHopeless = document.getElementById('depressionScreeningDownDepressedHopeless');
+
+let littleInterest;
+depressionScreeningLittleInterestPleasure.addEventListener('input', () => {
+    littleInterest = depressionScreeningLittleInterestPleasure.value;
+    notAtAll()
+})
+
+let depressedHopeless;
+depressionScreeningDownDepressedHopeless.addEventListener('input', () => {
+    depressedHopeless = depressionScreeningDownDepressedHopeless.value;
+    notAtAll()
+})
+
+function notAtAll(){
+    if(littleInterest == 'Not at all' && depressedHopeless == 'Not at all'){
+        document.getElementById('SleepIssues').style.display = 'none'
+        document.getElementById('TiredLittleEnergy').style.display = 'none'
+        document.getElementById('OvereatingPoorAppetite').style.display = 'none'
+        document.getElementById('FeelingsFailure').style.display = 'none'
+        document.getElementById('StruggleConcentrating').style.display = 'none'
+        document.getElementById('FidgetyRestlessMovingSlowly').style.display = 'none'
+        document.getElementById('ThoughtsSelfPainDeath').style.display = 'none'
+    }else{
+        document.getElementById('SleepIssues').style.display = 'block'
+        document.getElementById('TiredLittleEnergy').style.display = 'block'
+        document.getElementById('OvereatingPoorAppetite').style.display = 'block'
+        document.getElementById('FeelingsFailure').style.display = 'flex'
+        document.getElementById('StruggleConcentrating').style.display = 'flex'
+        document.getElementById('FidgetyRestlessMovingSlowly').style.display = 'flex'
+        document.getElementById('ThoughtsSelfPainDeath').style.display = 'flex'   
+    }
+}

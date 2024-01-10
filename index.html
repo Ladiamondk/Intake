@@ -1299,7 +1299,6 @@
                             <p class="h-help-text">This will contain a brief explanation of the text area</p>
                         </div>
                     </div>
-
                     <div class="sub-section">                    
                         <fieldset class="questions" id="mentalHealthDiagnose">
                             <label for="mentalHealthDiagnose">Have you ever been diagnosed with any of the following mental health conditions (check all that apply)</label>
@@ -1332,6 +1331,30 @@
                         </fieldset>
                         <!--Question belongs here but waiting
                              for structure direction-->
+                        <div>
+                            <strong>Depression Screening (PHQ-9)</strong>
+                        </div>
+                        <div class="questions" id="depressionScreeningPHQ9">
+                            <label for="">Over the last 2 weeks, how often have you been bothered by any of the following problems?</label>
+                            <ul>
+                                <li id="LittleInterestPleasure" class="depression">Little interest or pleasure in doing things<input list="depressionResponse" name="depressionScreeningLittleInterestPleasure" id="depressionScreeningLittleInterestPleasure"></li>
+                                <li id="DownDepressedHopeless" class="depression">Feeling down, depressed, or hopeless<input list="depressionResponse" name="depressionScreeningDownDepressedHopeless" id="depressionScreeningDownDepressedHopeless"></li>
+                                <li id="SleepIssues" class="depression">Trouble falling asleep/staying asleep, sleeping too much<input list="depressionResponse" name="depressionScreeningSleepIssues" id="depressionScreeningSleepIssues"></li>
+                                <li id="TiredLittleEnergy" class="depression">Feeling tired or having little energy<input list="depressionResponse" name="depressionScreeningTiredLittleEnergy" id="depressionScreeningTiredLittleEnergy"></li>
+                                <li id="OvereatingPoorAppetite" class="depression">Poor appetite or overeating<input list="depressionResponse" name="depressionScreeningOvereatingPoorAppetite" id="depressionScreeningOvereatingPoorAppetite"></li>
+                                <li id="FeelingsFailure" class="depressionScreeningList depression">Feeling bad about yourself or that you are a failure or have let yourself or your family down<input list="depressionResponse" name="depressionScreeningFeelingsFailure" id="depressionScreeningFeelingsFailure"></li>
+                                <li id="StruggleConcentrating" class="depressionScreeningList depression">Trouble concentrating on things, such as reading the newspaper or watching television<input list="depressionResponse" name="depressionScreeningStruggleConcentrating" id="depressionScreeningStruggleConcentrating"></li>
+                                <li id="FidgetyRestlessMovingSlowly" class="depressionScreeningList depression">Moving or speaking so slowly that other people could have noticed. Or the opposite:
+                                     being so fidgety or restless that you have been moving around a lot more than usual<input list="depressionResponse" name="depressionScreeningFidgetyRestlessMovingSlowly" id="depressionScreeningFidgetyRestlessMovingSlowly"></li>
+                                <li id="ThoughtsSelfPainDeath" class="depressionScreeningList depression">Thoughts that you would be better off dead or of hurting yourself in some way<input list="depressionResponse" name="depressionScreeningThoughtsSelfPainDeath" id="depressionScreeningThoughtsSelfPainDeath"></li>
+                            </ul>
+                            <datalist id="depressionResponse">
+                                <option value="Not at all">
+                                <option value="Several days">
+                                <option value="More than half the days">
+                                <option value="Every day">
+                              </datalist>
+                        </div>
                         <fieldset class="questions" id="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult">
                             <label for="mentalHealthIssuesMakeWorkHouseWorkSocialDifficult">If you checked off any problem in this questionaire so far, how difficult have these problems made 
                                 it for you to do your work, take care of things at home, or get along with other people?
