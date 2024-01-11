@@ -216,26 +216,43 @@
                             </style>
                         </div>
                         <div class="question" style="position: relative;">
-                            <button type="button" id="addEBtn" onclick="additionEC()">Add Emergency contact</button>
+                            <button type="button" id="addEBtn">Add Emergency contact</button>
                         </div>
                     </div>
-                    <div class="questions multi-question" id="dg23-24-25" style="display: none;">
+                    <div class="questions multi-question" id="emergencyContact2" style="display: none;">
                         <div class="question" id="emergencyContactName2">
                             <label for="emergency_contact_name2">Emergency Contact Name</label>
                             <input type="text" name="emergency_contact_name2" id="emergency_contact_name2">
                         </div>
-                        <div class="question q-w-help" id="emergencyContactRelationship2">
-                            <div class="label">
-                                <label for="emergency_contact_relationship2">Emergency Contact Phone Number</label>
+                        <div class="question" id="emergencyContactRelationship2">
+                            <label for="emergency_contact_relationship2">Emergency Contact Relationship</label>
+                            <input type="text" name="emergency_contact_relationship2" id="emergency_contact_relationship2">
+                        </div>
+                    </div>
+                    <div class="multi-question questions" id="emergency2" style="display: none;">
+                        <div class="question q-w-help" id="emergencyContactNumber2"> 
+                            <div class="label" >
+                                <label for="emergency_contact_number2">Emergency Contact Phone Number</label>
                                 <p class="q-help-text">10 digits, no spaces or dashes</p>
                             </div>
                             <div class="input">
-                                <input type="tel" name="emergency_contact_relationship2" id="emergency_contact_relationship2">
+                                <input type="tel" name="emergency_contact_number2" id="emergency_contact_number2">
                             </div>
+                            <style>
+                                #dg21{
+                                    min-width: 110%; 
+                                    z-index: 1
+                                }
+                                @media screen and (max-width: 767px) {
+                                    #dg21{
+                                        min-width: 90%;
+                                        z-index: 0;
+                                    }
+                                }
+                            </style>
                         </div>
-                        <div class="question" id="emergencyContactNumber2">
-                            <label for="emergency_contact_number2">Emergency Contact Relationship</label>
-                            <input type="text" name="emergency_contact_number2" id="emergency_contact_number2">
+                        <div class="question" style="position: relative;">
+                            <button type="button" id="removeEBtn">Remove Emergency contact</button>
                         </div>
                     </div>
                     <!--A question goes here but 
@@ -509,7 +526,7 @@
                             <div class="input">
                                 <ul class="threeOrLess">
                                     <li><input type="radio" name="immunosuppression" id="immunosuppression-yes" value="yes"> Yes</li>
-                                    <li><input type="radio" name="immunosuppression" id="tb3no" value="immunosuppression-no"> No</li>
+                                    <li><input type="radio" name="immunosuppression" id="immunosuppression-no" value="no"> No</li>
                                 </ul>
                             </div>                            
                         </fieldset>

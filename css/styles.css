@@ -175,9 +175,10 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 }
 /*styles for buttons*/
 button{
-    width: 120px;
-    height: 20px;
-    font-size: .6em;
+    width: 140px;
+    height: 23px;
+    font-size: .62em;
+    font-weight: 300;
 }
 .move{
     display: flex;
@@ -206,6 +207,17 @@ button{
 
 }
 #addEBtn:hover{
+    box-shadow: none;
+}
+#removeEBtn{
+    margin-right: 5px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: .5em;
+    box-shadow: .1em .1em .2em #54595f;
+}
+#removeEBtn:hover{
     box-shadow: none;
 }
 /*styles for the Demograpic questions*/
@@ -253,7 +265,7 @@ fieldset{
     display: flex;
     align-items: center;
     max-width: 55em;
-    text-indent: -.4em;
+    text-indent: -.3em;
 }
 /*Agreement area of the form*/
 .agreements{

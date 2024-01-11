@@ -139,7 +139,7 @@ if(clientOrNavigator){
     })
 }
 //creates a text input element if other is selected
-        //rootg_site question
+        //roots_site question
 const roots_site = document.getElementById('rootsSite');
 //specifies the question that is targeted
 if(roots_site){
@@ -428,17 +428,33 @@ if(martialStatus){
         }
     })
 }
-function additionEC(){
-    const addEBtn = document.getElementById('addEBtn');
-    const addEContact = document.getElementById('dg23-24-25');
-    if(addEContact.style.display === 'none'){
-        addEContact.style.display = 'block';
-        //uncomment if decide to want to be able to toggle
-       // addEBtn.style.visibility = 'hidden'
-    }else{
-        addEContact.style.display = 'none';
-    }   
+
+        //emergengy contact toggle
+const addEBtn = document.getElementById('addEBtn');
+const emergencyContact2 = document.getElementById('emergencyContact2');
+const emergency2 = document.getElementById('emergency2');
+
+if(addEBtn){
+    addEBtn.addEventListener('click', () => {
+        if(emergencyContact2.style.display == 'none' && emergency2.style.display == 'none'){
+            emergencyContact2.style.display = 'grid';
+            emergency2.style.display = 'grid';
+            addEBtn.style.display = 'none';
+        }
+    })
 }
+
+const removeEBtn = document.getElementById('removeEBtn');
+if(removeEBtn){
+    removeEBtn.addEventListener('click', () => {
+        if(emergencyContact2.style.display == 'grid' && emergency2.style.display == 'grid'){
+            emergencyContact2.style.display = 'none';
+            emergency2.style.display = 'none';
+            addEBtn.style.display = 'block';
+        }
+    })
+}
+
 //Medical History section of the form
 //creates a text input element if other is selected
         //Dose Brand 1 questiondoseBrand1
