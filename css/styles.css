@@ -256,7 +256,7 @@ fieldset{
 }
 #depressionScreeningPHQ9 ul li{
     margin-left: .5em;
-    min-width: 40em;
+    min-width: 30em;
 }
 #depressionScreeningPHQ9 ul li input{
     margin-left: 1em;
@@ -265,7 +265,7 @@ fieldset{
     display: flex;
     align-items: center;
     max-width: 55em;
-    text-indent: -.3em;
+    text-indent: -.4em;
 }
 /*Agreement area of the form*/
 .agreements{
