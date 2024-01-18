@@ -85,16 +85,16 @@ body{
 
 /*styles for the heading and description area*/
 .header{
-   font-size: 1.6em;
-   text-shadow:  3px 1px 5px #54595f;
+   font-size: 2.2em;
    align-self: center;
    text-align: center;
    margin-top: 40px;
 }
 .h-help-text{
     font-size: 1em;
-    color: #54595f;
+    color: #4c4c4d;
     text-align: center;
+    padding: 0 1em;
     margin-top: 30px;
 }
 .targetEl {
@@ -102,7 +102,10 @@ body{
     position: -webkit-sticky;
     top: 0;
     padding-top: 10px;
-    background-color: #94a187;
+    background-color: rgb(255 255 255 / 3%);
+    padding-bottom: 1.2em;
+    border-radius: .4em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 /*General Styling for questions and help text*/
 label{
@@ -147,8 +150,14 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 }
 .questions li{
     min-width: 200px ;
-    font-size: .8em;
     margin:2px 0;
+}
+li label {
+    font-size: 12pt;
+}
+input[type=radio], input[type=checkbox]{
+    width: 15px;
+    height: 1.2em;
 }
 .threeOrLess{
     display: flex;
