@@ -115,6 +115,8 @@ amprev.addEventListener('click', () => {
     pScreen.innerText = 'Screening';
 })
 //Demographics section of the form
+        //todays Date auto generates current date
+document.getElementById('todays_date').valueAsDate = new Date();
 
         //clientOrNavigator displays root email if navigator is selected
 const clientOrNavigator = document.getElementById('clientOrNavigator')
