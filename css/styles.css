@@ -85,13 +85,13 @@ body{
 
 /*styles for the heading and description area*/
 .header{
-   font-size: 2.2em;
+   font-size: 2.15em;
    align-self: center;
    text-align: center;
    margin-top: 40px;
 }
 .h-help-text{
-    font-size: 1em;
+    font-size: 1.2em;
     color: #4c4c4d;
     text-align: center;
     padding: 0 1em;
@@ -105,8 +105,7 @@ body{
     background-color: rgb(255 255 255 / 3%);
     padding-bottom: 1.2em;
     border-radius: .4em;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
+box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;}
 /*General Styling for questions and help text*/
 label{
     margin: 0 5px;
@@ -115,8 +114,12 @@ label{
 input{
     margin: 5px 5px 0;
 }
-input[type="radio"]:hover, input[type="checkbox"]:hover{
+input[type=radio]:hover, input[type=checkbox]:hover {
     cursor: pointer;
+}
+input[type=radio], input[type=checkbox]{
+    width: 15px;
+    height: 1.2em;
 }
 .question{
     background-color: #f5e2c8;
@@ -155,22 +158,19 @@ input[type="radio"]:hover, input[type="checkbox"]:hover{
 li label {
     font-size: 12pt;
 }
-input[type=radio], input[type=checkbox]{
-    width: 15px;
-    height: 1.2em;
-}
+
 .threeOrLess{
     display: flex;
     flex-wrap: wrap;
 }
 .threeOrLess li{
-    min-width: 160px;
+    min-width: 190px;
     max-width: 250px;
 }
 /*styling for questions with help text*/
 .q-help-text{
     margin: 0 10px;
-    font-size: .6em;
+    font-size: .9em;
     color: #54595f;
 }
 .q-w-help{
@@ -181,6 +181,9 @@ input[type=radio], input[type=checkbox]{
     min-width: 3em;
     padding-right: .3em;
     text-indent: -.3em;
+}
+label{
+    font-size: 17px;
 }
 /*styles for buttons*/
 button{
