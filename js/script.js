@@ -624,17 +624,19 @@ if(covidVaccinationHistory){
                     doseBrand2Set.style.display = 'block'
                     doseBrand3Set.style.display = 'block'
                 } else {
-                    doseBrand1Set.style.display = 'none'
+                    doseBrand1Set.style.display = 'none';
+                    doseBrand2Set.style.display = 'none';
+                    doseBrand3Set.style.display = 'none';
                     const doseBrand1Radios = doseBrand1.querySelectorAll('input[type="radio"]');
                     doseBrand1Radios.forEach(radio => {radio.checked = false});
                     document.getElementById('doseBrand1-date').value = '';
                     document.getElementById('doseBrand1Text').value = '';
-                    doseBrand2Set.style.display = 'none'
+                    
                     const doseBrand2Radios = doseBrand2.querySelectorAll('input[type="radio"]');
                     doseBrand2Radios.forEach(radio => {radio.checked = false});
                     document.getElementById('doseBrand2-date').value = '';
                     document.getElementById('doseBrand2Text').value = '';
-                    doseBrand3Set.style.display = 'none' 
+                    
                     const doseBrand3Radios = doseBrand3.querySelectorAll('input[type="radio"]');
                     doseBrand3Radios.forEach(radio => {radio.checked = false});
                     document.getElementById('doseBrand3-date').value = '';

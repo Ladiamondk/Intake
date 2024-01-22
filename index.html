@@ -387,17 +387,29 @@
                         </div>
                         <div class="questions" id="prescription">
                             <label for="prescription">List all prescription and non-prescription medication</label>
-                            <input type="text" name="prescription" id="prescription-list">
+                            <br>
+                            <input type="text" name="prescription" id="prescription-list" class="listOut">
                         </div>
                         <div class="questions" id="allergies">
                             <label for="allergies">List all allergies or reactions to medications.</label>
-                            <input type="text" name="allergies" id="allergies-list">
+                            <br>
+                            <input type="text" name="allergies" id="allergies-list" class="listOut">
                         </div>
                         <div class="questions" id="hospitalizations">
                             <label for="hospitalizations">List all hospitalizations for medical conditions or surgeries. What was the name of the condition 
                                 and the date of the hospitalization?
                             </label>
-                            <input type="text" name="hospitalizations" id="hospitalizations-list">
+                            <br>
+                            <input type="text" name="hospitalizations" id="hospitalizations-list" class="listOut">
+                        </div>
+                        <div class="questions" id="familyHistory">
+                            <div class="label">
+                                <label for="familyHistory">List medical conditions that run in your family and which of your relatives had this condition</label>
+                                <p class="q-help-text">e.g. Diabetes, Heart attacks/Heart problems, Strokes, Cancers</p>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="familyHistory" id="familyHistory-list" class="listOut">
+                            </div>
                         </div>
                         <fieldset class="questions" id="covidVaccinationHistory">
                             <label for="covidVaccinationHistory">Have you received any doses of the COVID-19 vaccine?</label>
@@ -453,15 +465,6 @@
                                 <label for="doseBrand3Date">Dose 3 date</label>
                                 <input type="date" name="doseBrand3Date" id="doseBrand3-date">
                             </div>                      
-                        </div>
-                        <div class="questions" id="familyHistory">
-                            <div class="label">
-                                <label for="familyHistory">List medical conditions that run in your family and which of your relatives had this condition</label>
-                                <p class="q-help-text">e.g. Diabetes, Heart attacks/Heart problems, Strokes, Cancers</p>
-                            </div>
-                            <div class="input">
-                                <input type="text" name="familyHistory" id="familyHistory-list">
-                            </div>
                         </div>
                         <fieldset class="questions" id="vaccinationHistory">
                             <label for="vaccinationHistory">Have you had any of the following vaccinations as an adult?</label>
@@ -662,6 +665,7 @@
                                 <li><label for="healthInsurancePlan-valleyHealthPlan"><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-valleyHealthPlan" value="Valley Health Plan"> Valley Health Plan</label></li>
                                 <li><label for="healthInsurancePlan-heathPAC"><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-heathPAC" value="HealthPAC"> HealthPAC</label></li>
                                 <li><label for="healthInsurancePlan-kaiser"><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-kaiser" value="Kaiser"> Kaiser</label></li>
+                                <li><label for="healthInsurancePlan-SCFHP"><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-SCFHP" value="Santa Clara Family Health Plan(SCFHP)"> Santa Clara Family Health Plan(SCFHP)</label></li>
                                 <li><label for="healthInsurancePlan-veterans"><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-veterans" value="Veterans Administration"> Veterans Administration</label></li>
                                 <li><label for="healthInsurancePlan-none"><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-none" value="none"> None(Uninsured)</label></li>
                                 <li><label for="healthInsurancePlan-other"><input type="radio" name="healthInsurancePlan" id="healthInsurancePlan-other" value="other"> Other</label></li>
